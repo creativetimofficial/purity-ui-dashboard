@@ -1,6 +1,6 @@
 {
-  "name": "material-dashboard-pro-react",
-  "version": "1.10.0",
+  "name": "purity-dashboard-pro-react",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
