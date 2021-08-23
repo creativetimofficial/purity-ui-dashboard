@@ -218,7 +218,7 @@ export default function Dashboard() {
                 fontWeight="bold"
                 pb=".5rem"
               >
-                Chakra UI Soft Dashboard
+                Purity UI Dashboard
               </Text>
               <Text fontSize="sm" color="gray.400" fontWeight="normal">
                 From colors, cards, typography to complex elements, you will
@@ -230,7 +230,7 @@ export default function Dashboard() {
                   p="0px"
                   variant="no-hover"
                   bg="transparent"
-                  my={{ sm: "1.5rem" }}
+                  my={{ sm: "1.5rem", lg: "0px" }}
                 >
                   <Text
                     fontSize="sm"
@@ -238,7 +238,7 @@ export default function Dashboard() {
                     fontWeight="bold"
                     cursor="pointer"
                     transition="all .5s ease"
-                    my={{ sm: "1.5rem" }}
+                    my={{ sm: "1.5rem", lg: "0px" }}
                     _hover={{ mr: "4px" }}
                   >
                     Read more
@@ -281,7 +281,7 @@ export default function Dashboard() {
             bgPosition="center"
             bgRepeat="no-repeat"
             w="100%"
-            h={{ sm: "200px", md: "100%" }}
+            h={{ sm: "200px", lg: "100%" }}
             bgSize="cover"
             position="relative"
             borderRadius="15px"
@@ -298,18 +298,21 @@ export default function Dashboard() {
               <Flex
                 flexDirection="column"
                 color="white"
-                p="1.5rem 1.2rem"
+                p="1.5rem 1.2rem 0.3rem 1.2rem"
                 lineHeight="1.6"
               >
                 <Text fontSize="xl" fontWeight="bold" pb=".3rem">
                   Work with the rockets
                 </Text>
-                <Text fontSize="sm" fontWeight="normal" w={{ lg: "67%" }}>
+                <Text fontSize="sm" fontWeight="normal" w={{ lg: "92%" }}>
                   Wealth creation is a revolutionary recent positive-sum game.
                   It is all about who takes the opportunity first.
                 </Text>
                 <Spacer />
-                <Flex align="center">
+                <Flex
+                  align="center"
+                  mt={{ sm: "20px", lg: "40px", xl: "90px" }}
+                >
                   <Button p="0px" variant="no-hover" bg="transparent" mt="12px">
                     <Text
                       fontSize="sm"
