@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.js": "/static/js/main.cc8f3217.chunk.js",
+    "main.js.map": "/static/js/main.cc8f3217.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42f1eeff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42f1eeff.js.map",
+    "static/js/2.753e8680.chunk.js": "/static/js/2.753e8680.chunk.js",
+    "static/js/2.753e8680.chunk.js.map": "/static/js/2.753e8680.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.753e8680.chunk.js.LICENSE.txt": "/static/js/2.753e8680.chunk.js.LICENSE.txt",
+    "static/js/main.cc8f3217.chunk.js.LICENSE.txt": "/static/js/main.cc8f3217.chunk.js.LICENSE.txt",
+    "static/media/BackgroundCard1.55c062c0.png": "/static/media/BackgroundCard1.55c062c0.png",
+    "static/media/BgSignUp.2dea4acf.png": "/static/media/BgSignUp.2dea4acf.png",
+    "static/media/ImageArchitect1.032614a5.png": "/static/media/ImageArchitect1.032614a5.png",
+    "static/media/ImageArchitect2.960c2b9c.png": "/static/media/ImageArchitect2.960c2b9c.png",
+    "static/media/ImageArchitect3.db5ecbbd.png": "/static/media/ImageArchitect3.db5ecbbd.png",
+    "static/media/ProfileBackground.4dc796b0.png": "/static/media/ProfileBackground.4dc796b0.png",
+    "static/media/avatar1.eeef2af6.png": "/static/media/avatar1.eeef2af6.png",
+    "static/media/avatar10.1683e1c0.png": "/static/media/avatar10.1683e1c0.png",
+    "static/media/avatar2.5692c39d.png": "/static/media/avatar2.5692c39d.png",
+    "static/media/avatar3.9f646ac5.png": "/static/media/avatar3.9f646ac5.png",
+    "static/media/avatar4.54d5c1de.png": "/static/media/avatar4.54d5c1de.png",
+    "static/media/avatar5.d2c5420e.png": "/static/media/avatar5.d2c5420e.png",
+    "static/media/avatar6.97310bf2.png": "/static/media/avatar6.97310bf2.png",
+    "static/media/avatar7.00e8f4f0.png": "/static/media/avatar7.00e8f4f0.png",
+    "static/media/avatar8.9719f145.png": "/static/media/avatar8.9719f145.png",
+    "static/media/avatar9.2db98189.png": "/static/media/avatar9.2db98189.png",
+    "static/media/logo-white.db174f3a.svg": "/static/media/logo-white.db174f3a.svg",
+    "static/media/people-image.1105fc1f.png": "/static/media/people-image.1105fc1f.png",
+    "static/media/signInImage.eeb0c777.png": "/static/media/signInImage.eeb0c777.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42f1eeff.js",
+    "static/js/2.753e8680.chunk.js",
+    "static/js/main.cc8f3217.chunk.js"
+  ]
+}
