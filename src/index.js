@@ -17,13 +17,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  BrowserRouter,
-  Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import AuthLayout from "layouts/Auth.js";
 import AdminLayout from "layouts/Admin.js";
@@ -33,7 +27,7 @@ ReactDOM.render(
     <Switch>
       <Route path={`/auth`} component={AuthLayout} />
       <Route path={`/admin`} component={AdminLayout} />
-      <Redirect from="/" to={`/admin/dashboard`} />
+      <Redirect from={`${process.env.PUBLIC_URL}/`} to={`/admin/dashboard`} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
