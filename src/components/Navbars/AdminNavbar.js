@@ -46,6 +46,7 @@ export default function AdminNavbar(props) {
       );
     }
   if (secondary) {
+    navbarBackdrop = "none";
     navbarPosition = "absolute";
     mainText = "white";
     secondaryText = "white";

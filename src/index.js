@@ -27,7 +27,7 @@ ReactDOM.render(
     <Switch>
       <Route path={`/auth`} component={AuthLayout} />
       <Route path={`/admin`} component={AdminLayout} />
-      <Redirect from={`${process.env.PUBLIC_URL}/`} to={`/admin/dashboard`} />
+      <Redirect from={`/`} to={`/admin/dashboard`} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
