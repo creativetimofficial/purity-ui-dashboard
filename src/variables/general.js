@@ -32,7 +32,7 @@ import { SiDropbox } from "react-icons/si";
 export const dashboardTableData = [
   {
     logo: AdobexdLogo,
-    name: "Chakra Soft UI Version",
+    name: "Purity UI Version",
     members: [avatar1, avatar2, avatar3, avatar4, avatar5],
     budget: "$14,000",
     progression: 60,
@@ -172,7 +172,7 @@ export const tablesTableData = [
 export const tablesProjectData = [
   {
     logo: AdobexdLogo,
-    name: "Chakra Soft UI Version",
+    name: "Purity UI Version",
     budget: "$14,000",
     status: "Working",
     progression: 60,
