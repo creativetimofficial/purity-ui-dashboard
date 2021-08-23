@@ -71,7 +71,7 @@ export default function AuthNavbar(props) {
   }
   var brand = (
     <Link
-      href="/admin/dashboard"
+      href={`${process.env.PUBLIC_URL}/#/`}
       target="_blank"
       display="flex"
       lineHeight="100%"

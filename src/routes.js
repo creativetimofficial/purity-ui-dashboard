@@ -1,10 +1,10 @@
 // import
-import DashboardChakra from "views/Dashboard/Dashboard.js";
-import TablesChakra from "views/Dashboard/Tables.js";
-import BillingChakra from "views/Dashboard/Billing.js";
-import ProfileChakra from "views/Dashboard/Profile.js";
-import SignInChakra from "views/Pages/SignIn.js";
-import SignUpChakra from "views/Pages/SignUp.js";
+import Dashboard from "views/Dashboard/Dashboard.js";
+import Tables from "views/Dashboard/Tables.js";
+import Billing from "views/Dashboard/Billing.js";
+import Profile from "views/Dashboard/Profile.js";
+import SignIn from "views/Pages/SignIn.js";
+import SignUp from "views/Pages/SignUp.js";
 
 import {
   HomeIcon,
@@ -21,7 +21,7 @@ var dashRoutes = [
     name: "Dashboard",
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color="inherit" />,
-    component: DashboardChakra,
+    component: Dashboard,
     layout: "/admin",
   },
   {
@@ -29,7 +29,7 @@ var dashRoutes = [
     name: "Tables",
     rtlName: "لوحة القيادة",
     icon: <StatsIcon color="inherit" />,
-    component: TablesChakra,
+    component: Tables,
     layout: "/admin",
   },
   {
@@ -37,7 +37,7 @@ var dashRoutes = [
     name: "Billing",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color="inherit" />,
-    component: BillingChakra,
+    component: Billing,
     layout: "/admin",
   },
   {
@@ -52,7 +52,7 @@ var dashRoutes = [
         rtlName: "لوحة القيادة",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: ProfileChakra,
+        component: Profile,
         layout: "/admin",
       },
       {
@@ -60,7 +60,7 @@ var dashRoutes = [
         name: "Sign In",
         rtlName: "لوحة القيادة",
         icon: <DocumentIcon color="inherit" />,
-        component: SignInChakra,
+        component: SignIn,
         layout: "/auth",
       },
       {
@@ -69,7 +69,7 @@ var dashRoutes = [
         rtlName: "لوحة القيادة",
         icon: <RocketIcon color="inherit" />,
         secondaryNavbar: true,
-        component: SignUpChakra,
+        component: SignUp,
         layout: "/auth",
       },
     ],

@@ -1,7 +1,8 @@
 {
-  "name": "purity-dashboard-pro-react",
+  "name": "purity-dashboard-react",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://demos.creative-tim.com/purity-ui-dashboard/#/",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",
