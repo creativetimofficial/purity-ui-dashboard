@@ -144,7 +144,6 @@ export default function HeaderLinks(props) {
         ref={settingsRef}
         onClick={onOpen}
         color={navbarIcon}
-        qqa
         w="18px"
         h="18px"
       />
@@ -158,7 +157,7 @@ export default function HeaderLinks(props) {
           <DrawerHeader pt="24px" px="24px">
             <DrawerCloseButton />
             <Text fontSize="xl" fontWeight="bold" mt="16px">
-              Chakra UI Configurator
+              Purity UI Configurator
             </Text>
             <Text fontSize="md" mb="16px">
               See your dashboard options.

@@ -74,7 +74,7 @@ function Billing() {
                 >
                   <Flex justify="space-between" align="center">
                     <Text fontSize="md" fontWeight="bold">
-                      Chakra UI
+                      Purity UI
                     </Text>
                     <Icon
                       as={RiMastercardFill}

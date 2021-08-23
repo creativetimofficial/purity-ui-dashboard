@@ -87,7 +87,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#blog"
-            href="https://blog.creative-tim.com?ref=creativetim-pud"
+            href="https://creative-tim.com/blog?ref=creativetim-pud"
           >
             {rtlActive ? "مدونة" : "Blog"}
           </Link>
