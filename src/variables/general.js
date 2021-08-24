@@ -266,7 +266,7 @@ export const billingData = [
   },
 ];
 
-export const newestTranzactions = [
+export const newestTransactions = [
   {
     name: "Netflix",
     date: "27 March 2021, at 12:30 PM",
@@ -281,7 +281,7 @@ export const newestTranzactions = [
   },
 ];
 
-export const olderTranzactions = [
+export const olderTransactions = [
   {
     name: "Stripe",
     date: "26 March 2021, at 13:45 PM",

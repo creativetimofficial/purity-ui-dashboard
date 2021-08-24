@@ -1,3 +1,4 @@
+// Chakra imports
 import {
   Box,
   Button,
@@ -8,7 +9,9 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+// Assets
 import BackgroundCard1 from "assets/img/BackgroundCard1.png";
+// Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
@@ -16,7 +19,8 @@ import IconBox from "components/Icons/IconBox";
 import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
 import BillingRow from "components/Tables/BillingRow";
 import InvoicesRow from "components/Tables/InvoicesRow";
-import TranzactionRow from "components/Tables/TranzactionRow";
+import TransactionRow from "components/Tables/TransactionRow";
+import { Separator } from "components/Separator/Separator";
 import React from "react";
 import {
   FaPaypal,
@@ -28,8 +32,8 @@ import { RiMastercardFill } from "react-icons/ri";
 import {
   billingData,
   invoicesData,
-  newestTranzactions,
-  olderTranzactions,
+  newestTransactions,
+  olderTransactions,
 } from "variables/general";
 
 function Billing() {
@@ -130,16 +134,15 @@ function Billing() {
                     <Text fontSize="md" color={textColor} fontWeight="bold">
                       Salary
                     </Text>
-                    <Text fontSize="xs" color="gray.400" fontWeight="semibold">
+                    <Text
+                      mb="24px"
+                      fontSize="xs"
+                      color="gray.400"
+                      fontWeight="semibold"
+                    >
                       Belong Interactive
                     </Text>
-                    <Box
-                      h="1px"
-                      bg="gray.600"
-                      w="70%"
-                      mb="12px"
-                      mt="24px"
-                    ></Box>
+                    <Separator />
                   </Flex>
                   <Text fontSize="lg" color={textColor} fontWeight="bold">
                     +$2000
@@ -174,16 +177,15 @@ function Billing() {
                     <Text fontSize="md" color={textColor} fontWeight="bold">
                       Paypal
                     </Text>
-                    <Text fontSize="xs" color="gray.400" fontWeight="semibold">
+                    <Text
+                      mb="24px"
+                      fontSize="xs"
+                      color="gray.400"
+                      fontWeight="semibold"
+                    >
                       Freelance Payment
                     </Text>
-                    <Box
-                      h="1px"
-                      bg="gray.600"
-                      w="70%"
-                      mb="12px"
-                      mt="24px"
-                    ></Box>
+                    <Separator />
                   </Flex>
                   <Text fontSize="lg" color={textColor} fontWeight="bold">
                     $455.00
@@ -363,9 +365,9 @@ function Billing() {
               >
                 NEWEST
               </Text>
-              {newestTranzactions.map((row) => {
+              {newestTransactions.map((row) => {
                 return (
-                  <TranzactionRow
+                  <TransactionRow
                     name={row.name}
                     logo={row.logo}
                     date={row.date}
@@ -381,9 +383,9 @@ function Billing() {
               >
                 OLDER
               </Text>
-              {olderTranzactions.map((row) => {
+              {olderTransactions.map((row) => {
                 return (
-                  <TranzactionRow
+                  <TransactionRow
                     name={row.name}
                     logo={row.logo}
                     date={row.date}

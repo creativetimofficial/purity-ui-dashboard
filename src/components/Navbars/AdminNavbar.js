@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
 // Chakra Imports
 import {
   Box,
@@ -10,13 +8,24 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
 import AdminNavbarLinks from "./AdminNavbarLinks";
 
 export default function AdminNavbar(props) {
-  const [sidebarVariant, setSidebarVariant] = useState();
-  const [fixed, setFixed] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { rtlActive, brandText, secondary } = props;
+  const {
+    rtlActive,
+    variant,
+    children,
+    fixed,
+    secondary,
+    brandText,
+    onOpen,
+    ...rest
+  } = props;
+
+  // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
   let mainText = useColorModeValue("gray.700", "gray.200");
   let secondaryText = useColorModeValue("gray.400", "gray.200");
   let navbarPosition = "absolute";
@@ -27,7 +36,7 @@ export default function AdminNavbar(props) {
   let navbarBorder = "transparent";
   let secondaryMargin = "0px";
   let paddingX = "15px";
-  if (fixed === true)
+  if (props.fixed === true)
     if (scrolled === true) {
       navbarPosition = "fixed";
       navbarShadow = useColorModeValue(
@@ -44,7 +53,7 @@ export default function AdminNavbar(props) {
         "drop-shadow(0px 7px 23px rgba(0, 0, 0, 0.05))"
       );
     }
-  if (secondary) {
+  if (props.secondary) {
     navbarBackdrop = "none";
     navbarPosition = "absolute";
     mainText = "white";
@@ -136,19 +145,11 @@ export default function AdminNavbar(props) {
         </Box>
         <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
+            onOpen={props.onOpen}
             rtlActive={rtlActive}
             logoText={props.logoText}
             secondary={props.secondary}
-            fixed={fixed}
-            onChange={
-              ((value) => setSidebarVariant(value),
-              (value) => {
-                props.onChange(value);
-              })
-            }
-            onSwitch={(value) => {
-              setFixed(value);
-            }}
+            fixed={props.fixed}
           />
         </Box>
       </Flex>
@@ -159,5 +160,8 @@ export default function AdminNavbar(props) {
 AdminNavbar.propTypes = {
   rtlActive: PropTypes.bool,
   brandText: PropTypes.string,
+  variant: PropTypes.string,
   secondary: PropTypes.bool,
+  fixed: PropTypes.bool,
+  onOpen: PropTypes.func,
 };

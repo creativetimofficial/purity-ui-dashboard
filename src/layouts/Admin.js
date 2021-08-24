@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import routes from "routes.js";
 // Chakra imports
 import {
   ChakraProvider,
@@ -7,25 +5,26 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import Configurator from "components/Configurator/Configurator";
+import Footer from "components/Footer/Footer.js";
 // Layout components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import React, { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
+import routes from "routes.js";
 // Custom Chakra theme
 import theme from "theme/theme.js";
-// Custom Components
-import { DashboardLogo } from "../components/Icons/Icons";
+import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
 // Custom components
 import MainPanel from "../components/Layout/MainPanel";
 import PanelContainer from "../components/Layout/PanelContainer";
 import PanelContent from "../components/Layout/PanelContent";
-
-var ps;
 export default function Dashboard(props) {
   const { ...rest } = props;
   // states and functions
   const [sidebarVariant, setSidebarVariant] = useState("transparent");
+  const [fixed, setFixed] = useState(false);
   // ref for main panel div
   const mainPanel = React.createRef();
   // functions for changing the states from components
@@ -97,10 +96,8 @@ export default function Dashboard(props) {
       }
     });
   };
-  // Chakra Color Mode
-  const mainText = useColorModeValue("gray.700", "gray.200");
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const logo = <DashboardLogo color={mainText} />;
+  // Chakra Color Mode
   return (
     <ChakraProvider theme={theme} resetCss={false}>
       <Sidebar
@@ -119,10 +116,12 @@ export default function Dashboard(props) {
       >
         <Portal>
           <AdminNavbar
+            onOpen={onOpen}
             logoText={"DASHBOARD"}
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
-            onChange={(value) => setSidebarVariant(value)}
+            rtlActive={false}
+            fixed={fixed}
             {...rest}
           />
         </Portal>
@@ -137,6 +136,25 @@ export default function Dashboard(props) {
           </PanelContent>
         ) : null}
         <Footer />
+        <Portal>
+          <FixedPlugin
+            secondary={getActiveNavbar(routes)}
+            rtlActive={false}
+            fixed={fixed}
+            onOpen={onOpen}
+          />
+        </Portal>
+        <Configurator
+          secondary={getActiveNavbar(routes)}
+          isOpen={isOpen}
+          onClose={onClose}
+          isChecked={fixed}
+          onSwitch={(value) => {
+            setFixed(value);
+          }}
+          onOpaque={() => setSidebarVariant("opaque")}
+          onTransparent={() => setSidebarVariant("transparent")}
+        />
       </MainPanel>
     </ChakraProvider>
   );
