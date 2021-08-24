@@ -107,7 +107,5 @@ export default function Footer(props) {
 }
 
 Footer.propTypes = {
-  fluid: PropTypes.bool,
-  white: PropTypes.bool,
   rtlActive: PropTypes.bool,
 };

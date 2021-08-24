@@ -192,7 +192,7 @@ function Sidebar(props) {
       );
     });
   };
-  const { logo, logoText, routes, rtlActive, sidebarVariant } = props;
+  const { logoText, routes, rtlActive, sidebarVariant } = props;
 
   var links = <>{createLinks(routes)}</>;
   //  BRAND
@@ -411,7 +411,7 @@ export function SidebarResponsive(props) {
       );
     });
   };
-  const { logo, logoText, routes, rtlActive } = props;
+  const { logoText, routes, rtlActive } = props;
 
   var links = <>{createLinks(routes)}</>;
   //  BRAND
@@ -500,15 +500,15 @@ export function SidebarResponsive(props) {
 // PROPS
 
 Sidebar.propTypes = {
-  bgColor: PropTypes.oneOf(["white", "black", "blue"]),
   rtlActive: PropTypes.bool,
-  logo: PropTypes.string,
   logoText: PropTypes.string,
-  image: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
-  miniActive: PropTypes.bool,
-  open: PropTypes.bool,
-  handleDrawerToggle: PropTypes.func,
+  variant: PropTypes.string,
+};
+SidebarResponsive.propTypes = {
+  rtlActive: PropTypes.bool,
+  logoText: PropTypes.string,
+  routes: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Sidebar;

@@ -27,7 +27,6 @@ export default function AdminNavbar(props) {
   let navbarBorder = "transparent";
   let secondaryMargin = "0px";
   let paddingX = "15px";
-  // let navbarWidth= "calc(100vw - 60px - 275px)";
   if (fixed === true)
     if (scrolled === true) {
       navbarPosition = "fixed";
@@ -66,11 +65,11 @@ export default function AdminNavbar(props) {
       position={navbarPosition}
       boxShadow={navbarShadow}
       bg={navbarBg}
-      borderWidth="1.5px"
-      borderStyle="solid"
       borderColor={navbarBorder}
       filter={navbarFilter}
       backdropFilter={navbarBackdrop}
+      borderWidth="1.5px"
+      borderStyle="solid"
       transitionDelay="0s, 0s, 0s, 0s"
       transitionDuration=" 0.25s, 0.25s, 0.25s, 0s"
       transition-property="box-shadow, background-color, filter, border"
@@ -140,7 +139,6 @@ export default function AdminNavbar(props) {
             rtlActive={rtlActive}
             logoText={props.logoText}
             secondary={props.secondary}
-            disclosureFunc={props.disclosureFunc}
             fixed={fixed}
             onChange={
               ((value) => setSidebarVariant(value),
@@ -159,10 +157,7 @@ export default function AdminNavbar(props) {
 }
 
 AdminNavbar.propTypes = {
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"]),
   rtlActive: PropTypes.bool,
   brandText: PropTypes.string,
-  miniActive: PropTypes.bool,
-  handleDrawerToggle: PropTypes.func,
-  sidebarMinimize: PropTypes.func,
+  secondary: PropTypes.bool,
 };

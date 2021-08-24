@@ -35,8 +35,6 @@ export function ItemContent(props) {
   );
 }
 
-// Footer.propTypes = {
-//   fluid: PropTypes.bool,
-//   white: PropTypes.bool,
-//   rtlActive: PropTypes.bool,
-// };
+ItemContent.propTypes = {
+  rtlActive: PropTypes.bool,
+};

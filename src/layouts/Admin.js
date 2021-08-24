@@ -106,10 +106,9 @@ export default function Dashboard(props) {
       <Sidebar
         routes={routes}
         logoText={"DASHBOARD"}
-        logo={logo}
         display="none"
-        {...rest}
         sidebarVariant={sidebarVariant}
+        {...rest}
       />
       <MainPanel
         ref={mainPanel}
