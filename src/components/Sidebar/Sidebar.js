@@ -49,6 +49,7 @@ function Sidebar(props) {
     let activeColor = useColorModeValue("gray.700", "white");
     let inactiveColor = useColorModeValue("gray.400", "gray.400");
     let sidebarActiveShadow = "0px 7px 11px rgba(0, 0, 0, 0.04)";
+    // Here are all the props that may change depending on sidebar's state.(Opaque or transparent)
     if (sidebarVariant === "opaque") {
       activeBg = "transparent";
       inactiveBg = useColorModeValue("gray.100", "gray.600");
@@ -273,7 +274,7 @@ export function SidebarResponsive(props) {
   };
   // this function creates the links and collapses that appear in the sidebar (left menu)
   const createLinks = (routes) => {
-    const { rtlActive, secondary, display } = props;
+    const { rtlActive } = props;
     // Chakra Color Mode
     const activeBg = useColorModeValue("white", "gray.700");
     const inactiveBg = useColorModeValue("white", "gray.700");
