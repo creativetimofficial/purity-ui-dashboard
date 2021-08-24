@@ -156,7 +156,7 @@ purity-ui-dashboard/
     │   ├── Sidebar
     │   │   ├── Sidebar.js
     │   │   └── SidebarHelp.js
-    │   └── Table
+    │   └── Tables
     │       ├── BillingRow.js
     │       ├── DashboardTableRow.js
     │       ├── InvoicesRow.js
