@@ -5,7 +5,7 @@ export const linkStyles = {
       decoration: "none",
       baseStyle: {
         _hover: {
-          decoration: "none",
+          textDecoration: "none",
         },
         _focus: {
           boxShadow: "none",

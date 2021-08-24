@@ -64,7 +64,7 @@ var dashRoutes = [
         layout: "/auth",
       },
       {
-        path: "/signUp",
+        path: "/signup",
         name: "Sign Up",
         rtlName: "لوحة القيادة",
         icon: <RocketIcon color="inherit" />,

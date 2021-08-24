@@ -6,7 +6,7 @@ import React from "react";
 
 export function SidebarHelp(props) {
   // Pass the computed styles into the `__css` prop
-  const { variant, children, ...rest } = props;
+  const { children, ...rest } = props;
   return (
     <Flex
       borderRadius="15px"
@@ -28,7 +28,10 @@ export function SidebarHelp(props) {
       <Text fontSize="xs" color="white" mb="10px">
         Please check our docs
       </Text>
-      <Link w="100%" href="https://chakra-ui.com/docs/form/button">
+      <Link
+        w="100%"
+        href="https://www.creative-tim.com/product/purity-ui-dashboard?ref=readme-pud"
+      >
         <Button
           fontSize="10px"
           fontWeight="bold"

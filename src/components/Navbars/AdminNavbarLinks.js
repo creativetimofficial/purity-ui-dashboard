@@ -1,17 +1,8 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import routes from "routes.js";
-
+// Chakra Icons
+import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 // Chakra Imports
 import {
-  Box,
   Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
   Flex,
   IconButton,
   Input,
@@ -21,14 +12,9 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Switch,
   Text,
-  useColorMode,
   useColorModeValue,
-  useDisclosure,
 } from "@chakra-ui/react";
-// Chakra Icons
-import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 // Assets
 import avatar1 from "assets/img/avatars/avatar1.png";
 import avatar2 from "assets/img/avatars/avatar2.png";
@@ -37,36 +23,33 @@ import avatar3 from "assets/img/avatars/avatar3.png";
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
 import { ItemContent } from "components/Menu/ItemContent";
-import { Separator } from "components/Separator/Separator";
 import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import PropTypes from "prop-types";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import routes from "routes.js";
 
 export default function HeaderLinks(props) {
   const {
     rtlActive,
-    disclosureFunc,
     variant,
     children,
     fixed,
     secondary,
+    onOpen,
     ...rest
   } = props;
-  const [fixedLinks, setFixedLinks] = useState(props.fixedNavbar);
-  const [switched, setSwitched] = useState(false);
 
-  const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
   // Chakra Color Mode
   let mainTeal = useColorModeValue("teal.300", "teal.300");
   let inputBg = useColorModeValue("white", "gray.800");
   let mainText = useColorModeValue("gray.700", "gray.200");
   let navbarIcon = useColorModeValue("gray.500", "gray.200");
   let searchIcon = useColorModeValue("gray.700", "gray.200");
-  let fixedDisplay = "flex";
 
   if (secondary) {
     navbarIcon = "white";
     mainText = "white";
-    fixedDisplay = "none";
   }
   const settingsRef = React.useRef();
   return (
@@ -142,110 +125,11 @@ export default function HeaderLinks(props) {
         cursor="pointer"
         me="16px"
         ref={settingsRef}
-        onClick={onOpen}
+        onClick={props.onOpen}
         color={navbarIcon}
         w="18px"
         h="18px"
       />
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-        finalFocusRef={settingsRef}
-      >
-        <DrawerContent>
-          <DrawerHeader pt="24px" px="24px">
-            <DrawerCloseButton />
-            <Text fontSize="xl" fontWeight="bold" mt="16px">
-              Purity UI Configurator
-            </Text>
-            <Text fontSize="md" mb="16px">
-              See your dashboard options.
-            </Text>
-            <Separator />
-          </DrawerHeader>
-          <DrawerBody w="340px" ps="24px" pe="40px">
-            <Flex flexDirection="column">
-              <Box>
-                <Text fontSize="md" fontWeight="600">
-                  Sidenav Type
-                </Text>
-                <Text fontSize="sm" mb="16px">
-                  Choose between 2 different sidenav types.
-                </Text>
-                <Flex>
-                  <Button
-                    w="50%"
-                    p="8px 32px"
-                    me="8px"
-                    colorScheme="teal"
-                    borderColor="teal.300"
-                    color="teal.300"
-                    variant="outline"
-                    fontSize="xs"
-                    onClick={(event) => {
-                      props.onChange("transparent");
-                    }}
-                  >
-                    Transparent
-                  </Button>
-                  <Button
-                    type="submit"
-                    bg="teal.300"
-                    w="50%"
-                    p="8px 32px"
-                    mb={5}
-                    _hover="teal.300"
-                    color="white"
-                    fontSize="xs"
-                    onClick={(event) => {
-                      props.onChange("opaque");
-                    }}
-                  >
-                    Opaque
-                  </Button>
-                </Flex>
-              </Box>
-              <Box
-                display={fixedDisplay}
-                justifyContent="space-between "
-                mb="16px"
-              >
-                <Text fontSize="md" fontWeight="600" mb="4px">
-                  Navbar Fixed
-                </Text>
-                <Switch
-                  colorScheme="teal"
-                  isChecked={switched}
-                  onChange={(event) => {
-                    if (fixedLinks === true) {
-                      props.onSwitch(false);
-                      setFixedLinks(false);
-                      setSwitched(false);
-                    } else {
-                      props.onSwitch(true);
-                      setFixedLinks(true);
-                      setSwitched(true);
-                    }
-                  }}
-                />
-              </Box>
-              <Flex
-                justifyContent="space-between"
-                alignItems="center"
-                mb="16px"
-              >
-                <Text fontSize="md" fontWeight="600" mb="4px">
-                  Dark/Light
-                </Text>
-                <Button onClick={toggleColorMode}>
-                  Toggle {colorMode === "light" ? "Dark" : "Light"}
-                </Button>
-              </Flex>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
       <Menu>
         <MenuButton>
           <BellIcon color={navbarIcon} w="18px" h="18px" />
@@ -288,4 +172,8 @@ export default function HeaderLinks(props) {
 
 HeaderLinks.propTypes = {
   rtlActive: PropTypes.bool,
+  variant: PropTypes.string,
+  fixed: PropTypes.bool,
+  secondary: PropTypes.bool,
+  onOpen: PropTypes.func,
 };
