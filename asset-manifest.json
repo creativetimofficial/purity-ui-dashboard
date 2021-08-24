@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/purity-ui-dashboard/static/js/main.4fd470a8.chunk.js",
-    "main.js.map": "/purity-ui-dashboard/static/js/main.4fd470a8.chunk.js.map",
+    "main.js": "/purity-ui-dashboard/static/js/main.8deffced.chunk.js",
+    "main.js.map": "/purity-ui-dashboard/static/js/main.8deffced.chunk.js.map",
     "runtime-main.js": "/purity-ui-dashboard/static/js/runtime-main.12e2ec03.js",
     "runtime-main.js.map": "/purity-ui-dashboard/static/js/runtime-main.12e2ec03.js.map",
-    "static/js/2.d210e06f.chunk.js": "/purity-ui-dashboard/static/js/2.d210e06f.chunk.js",
-    "static/js/2.d210e06f.chunk.js.map": "/purity-ui-dashboard/static/js/2.d210e06f.chunk.js.map",
+    "static/js/2.b0988212.chunk.js": "/purity-ui-dashboard/static/js/2.b0988212.chunk.js",
+    "static/js/2.b0988212.chunk.js.map": "/purity-ui-dashboard/static/js/2.b0988212.chunk.js.map",
     "index.html": "/purity-ui-dashboard/index.html",
-    "static/js/2.d210e06f.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/2.d210e06f.chunk.js.LICENSE.txt",
-    "static/js/main.4fd470a8.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/main.4fd470a8.chunk.js.LICENSE.txt",
+    "static/js/2.b0988212.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/2.b0988212.chunk.js.LICENSE.txt",
+    "static/js/main.8deffced.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/main.8deffced.chunk.js.LICENSE.txt",
     "static/media/BackgroundCard1.55c062c0.png": "/purity-ui-dashboard/static/media/BackgroundCard1.55c062c0.png",
     "static/media/BgSignUp.2dea4acf.png": "/purity-ui-dashboard/static/media/BgSignUp.2dea4acf.png",
     "static/media/ImageArchitect1.032614a5.png": "/purity-ui-dashboard/static/media/ImageArchitect1.032614a5.png",
@@ -31,7 +31,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.12e2ec03.js",
-    "static/js/2.d210e06f.chunk.js",
-    "static/js/main.4fd470a8.chunk.js"
+    "static/js/2.b0988212.chunk.js",
+    "static/js/main.8deffced.chunk.js"
   ]
 }
