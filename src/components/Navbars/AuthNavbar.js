@@ -174,16 +174,18 @@ export default function AuthNavbar(props) {
       maxW="90%"
       alignItems="center"
     >
-      <Flex w="100%" justifyContent="space-between">
+      <Flex w="100%" justifyContent={{ sm: "start", lg: "space-between" }}>
         {brand}
-        <SidebarResponsive
-          logoText={props.logoText}
-          display={{ lg: "none" }}
-          secondary={props.secondary}
-          routes={routes}
-          // logo={logo}
-          {...rest}
-        />
+        <Box ms={{ base: "auto", lg: "0px" }}>
+          <SidebarResponsive
+            logoText={props.logoText}
+            display={{ lg: "none" }}
+            secondary={props.secondary}
+            routes={routes}
+            // logo={logo}
+            {...rest}
+          />
+        </Box>
         {linksAuth}
         <Link href="https://creative-tim.com/product/purity-ui-dashboard">
           <Button
