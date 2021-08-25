@@ -1,7 +1,7 @@
 import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
-function TranzactionRow(props) {
+function TransactionRow(props) {
   const textColor = useColorModeValue("gray.700", "white");
   const { name, date, logo, price } = props;
 
@@ -61,4 +61,4 @@ function TranzactionRow(props) {
   );
 }
 
-export default TranzactionRow;
+export default TransactionRow;

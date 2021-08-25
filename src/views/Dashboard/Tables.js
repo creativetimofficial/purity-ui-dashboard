@@ -13,8 +13,8 @@ import {
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
-import TablesProjectRow from "components/Table/TablesProjectRow";
-import TablesTableRow from "components/Table/TablesTableRow";
+import TablesProjectRow from "components/Tables/TablesProjectRow";
+import TablesTableRow from "components/Tables/TablesTableRow";
 import { tablesProjectData, tablesTableData } from "variables/general";
 
 function Tables() {

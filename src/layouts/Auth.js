@@ -53,7 +53,6 @@ export default function Pages(props) {
           window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
         ) {
           if (routes[i].secondaryNavbar) {
-            console.log(routes[i].secondaryNavbar);
             return routes[i].secondaryNavbar;
           }
         }

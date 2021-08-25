@@ -1,6 +1,7 @@
 // chakra imports
 import { Avatar, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { ClockIcon } from "components/Icons/Icons";
+import PropTypes from "prop-types";
 import React from "react";
 
 export function ItemContent(props) {
@@ -35,8 +36,6 @@ export function ItemContent(props) {
   );
 }
 
-// Footer.propTypes = {
-//   fluid: PropTypes.bool,
-//   white: PropTypes.bool,
-//   rtlActive: PropTypes.bool,
-// };
+ItemContent.propTypes = {
+  rtlActive: PropTypes.bool,
+};
