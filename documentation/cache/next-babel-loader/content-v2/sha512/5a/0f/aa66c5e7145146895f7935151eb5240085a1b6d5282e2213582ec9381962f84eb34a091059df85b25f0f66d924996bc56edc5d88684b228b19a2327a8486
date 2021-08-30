@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport ReactPlayer from \"react-player\";\nimport React from \"react\";\nexport const VideoPlayer = props => __jsx(ReactPlayer, props);","map":null,"metadata":{},"sourceType":"module"}

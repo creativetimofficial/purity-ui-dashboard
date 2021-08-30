@@ -1,0 +1,1 @@
+{"ast":null,"code":"function loadScript(src, container) {\n  const script = document.createElement(\"script\");\n  script.setAttribute(\"async\", \"\");\n  script.src = src;\n  container.appendChild(script);\n  return script;\n}\n\nexport default loadScript;","map":null,"metadata":{},"sourceType":"module"}

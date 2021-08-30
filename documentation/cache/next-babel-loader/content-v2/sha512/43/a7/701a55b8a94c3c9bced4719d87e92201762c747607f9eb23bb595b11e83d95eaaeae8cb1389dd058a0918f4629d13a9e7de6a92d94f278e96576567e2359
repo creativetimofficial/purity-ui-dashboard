@@ -1,0 +1,1 @@
+{"ast":null,"code":"\"use strict\";\n\nexports.__esModule = true;\nexports.toBase64 = toBase64;\n/**\n* Isomorphic base64 that works on the server and client\n*/\n\nfunction toBase64(str) {\n  if (false) {\n    return Buffer.from(str).toString('base64');\n  } else {\n    return window.btoa(str);\n  }\n}","map":null,"metadata":{},"sourceType":"script"}

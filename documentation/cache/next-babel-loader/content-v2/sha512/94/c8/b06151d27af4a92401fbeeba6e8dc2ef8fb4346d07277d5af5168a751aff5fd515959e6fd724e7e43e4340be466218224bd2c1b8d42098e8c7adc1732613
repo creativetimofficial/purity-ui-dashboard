@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function calcReadTime(content) {\n  const wordsPerMinute = 275;\n  const words = content.split(\" \");\n  const textLength = words.length || 1;\n  return Math.ceil(textLength / wordsPerMinute);\n}","map":null,"metadata":{},"sourceType":"module"}
