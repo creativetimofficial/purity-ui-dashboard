@@ -1,0 +1,267 @@
+---
+title: Avatar
+package: "@chakra-ui/avatar"
+image: "components/avatar.svg"
+description:
+  The Avatar component is used to represent user, and displays the profile
+  picture, initials or fallback icon.
+---
+
+The `Avatar` component is used to represent a user, and displays the profile
+picture, initials or fallback icon.
+
+## Import
+
+Chakra UI exports 3 avatar-related components:
+
+- `Avatar`: The image that represents the user.
+- `AvatarBadge`: A wrapper that displays its content on the right corner of the
+  avatar.
+- `AvatarGroup`: A wrapper to stack multiple Avatars together.
+
+```js
+import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react"
+```
+
+## Usage
+
+```jsx
+<Wrap>
+  <WrapItem>
+    <Avatar name="Dan Abrahmov" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Kola Tioluwani" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Kent Dodds" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Ryan Florence" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Prosper Otemuyiwa" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Christian Nwamba" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Segun Adebayo" src="" />
+  </WrapItem>
+</Wrap>
+```
+
+```tsx
+<Wrap>
+  <WrapItem>
+    <Avatar name="Dan Abrahmov" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Kola Tioluwani" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Kent Dodds" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Ryan Florence" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Prosper Otemuyiwa" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Christian Nwamba" src="" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar name="Segun Adebayo" src="" />
+  </WrapItem>
+</Wrap>
+```
+
+### Avatar Sizes
+
+The `Avatar` component comes in 7 sizes.
+
+```jsx
+<Wrap>
+  <WrapItem>
+    <Avatar size="2xs" name="Dan Abrahmov" src="h" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="xs" name="Kola Tioluwani" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="sm" name="Kent Dodds" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="md" name="Ryan Florence" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="lg" name="Prosper Otemuyiwa" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="xl" name="Christian Nwamba" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="2xl" name="Segun Adebayo" src="" />{" "}
+  </WrapItem>
+</Wrap>
+```
+
+```tsx
+<Wrap>
+  <WrapItem>
+    <Avatar size="2xs" name="Dan Abrahmov" src="h" />
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="xs" name="Kola Tioluwani" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="sm" name="Kent Dodds" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="md" name="Ryan Florence" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="lg" name="Prosper Otemuyiwa" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="xl" name="Christian Nwamba" src="" />{" "}
+  </WrapItem>
+  <WrapItem>
+    <Avatar size="2xl" name="Segun Adebayo" src="" />{" "}
+  </WrapItem>
+</Wrap>
+```
+
+### Avatar Fallbacks
+
+If there is an error loading the `src` of the avatar, there are 2 fallbacks:
+
+- If there's a `name` prop, we use it to generate the initials and a random,
+  accessible background color.
+- If there's no `name` prop, we use a default avatar.
+
+```jsx
+<Stack direction="row">
+  <Avatar name="Oshigaki Kisame" src="https://bit.ly/broken-link" />
+  <Avatar name="Sasuke Uchiha" src="https://bit.ly/broken-link" />
+  <Avatar src="https://bit.ly/broken-link" />
+</Stack>
+```
+
+```tsx
+<Stack direction="row">
+  <Avatar name="Oshigaki Kisame" src="https://bit.ly/broken-link" />
+  <Avatar name="Sasuke Uchiha" src="https://bit.ly/broken-link" />
+  <Avatar src="https://bit.ly/broken-link" />
+</Stack>
+```
+
+### Customize the fallback avatar
+
+You can customize the background color and icon of the fallback avatar icon to
+match your design requirements.
+
+- To update the background, pass the usual `bg` prop.
+- To update the icon svg, pass the `icon` prop.
+
+```jsx
+<AvatarGroup spacing="1rem">
+  <Avatar bg="red.500" icon={<AiOutlineUser fontSize="1.5rem" />} />
+  <Avatar bg="teal.500" />
+</AvatarGroup>
+```
+
+```tsx
+<AvatarGroup spacing="1rem">
+  <Avatar bg="red.500" icon={<AiOutlineUser fontSize="1.5rem" />} />
+  <Avatar bg="teal.500" />
+</AvatarGroup>
+```
+
+### Avatar with badge
+
+In some products, you might need to show a badge on the right corner of the
+avatar. We call this a **badge**. Here's an example that shows if the user is
+online:
+
+```jsx
+<Stack direction="row" spacing={4}>
+  <Avatar>
+    <AvatarBadge boxSize="1.25em" bg="green.500" />
+  </Avatar>
+
+  {/* You can also change the borderColor and bg of the badge */}
+  <Avatar>
+    <AvatarBadge borderColor="papayawhip" bg="tomato" boxSize="1.25em" />
+  </Avatar>
+</Stack>
+```
+
+```tsx
+<Stack direction="row" spacing={4}>
+  <Avatar>
+    <AvatarBadge boxSize="1.25em" bg="green.500" />
+  </Avatar>
+
+  {/* You can also change the borderColor and bg of the badge */}
+  <Avatar>
+    <AvatarBadge borderColor="papayawhip" bg="tomato" boxSize="1.25em" />
+  </Avatar>
+</Stack>
+```
+
+> Note the use of `em` for the size of the `AvatarBadge`. This is useful to size
+> the badge relative to the avatar font size.
+
+### AvatarGroup
+
+In some cases, you might need to stack avatars as a group. Use the `AvatarGroup`
+component.
+
+- To limit the amount of avatars to show, use the `max` prop. It'll truncate the
+  avatars and show a "+X" label (where X is the remaining avatars).
+- To size all the avatars equally, pass the `size` prop.
+- To adjust the spacing between the avatars, pass the `spacing` prop.
+
+```jsx
+<AvatarGroup size="md" max={2}>
+  <Avatar name="Ryan Florence" src="" />
+  <Avatar name="Segun Adebayo" src="" />
+  <Avatar name="Kent Dodds" src="" />
+  <Avatar name="Prosper Otemuyiwa" src="" />
+  <Avatar name="Christian Nwamba" src="" />
+</AvatarGroup>
+```
+
+```tsx
+<AvatarGroup size="md" max={2}>
+  <Avatar name="Ryan Florence" src="" />
+  <Avatar name="Segun Adebayo" src="" />
+  <Avatar name="Kent Dodds" src="" />
+  <Avatar name="Prosper Otemuyiwa" src="" />
+  <Avatar name="Christian Nwamba" src="" />
+</AvatarGroup>
+```
+
+### Changing the initials logic
+
+Added `getInitials` prop to allow users to manage how initials are generated
+from name. By default we merge the first characters of each word in the `name`
+prop.
+
+## Props
+
+### Avatar Props
+
+`Avatar` composes the `Box` component so you can pass all its props. These are
+props specific to the `Avatar` component:
+
+<PropsTable of="Avatar" />
+
+### Avatar Group Props
+
+`AvatarGroup` composes the `Box` component so you can pass all its props. These
+are props specific to the `AvatarGroup` component:
+
+<PropsTable of="AvatarGroup" />

@@ -1,0 +1,252 @@
+{
+  "routes": [
+    {
+      "title": "Getting Started",
+      "heading": true,
+      "routes": [
+        {
+          "title": "Installation",
+          "path": "/docs/getting-started"
+        },
+        {
+          "title": "Changelog",
+          "path": "/changelog"
+        },
+        {
+          "title": "Routing",
+          "path": "/docs/routing"
+        },
+        {
+          "title": "Theme",
+          "path": "/docs/theming",
+          "open": true,
+          "routes": [
+            {
+              "title": "Theme (Colors, etc)",
+              "path": "/docs/theming/theme"
+            }
+          ]
+        },
+        {
+          "title": "Layout",
+          "path": "/docs/layout",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Box",
+              "path": "/docs/layout/box"
+            },
+            {
+              "title": "Cards",
+              "path": "/docs/layout/cards"
+            },
+            {
+              "title": "Flex",
+              "path": "/docs/layout/flex"
+            },
+            {
+              "title": "Grid",
+              "path": "/docs/layout/grid"
+            },
+            {
+              "title": "Separator",
+              "path": "/docs/layout/separator"
+            },
+            {
+              "title": "SimpleGrid",
+              "path": "/docs/layout/simple-grid"
+            },
+            {
+              "title": "Stack",
+              "path": "/docs/layout/stack"
+            },
+            {
+              "title": "Fixed Plugin",
+              "path": "/docs/layout/fixed-plugin"
+            }
+          ]
+        },
+        {
+          "title": "Forms",
+          "path": "/docs/form",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Button",
+              "path": "/docs/form/button"
+            },
+            {
+              "title": "Form Control",
+              "path": "/docs/form/form-control"
+            },
+            {
+              "title": "Icon Button",
+              "path": "/docs/form/icon-button"
+            },
+            {
+              "title": "Input",
+              "path": "/docs/form/input"
+            },
+            {
+              "title": "Switch",
+              "path": "/docs/form/switch"
+            }
+          ]
+        },
+        {
+          "title": "Data Display",
+          "path": "/docs/data-display",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Badge",
+              "path": "/docs/data-display/badge"
+            },
+            {
+              "title": "Charts",
+              "path": "/docs/data-display/charts"
+            },
+            {
+              "title": "Close Button",
+              "path": "/docs/components/close-button"
+            },
+            {
+              "title": "List",
+              "path": "/docs/data-display/list"
+            },
+            {
+              "title": "Stat",
+              "path": "/docs/data-display/stat"
+            },
+            {
+              "title": "Table",
+              "path": "/docs/data-display/table"
+            },
+            {
+              "title": "Timeline",
+              "path": "/docs/data-display/timeline"
+            }
+          ]
+        },
+        {
+          "title": "Feedback",
+          "path": "/docs/feedback",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Progress",
+              "path": "/docs/feedback/progress"
+            }
+          ]
+        },
+        {
+          "title": "Typography",
+          "path": "/docs/typography",
+          "open": true,
+          "routes": [
+            {
+              "title": "Text",
+              "path": "/docs/typography/text"
+            },
+            {
+              "title": "Heading",
+              "path": "/docs/typography/heading"
+            }
+          ]
+        },
+        {
+          "title": "Overlay",
+          "path": "/docs/overlay",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Drawer",
+              "path": "/docs/overlay/drawer"
+            },
+            {
+              "title": "Menu",
+              "path": "/docs/overlay/menu"
+            },
+            {
+              "title": "Modal",
+              "path": "/docs/overlay/modal"
+            }
+          ]
+        },
+        {
+          "title": "Navigation",
+          "path": "/docs/navigation",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Breadcrumb",
+              "path": "/docs/navigation/breadcrumb"
+            },
+            {
+              "title": "Link",
+              "path": "/docs/navigation/link"
+            },
+            {
+              "title": "Navbar",
+              "path": "/docs/navigation/navbar"
+            },
+            {
+              "title": "Sidebar",
+              "path": "/docs/navigation/sidebar"
+            }
+          ]
+        },
+        {
+          "title": "Media and icons",
+          "path": "/docs/media-and-icons",
+          "sort": true,
+          "open": true,
+          "routes": [
+            {
+              "title": "Avatar",
+              "path": "/docs/media-and-icons/avatar"
+            },
+            {
+              "title": "Icon",
+              "path": "/docs/media-and-icons/icon"
+            },
+            {
+              "title": "Image",
+              "path": "/docs/media-and-icons/image"
+            }
+          ]
+        },
+        {
+          "title": "Others",
+          "path": "/docs/components",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "Portal",
+              "path": "/docs/components/portal"
+            }
+          ]
+        },
+        {
+          "title": "Hooks",
+          "path": "/docs/hooks",
+          "open": true,
+          "sort": true,
+          "routes": [
+            {
+              "title": "useDisclosure",
+              "path": "/docs/hooks/use-disclosure"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

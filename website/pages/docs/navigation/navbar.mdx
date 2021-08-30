@@ -1,0 +1,22 @@
+---
+title: Navbar
+package: "@chakra-ui/navigation"
+image: "components/box.svg"
+description:
+  Navbar is the most abstract component on top of which all other Purity UI
+  components are built.
+---
+
+You will find this component in `src/components/Navbars/AdminNavbar.js`. In this
+component there is just the structure of the navbar. The links can be found in
+`src/components/Navbars/AdminNavbarLinks.js`. We've done this because on
+responsive we want both the links from `Navbar` and those from `Sidebar`
+components to be displayed.
+
+From the configurator opened by the `SettingsIcon` from withing the `Navbar`,
+you can change the type of the Navbar (sticky or not sticky).
+
+There is also a `AuthNavbar` used for the `/Auth layout`. It is located in
+`src/components/Navbars/AuthNavbar.js`. Depending on the route property
+`secondaryNavbar`, the navbar changes styles in a specific way (see the
+[Profile](https://demos.creative-tim.com/purity-ui-dashboard/#/admin/profile?ref=docs-pud)).

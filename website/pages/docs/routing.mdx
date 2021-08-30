@@ -1,0 +1,51 @@
+---
+title: Routing
+description: Routing path system
+---
+
+We've created these dynamic routes, so we wouldn't have to write them in two
+places. On place would have been inside our `Sidebar` and the onther one would
+be either the `src/RTL.js` layout or the `src/Admin.js`layout. You will find all
+our demo routes in `src/routes.js`
+
+Please note that these are just demo routes. You can delete them and create your
+own routing system, or you can easily replace them with normal
+[Routes](https://reacttraining.com/react-router/web/api/Route?ref=creativetim)
+and [Links](https://reacttraining.com/react-router/web/api/Link?ref=creativetim)
+or
+[NavLinks](https://reacttraining.com/react-router/web/api/NavLink?ref=creativetim)
+from
+[react-router-dom](https://reacttraining.com/react-router/web/example/basic?ref=creativetim).
+If you do not understand them, please take in consideration replacing them with
+normal routes and use the `src/routes.js` just for rendering Links inside the
+Sidebar component.
+
+```js
+{ path: "/path/name", name: "Name Of the View", rtlName: "اسم العرض", icon: <Icon />, component: ViewComponent, layout: "/layout-path" },
+```
+
+## Legend
+
+- `path` (path for your route - this will be seen in the browser url input -
+  example `/dashboard`)
+- `name`(name of your route - this will appear in the `Sidebar` and `Navbar`
+  components - example `Dashboard`)
+- `rtlName` (name of your route - this will appear in the `Sidebar` and `Navbar`
+  components - example `لوحة القيادة` if `rtlActive` prop is set on the
+  `Sidebar` and `Navbar` components)
+- `icon` (icon to be displayed alongside with links in `Sidebar` component -
+  example `<DocumentIcon color="inherit" />`)
+- `component` (this is the View component that you want to be displayed on the
+  specified route - example `Dashboard`)
+- `layout` (path of the layout in which the View component you want to be
+  rendered - in our template demo you only have to options: `/admin` and
+  `/rtl` - but due to this routing system you can add more, for example
+  `/new-layout`)
+
+For a better understanding, please take a look inside the file at hand, and also
+how the routes are rendered while the app si opened.
+
+## Notice
+
+Because our routes are arrays of objects, and each route is an object, you can
+add what props you want in our routes and do what you want with them.

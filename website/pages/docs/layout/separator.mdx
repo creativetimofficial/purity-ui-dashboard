@@ -1,0 +1,62 @@
+---
+title: Separator
+package: "@chakra-ui/layout"
+image: "components/box.svg"
+description: "The separator is a div used for visually separating components."
+---
+
+The separator composes `Flex` and is used as a separation element.
+
+## Import
+
+```js
+import { Separator } from "components/Separator/Separator"
+```
+
+### Usage
+
+```jsx
+
+function Example() {
+  const property = {
+    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  }
+
+  return (
+    <Box>
+      <Text align="center" mb="20px">
+        This is on above the Separator
+      </Text>
+      <Flex
+        h="1px"
+        w="100%"
+        bg="linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0) 100%)"
+        mb="20px"
+      ></Flex>
+      <Text align="center">This is on below the Separator</Text>
+    </Box>
+  )
+}
+```
+
+```tsx
+
+function Example() {
+  return (
+      <Text align="center" mb="20px">
+        This is on above the Separator
+      </Text>
+      </Separator />
+      <Text align="center">
+        This is on below the Separator
+      </Text>
+  )
+}
+```
