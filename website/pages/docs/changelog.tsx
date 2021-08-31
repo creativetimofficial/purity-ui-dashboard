@@ -17,6 +17,7 @@ function Changelog({
 }
 
 export async function getStaticProps() {
+  // const changelogPath = ["/docs", "changelog.mdx"].join("/")
   const changelogPath = ["..", "CHANGELOG.md"].join("/")
   const page = await loadMdx(changelogPath)
 

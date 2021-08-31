@@ -7,6 +7,11 @@ async function redirect() {
       permanent: true,
     },
     {
+      source: "/changelog",
+      destination: "/docs/changelog",
+      permanent: true,
+    },
+    {
       source: "/getting-started",
       destination: "/docs/getting-started",
       permanent: true,

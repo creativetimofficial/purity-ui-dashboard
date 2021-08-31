@@ -106,6 +106,7 @@ const MainNavLink = ({ href, icon, children }) => {
   return (
     <NextLink href={href} passHref>
       <Flex
+        display="none"
         as="a"
         align="center"
         fontSize="sm"

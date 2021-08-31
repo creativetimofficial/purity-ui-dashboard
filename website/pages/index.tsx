@@ -10,7 +10,6 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { AdBanner } from "components/chakra-pro/ad-banner"
 import Container from "components/container"
 import { Footer } from "components/footer"
 import Header from "components/header"
@@ -98,7 +97,6 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
         title="Purity UI Documentation - Most trendiest, complex and innovative Dashboard Made by Creative Tim &amp; Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI."
         description="Most trendiest, complex and innovative Dashboard Made by Creative Tim &amp; Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI."
       />
-      <AdBanner />
       <Header />
       <Box mb={20}>
         <Box as="section" pt="6rem" pb={{ base: "0", md: "5rem" }}>
@@ -164,11 +162,10 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                   h="4rem"
                   px="40px"
                   fontSize="1.2rem"
-                  href="https://github.com/creativetimofficial/purity-ui-dashboard/"
+                  href="https://www.creative-tim.com/product/purity-ui-dashboard"
                   target="__blank"
-                  leftIcon={<DiGithubBadge size="1.5em" />}
                 >
-                  GitHub
+                  Free Download
                 </Button>
               </Stack>
             </Box>

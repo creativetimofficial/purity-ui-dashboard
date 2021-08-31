@@ -16,7 +16,7 @@ import siteConfig from "configs/site-config"
 import { useViewportScroll } from "framer-motion"
 import NextLink from "next/link"
 import React from "react"
-import { FaMoon, FaSun, FaYoutube } from "react-icons/fa"
+import { FaMoon, FaSun } from "react-icons/fa"
 import Logo, { LogoIcon } from "./logo"
 import { MobileNavButton, MobileNavContent } from "./mobile-nav"
 import Search from "./omni-search"
@@ -73,20 +73,6 @@ function HeaderContent() {
             >
               <Icon
                 as={GithubIcon}
-                display="block"
-                transition="color 0.2s"
-                w="5"
-                h="5"
-                _hover={{ color: "gray.600" }}
-              />
-            </Link>
-            <Link
-              isExternal
-              aria-label="Go to Creative Tim YouTube channel"
-              href={siteConfig.youtube}
-            >
-              <Icon
-                as={FaYoutube}
                 display="block"
                 transition="color 0.2s"
                 w="5"
