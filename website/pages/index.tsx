@@ -95,8 +95,8 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
   return (
     <>
       <SEO
-        title="Chakra UI - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications."
-        description="Simple, Modular and Accessible UI Components for your React Applications. Built with Styled System"
+        title="Purity UI Documentation - Most trendiest, complex and innovative Dashboard Made by Creative Tim &amp; Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI."
+        description="Most trendiest, complex and innovative Dashboard Made by Creative Tim &amp; Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI."
       />
       <AdBanner />
       <Header />
@@ -117,7 +117,7 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                 Purity UI Dashboard
                 <Box
                   as="span"
-                  color={useColorModeValue("teal.500", "teal.300")}
+                  color={useColorModeValue("teal.300", "teal.300")}
                 >
                   {" "}
                   Documentation
@@ -144,6 +144,8 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
               >
                 <NextLink href="/docs/getting-started" passHref>
                   <Button
+                    borderRadius="15px"
+                    bg="teal.300"
                     h="4rem"
                     px="40px"
                     fontSize="1.2rem"
@@ -156,6 +158,7 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                   </Button>
                 </NextLink>
                 <Button
+                  borderRadius="15px"
                   as="a"
                   size="lg"
                   h="4rem"
