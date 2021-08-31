@@ -1,5 +1,14 @@
 import React from "react"
-import { Box, Icon, Text, Stack, Link, chakra } from "@chakra-ui/react"
+import {
+  Flex,
+  Icon,
+  Text,
+  Stack,
+  Link,
+  List,
+  ListItem,
+  chakra,
+} from "@chakra-ui/react"
 import { IoLogoTwitter, IoLogoFacebook } from "react-icons/io"
 import { FaYoutube } from "react-icons/fa"
 import { DiGithubBadge } from "react-icons/di"
@@ -67,28 +76,122 @@ const RomaniaFlag = (props) => (
 )
 
 export const Footer = () => (
-  <Box as="footer" mt={12} textAlign="center">
-    <Text fontSize="sm">
-      <span>
-        Proudly made in
-        <RomaniaFlag />
-        by &nbsp;
-      </span>
-      <a target="_blank" href="https://www.creative-tim.com?ref=docs-pud">
+  <Flex
+    justifyContent="center"
+    alignItems="center"
+    width="1440px"
+    maxW="100%"
+    mx="auto"
+    boxSizing="border-box"
+    flexDirection={{
+      base: "column",
+    }}
+    px="24px"
+    pb="20px"
+    mt="60px"
+  >
+    {/* <Box as="footer" mt={12} textAlign="center">
+          <Text fontSize="sm">
+            <span>
+              Proudly made in
+              <RomaniaFlag />
+              by &nbsp;
+            </span>
+            <a target="_blank" href="https://www.creative-tim.com?ref=docs-pud">
+              Creative Tim{" "}
+            </a>
+            &amp;
+            <a target="_blank" href="https://www.simmmple.com?ref=docs-pud">
+              {" "}
+              Simmmple
+            </a>
+          </Text>
+          <Stack mt={4} direction="row" spacing="12px" justify="center">
+            {links.map((link) => (
+              <FooterLink key={link.href} {...link} />
+            ))}
+          </Stack>
+        </Box> */}
+    <Text
+      color="gray.400"
+      textAlign={{
+        base: "center",
+        xl: "start",
+      }}
+      mb="20px"
+      me="0px"
+    >
+      &copy; 2021, <Text as="span">Made with ❤️ by</Text>
+      <Link
+        // color={linkTeal}
+        color="teal.400"
+        href="https://www.creative-tim.com?ref=creativetim-pud"
+        target="_blank"
+      >
+        {" "}
         Creative Tim{" "}
-      </a>
-      &amp;
-      <a target="_blank" href="https://www.simmmple.com?ref=docs-pud">
+      </Link>
+      &
+      <Link
+        // color={linkTeal}
+        color="teal.400"
+        href="https://www.simmmple.com?ref=simmmple-pud"
+        target="_blank"
+      >
         {" "}
         Simmmple
-      </a>
+      </Link>{" "}
+      for a better web
     </Text>
-    <Stack mt={4} direction="row" spacing="12px" justify="center">
-      {links.map((link) => (
-        <FooterLink key={link.href} {...link} />
-      ))}
-    </Stack>
-  </Box>
+    <List display="flex">
+      <ListItem
+        me={{
+          base: "20px",
+          md: "24px",
+        }}
+      >
+        <Link
+          color="gray.400"
+          href="https://www.creative-tim.com?ref=creativetim-pud"
+        >
+          Creative Tim
+        </Link>
+      </ListItem>
+      <ListItem
+        me={{
+          base: "20px",
+          md: "24px",
+        }}
+      >
+        <Link color="gray.400" href="https://www.simmmple.com?ref=simmmple-pud">
+          Simmmple
+        </Link>
+      </ListItem>
+      <ListItem
+        me={{
+          base: "20px",
+          md: "24px",
+        }}
+      >
+        <Link
+          color="gray.400"
+          href="#blog"
+          href="https://creative-tim.com/blog?ref=creativetim-pud"
+        >
+          Blog
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link
+          color="gray.400"
+          href="#license"
+          href="https://www.creative-tim.com/license?ref=creativetim-pud"
+        >
+          License
+        </Link>
+      </ListItem>
+    </List>
+  </Flex>
 )
 
 export default Footer
