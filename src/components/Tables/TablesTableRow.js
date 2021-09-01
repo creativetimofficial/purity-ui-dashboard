@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tr, Td, Image, Flex, Text, Progress, Button, Icon, useColorModeValue} from "@chakra-ui/react";
+import {Tr, Td, Image, Flex, Text, Progress, Button, Icon, useColorModeValue, Badge} from "@chakra-ui/react";
 
 function TablesTableRow(props) {
 
@@ -27,9 +27,16 @@ function TablesTableRow(props) {
                 </Flex>
             </Td>
             <Td>
-                <Flex bg={status === "Online" ? "green.400" : bgStatus} w="66px" h="26px" align="center" justify="center" borderRadius="8px">
+                <Badge 
+                    bg={status === "Online" ? "green.400" : bgStatus}
+                    color={status === "Online" ? "white" : colorStatus}
+                    fontSize="12px"
+                    p="3px 10px"
+                    borderRadius="8px"
+                >{status}</Badge>
+                {/* <Flex bg={status === "Online" ? "green.400" : bgStatus} w="66px" h="26px" align="center" justify="center" borderRadius="8px">
                     <Text color={status === "Online" ? "white" : colorStatus} fontWeight="bold" fontSize="md">{status}</Text>
-                </Flex>
+                </Flex> */}
             </Td>
             <Td>
                 <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">{date}</Text>
