@@ -101,7 +101,7 @@ function Profile() {
               w={{ sm: "100%" }}
               textAlign={{ sm: "center", md: "start" }}
             >
-              <Image
+              <Avatar
                 me={{ md: "22px" }}
                 src={avatar4}
                 w="80px"
@@ -390,7 +390,7 @@ function Profile() {
             <Flex direction="column" w="100%">
               <Flex justifyContent="space-between" mb="21px">
                 <Flex alignItems="center">
-                  <Image
+                  <Avatar
                     src={avatar2}
                     w="50px"
                     h="50px"
@@ -419,7 +419,7 @@ function Profile() {
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
                 <Flex alignItems="center">
-                  <Image
+                  <Avatar
                     src={avatar3}
                     w="50px"
                     h="50px"
@@ -448,7 +448,7 @@ function Profile() {
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
                 <Flex alignItems="center">
-                  <Image
+                  <Avatar
                     src={avatar4}
                     w="50px"
                     h="50px"
@@ -477,7 +477,7 @@ function Profile() {
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
                 <Flex alignItems="center">
-                  <Image
+                  <Avatar
                     src={avatar5}
                     w="50px"
                     h="50px"
@@ -506,7 +506,7 @@ function Profile() {
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
                 <Flex alignItems="center">
-                  <Image
+                  <Avatar
                     src={avatar6}
                     w="50px"
                     h="50px"

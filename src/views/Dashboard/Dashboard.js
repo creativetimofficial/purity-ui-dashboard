@@ -19,6 +19,11 @@ import {
   useColorMode,
   useColorModeValue,
   Portal,
+  Stat,
+  StatLabel,
+  StatArrow,
+  StatNumber,
+  StatHelpText
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -77,24 +82,15 @@ export default function Dashboard() {
             justify="center"
             height="100%"
           >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Today's Money
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $53,000
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
+            <Stat>
+              <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Money</StatLabel>
+              <Flex>
+                <StatNumber fontSize="lg" color={textColor}>$53,000</StatNumber>
+                <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
                   +55%
-                </Text>
+                </StatHelpText>
               </Flex>
-            </Flex>
+            </Stat>
             <Spacer />
             <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
               <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
@@ -108,24 +104,15 @@ export default function Dashboard() {
             justify="center"
             height="100%"
           >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Today's Users
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $2,300
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
+            <Stat>
+              <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Users</StatLabel>
+              <Flex>
+                <StatNumber fontSize="lg" color={textColor}>$2,300</StatNumber>
+                <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
                   +5%
-                </Text>
+                </StatHelpText>
               </Flex>
-            </Flex>
+            </Stat>
             <Spacer />
             <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
               <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
@@ -139,24 +126,15 @@ export default function Dashboard() {
             justify="center"
             height="100%"
           >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                New Clients
-              </Text>
-              <Flex flexDirection="row" align="flex-end">
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $3,052
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="red.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
+            <Stat>
+              <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">New Clients</StatLabel>
+              <Flex>
+                <StatNumber fontSize="lg" color={textColor}>+$3,020</StatNumber>
+                <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="red.500" fontWeight="bold" ps="3px" fontSize="md">
                   -14%
-                </Text>
+                </StatHelpText>
               </Flex>
-            </Flex>
+            </Stat>
             <Spacer />
             <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
               <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
@@ -170,24 +148,15 @@ export default function Dashboard() {
             justify="center"
             height="100%"
           >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Total Sales
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $173,000
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
+            <Stat>
+              <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Total Sales</StatLabel>
+              <Flex>
+                <StatNumber fontSize="lg" color={textColor} fontWeight="bold">$173,000</StatNumber>
+                <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
                   +8%
-                </Text>
+                </StatHelpText>
               </Flex>
-            </Flex>
+            </Stat>
             <Spacer />
             <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
               <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
