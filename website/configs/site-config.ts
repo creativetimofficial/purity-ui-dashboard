@@ -11,7 +11,7 @@ const siteConfig = {
     name: "Creative Tim & Simmmple",
     github: "https://github.com/creativetimofficial",
     twitter: "https://twitter.com/creativetim",
-    email: "sage@adebayosegun.com",
+    email: "",
   },
   repo: {
     url: baseUrl,
