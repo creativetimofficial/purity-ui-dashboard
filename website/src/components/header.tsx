@@ -48,7 +48,10 @@ function HeaderContent() {
       <Flex w="100%" h="100%" px="6" align="center" justify="space-between">
         <Flex align="center">
           <NextLink href="/" passHref>
-            <chakra.a display="block" aria-label="Chakra UI, Back to homepage">
+            <chakra.a
+              display="block"
+              aria-label="Purity UI Dashboard, Back to homepage"
+            >
               <Logo display={{ base: "none", md: "block" }} />
               <Box minW="3rem" display={{ base: "block", md: "none" }}>
                 <LogoIcon />
