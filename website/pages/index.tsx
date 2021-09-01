@@ -16,12 +16,8 @@ import Header from "components/header"
 import SEO from "components/seo"
 import NextLink from "next/link"
 import * as React from "react"
-import { DiGithubBadge } from "react-icons/di"
 import { FaArrowRight } from "react-icons/fa"
 import type { Member, Sponsor } from "src/types/github"
-import { getAllContributors } from "utils/get-all-contributors"
-import { getAllMembers } from "utils/get-all-members"
-import { getAllSponsors } from "utils/get-all-sponsors"
 import { getGithubStars } from "utils/get-github-stars"
 
 const Feature = ({ title, icon, children, ...props }) => {
@@ -179,16 +175,10 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
 
 export async function getStaticProps() {
   const { prettyCount } = await getGithubStars()
-  const contributors = getAllContributors()
-  const members = getAllMembers()
-  const sponsors = getAllSponsors()
 
   return {
     props: {
       githubStars: prettyCount,
-      members,
-      contributors,
-      sponsors,
     },
   }
 }

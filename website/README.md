@@ -1,3 +1,3 @@
-# Chakra UI Docs
+# Purity UI Docs
 
-The Documentation website for chakra-ui.com
+The Documentation website for Purity UI Dashboard

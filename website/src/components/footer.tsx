@@ -90,28 +90,6 @@ export const Footer = () => (
     pb="20px"
     mt="60px"
   >
-    {/* <Box as="footer" mt={12} textAlign="center">
-          <Text fontSize="sm">
-            <span>
-              Proudly made in
-              <RomaniaFlag />
-              by &nbsp;
-            </span>
-            <a target="_blank" href="https://www.creative-tim.com?ref=docs-pud">
-              Creative Tim{" "}
-            </a>
-            &amp;
-            <a target="_blank" href="https://www.simmmple.com?ref=docs-pud">
-              {" "}
-              Simmmple
-            </a>
-          </Text>
-          <Stack mt={4} direction="row" spacing="12px" justify="center">
-            {links.map((link) => (
-              <FooterLink key={link.href} {...link} />
-            ))}
-          </Stack>
-        </Box> */}
     <Text
       color="gray.400"
       textAlign={{
@@ -175,7 +153,6 @@ export const Footer = () => (
       >
         <Link
           color="gray.400"
-          href="#blog"
           href="https://creative-tim.com/blog?ref=creativetim-pud"
         >
           Blog
@@ -184,7 +161,6 @@ export const Footer = () => (
       <ListItem>
         <Link
           color="gray.400"
-          href="#license"
           href="https://www.creative-tim.com/license?ref=creativetim-pud"
         >
           License
