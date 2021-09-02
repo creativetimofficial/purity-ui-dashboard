@@ -32,7 +32,7 @@ function SignUp() {
     >
       <Box
         position="absolute"
-        minHeight={{ base: "70vh", md: "50vh" }}
+        minH={{ base: "70vh", md: "50vh" }}
         w={{ md: "calc(100vw - 50px)" }}
         borderRadius={{ md: "15px" }}
         left="0"
@@ -63,7 +63,7 @@ function SignUp() {
           fontWeight="normal"
           mt="10px"
           mb="26px"
-          width={{ base: "90%", sm: "60%", lg: "40%", xl: "30%" }}
+          w={{ base: "90%", sm: "60%", lg: "40%", xl: "30%" }}
         >
           Use these awesome forms to login or create new account in your project
           for free.
@@ -72,10 +72,10 @@ function SignUp() {
       <Flex alignItems="center" justifyContent="center" mb="60px" mt="20px">
         <Flex
           direction="column"
-          width="445px"
+          w="445px"
           background="transparent"
           borderRadius="15px"
-          p="2.5rem 2.5rem"
+          p="40px"
           mx={{ base: "100px" }}
           bg={bgColor}
           boxShadow="0 20px 27px 0 rgb(0 0 0 / 5%)"
@@ -204,7 +204,7 @@ function SignUp() {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            maxWidth="100%"
+            maxW="100%"
             mt="0px"
           >
             <Text color={textColor} fontWeight="medium">

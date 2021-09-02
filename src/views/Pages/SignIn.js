@@ -23,7 +23,7 @@ function SignIn() {
   return (
     <Flex position="relative" mb="40px">
       <Flex
-        height={{ sm: "initial", md: "64vh", lg: "75vh" }}
+        h={{ sm: "initial", md: "64vh", lg: "75vh" }}
         w="100%"
         maxW="1044px"
         mx="auto"
@@ -101,7 +101,7 @@ function SignIn() {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              maxWidth="100%"
+              maxW="100%"
               mt="0px"
             >
               <Text color={textColor} fontWeight="medium">
@@ -117,14 +117,14 @@ function SignIn() {
           display={{ base: "none", md: "block" }}
           overflowX="hidden"
           h="100%"
-          width="40vw"
+          w="40vw"
           position="absolute"
           right="0px"
         >
           <Box
             bgImage={signInImage}
-            width="100%"
-            height="100%"
+            w="100%"
+            h="100%"
             bgSize="cover"
             bgPosition="50%"
             position="absolute"
