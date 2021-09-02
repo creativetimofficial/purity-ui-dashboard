@@ -1,0 +1,267 @@
+---
+title: Timeline
+package: "@chakra-ui/data-display"
+image: "components/box.svg"
+description:
+  "Timeline is a component that work like our tables, but has a different
+  structure."
+---
+
+`TimelineRow` is a component that work like our tables, but has a different
+structure.
+
+## Import
+
+```js
+import TimelineRow from "components/Tables/TimelineRow"
+// You should also import some data for the timeline
+import { timelineData } from "variables/general"
+```
+
+### Usage
+
+```jsx
+function TimelineExample() {
+  const textColor = useColorModeValue("gray.700", "white.300")
+  const bgIconColor = useColorModeValue("white.300", "gray.800")
+  const bg = useColorModeValue("gray.50", "gray.700")
+
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      width="100%"
+      position="relative"
+      minWidth="0px"
+      wordWrap="break-word"
+      backgroundClip="border-box"
+      width="100%"
+      boxShadow="0px 3.5px 5.5px rgba(0, 0, 0, 0.02)"
+      borderRadius="15px"
+      p="1rem"
+      maxHeight="100%"
+    >
+      <Box
+        display="flex"
+        width="100%"
+        pt="28px"
+        px="21px"
+        pt="0px"
+        p="28px 0px 35px 21px"
+      >
+        <Flex direction="column">
+          <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
+            Orders overview
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="normal">
+            <Text fontWeight="bold" as="span" color="teal.300">
+              +30%
+            </Text>{" "}
+            this month.
+          </Text>
+        </Flex>
+      </Box>
+      <Box
+        width="100%"
+        px="21px"
+        ps="26px"
+        pe="0px"
+        mb="31px"
+        position="relative"
+      >
+        <Flex direction="column">
+          <Flex
+            alignItems="center"
+            minH="78px"
+            h="78px"
+            justifyContent="start"
+            mb="5px"
+          >
+            <Flex direction="column" h="100%">
+              <AddIcon
+                bg={bgIconColor}
+                color="teal.300"
+                h={"30px"}
+                w={"26px"}
+                pr="6px"
+                zIndex="1"
+                position="relative"
+                left="-8px"
+              />
+              <Box w="2px" bg="gray.200" h="100%"></Box>
+            </Flex>
+            <Flex direction="column" justifyContent="flex-start" h="100%">
+              <Text fontSize="sm" color={textColor} fontWeight="bold">
+                $2400, Design changes
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                22 DEC 7:20 PM
+              </Text>
+            </Flex>
+          </Flex>
+          <Flex
+            alignItems="center"
+            minH="78px"
+            h="78px"
+            justifyContent="start"
+            mb="5px"
+          >
+            <Flex direction="column" h="100%">
+              <ChatIcon
+                bg={bgIconColor}
+                color="blue.300"
+                h={"30px"}
+                w={"26px"}
+                pr="6px"
+                zIndex="1"
+                position="relative"
+                left="-8px"
+              />
+              <Box w="2px" bg="gray.200" h="100%"></Box>
+            </Flex>
+            <Flex direction="column" justifyContent="flex-start" h="100%">
+              <Text fontSize="sm" color={textColor} fontWeight="bold">
+                New order #4219423
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                21 DEC 11:21 PM
+              </Text>
+            </Flex>
+          </Flex>
+          <Flex
+            alignItems="center"
+            minH="78px"
+            h="78px"
+            justifyContent="start"
+            mb="5px"
+          >
+            <Flex direction="column" h="100%">
+              <Icon
+                as={DownloadIcon}
+                bg={bgIconColor}
+                color="orange.300"
+                h={"30px"}
+                w={"26px"}
+                pr="6px"
+                zIndex="1"
+                position="relative"
+                left="-8px"
+              />
+              <Box w="2px" bg="gray.200" h="100%"></Box>
+            </Flex>
+            <Flex direction="column" justifyContent="flex-start" h="100%">
+              <Text fontSize="sm" color={textColor} fontWeight="bold">
+                Server Payments for April
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                21 DEC 9:28 PM
+              </Text>
+            </Flex>
+          </Flex>
+          <Flex
+            alignItems="center"
+            minH="78px"
+            h="78px"
+            justifyContent="start"
+            mb="5px"
+          >
+            <Flex direction="column" h="100%">
+              <CheckIcon
+                bg={bgIconColor}
+                color="red.300"
+                h={"30px"}
+                w={"26px"}
+                pr="6px"
+                zIndex="1"
+                position="relative"
+                left="-8px"
+              />
+              <Box w="2px" bg="gray.200" h="15px"></Box>
+            </Flex>
+            <Flex direction="column" justifyContent="flex-start" h="100%">
+              <Text fontSize="sm" color={textColor} fontWeight="bold">
+                New card added for order #3210145
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                20 DEC 3:52 PM
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+      </Box>
+    </Box>
+  )
+}
+```
+
+```tsx
+// Sample card from Airbnb
+
+// This is how the "timelineData" imported above should look like
+const timelineData = [
+  {
+    logo: AddIcon,
+    title: "$2400, Design changes",
+    date: "22 DEC 7:20 PM",
+    color: "teal.300",
+  },
+  {
+    logo: ChatIcon,
+    title: "New order #4219423",
+    date: "21 DEC 11:21 PM",
+    color: "blue.300",
+  },
+  {
+    logo: DownloadIcon,
+    title: "Server Payments for April",
+    date: "21 DEC 9:28 PM",
+    color: "orange.300",
+  },
+  {
+    logo: CheckIcon,
+    title: "New card added for order #3210145",
+    date: "20 DEC 3:52 PM",
+    color: "red.300",
+  },
+]
+
+function TimelineExample() {
+  const textColor = useColorModeValue("gray.700", "white.300")
+  const bgIconColor = useColorModeValue("white.300", "gray.700")
+  const bg = useColorModeValue("gray.50", "gray.700")
+
+  return (
+    <Card p="1rem" maxHeight="100%">
+      <CardHeader pt="0px" p="28px 0px 35px 21px">
+        <Flex direction="column">
+          <Text fontSize="lg" color={textColor} fontWeight="bold" pb=".5rem">
+            Orders overview
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="normal">
+            <Text fontWeight="bold" as="span" color="teal.300">
+              +30%
+            </Text>{" "}
+            this month.
+          </Text>
+        </Flex>
+      </CardHeader>
+      <CardBody ps="26px" pe="0px" mb="31px" position="relative">
+        <Flex direction="column">
+          {timelineData.map((row, index, arr) => {
+            return (
+              <TimelineRow
+                logo={row.logo}
+                title={row.title}
+                date={row.date}
+                color={row.color}
+                index={index}
+                arrLength={arr.length}
+              />
+            )
+          })}
+        </Flex>
+      </CardBody>
+    </Card>
+  )
+}
+```

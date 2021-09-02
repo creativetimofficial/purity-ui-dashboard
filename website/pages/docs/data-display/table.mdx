@@ -1,0 +1,2552 @@
+---
+title: Table
+package: "@chakra-ui/table"
+image: "components/table.svg"
+description:
+  "Table component is used to organize and display data efficiently. It renders
+  a <table> element by default"
+---
+
+Tables are used to organize and display data efficiently. It renders a `<table>`
+element by default.
+
+## Import
+
+```js
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+} from "@chakra-ui/react"
+```
+
+## Table Variants
+
+The table component comes in 3 variants: `simple`, `striped`, and `unstyled`.
+The default variant is `simple`
+
+> Change the `variant` values to see the other variants.
+
+### Simple Table
+
+```jsx
+<Table variant="simple">
+  <TableCaption>Imperial to metric conversion factors</TableCaption>
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+```tsx
+<Table variant="simple">
+  <TableCaption>Imperial to metric conversion factors</TableCaption>
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+### Striped Table
+
+```jsx
+<Table variant="striped" colorScheme="teal">
+  <TableCaption>Imperial to metric conversion factors</TableCaption>
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+```tsx
+<Table variant="striped" colorScheme="teal">
+  <TableCaption>Imperial to metric conversion factors</TableCaption>
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+## Table Sizing
+
+The table component is available in 3 sizes: `sm`, `md`, `lg`. The default size
+is `md`.
+
+```jsx
+<Table size="sm">
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+```tsx
+<Table size="sm">
+  <Thead>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td>inches</Td>
+      <Td>millimetres (mm)</Td>
+      <Td isNumeric>25.4</Td>
+    </Tr>
+    <Tr>
+      <Td>feet</Td>
+      <Td>centimetres (cm)</Td>
+      <Td isNumeric>30.48</Td>
+    </Tr>
+    <Tr>
+      <Td>yards</Td>
+      <Td>metres (m)</Td>
+      <Td isNumeric>0.91444</Td>
+    </Tr>
+  </Tbody>
+  <Tfoot>
+    <Tr>
+      <Th>To convert</Th>
+      <Th>into</Th>
+      <Th isNumeric>multiply by</Th>
+    </Tr>
+  </Tfoot>
+</Table>
+```
+
+```jsx
+function Example() {
+  const exampleBg = useColorModeValue("gray.200", "gray.800")
+  const bg = useColorModeValue("gray.50", "gray.700")
+  const textColor = useColorModeValue("gray.700", "white")
+  const bgColor = useColorModeValue("#F8F9FA", "gray.800")
+  const nameColor = useColorModeValue("gray.500", "white")
+  return (
+    <Flex flexDirection="column">
+      <Box
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        position="relative"
+        minWidth="0px"
+        wordWrap="break-word"
+        backgroundClip="border-box"
+        bg={bg}
+        width="100%"
+        boxShadow="0px 3.5px 5.5px rgba(0, 0, 0, 0.02)"
+        borderRadius="15px"
+        p="1.5rem"
+        bg={bgColor}
+        my="1rem"
+      >
+        <Box display="flex" width="100%" pt="28px" px="21px" p="0px">
+          <Flex justifyContent="space-between" w="100%">
+            <Flex direction="column" maxWidth="70%">
+              <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
+                Oliver Liam
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Company Name:{" "}
+                <Text as="span" color="gray.500">
+                  Viking Burrito
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Email Address:{" "}
+                <Text as="span" color="gray.500">
+                  oliver@burrito.com
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                VAT Number:{" "}
+                <Text as="span" color="gray.500">
+                  FRB1235476
+                </Text>
+              </Text>
+            </Flex>
+            <Flex
+              direction={{ sm: "column", md: "row" }}
+              alignItems="flex-start"
+              p={{ md: "1.5rem" }}
+            >
+              <Button
+                p="0px"
+                bg="transparent"
+                mb={{ sm: "10px", md: "0px" }}
+                mr={{ md: "12px" }}
+              >
+                <Flex
+                  color="red.500"
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaTrashAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    DELETE
+                  </Text>
+                </Flex>
+              </Button>
+              <Button p="0px" bg="transparent">
+                <Flex
+                  color={textColor}
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaPencilAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    EDIT
+                  </Text>
+                </Flex>
+              </Button>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        position="relative"
+        minWidth="0px"
+        wordWrap="break-word"
+        backgroundClip="border-box"
+        bg={bg}
+        width="100%"
+        boxShadow="0px 3.5px 5.5px rgba(0, 0, 0, 0.02)"
+        borderRadius="15px"
+        p="1.5rem"
+        bg={bgColor}
+        my="1rem"
+      >
+        <Box display="flex" width="100%" pt="28px" px="21px" p="0px">
+          <Flex justifyContent="space-between" w="100%">
+            <Flex direction="column" maxWidth="70%">
+              <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
+                Lucas Harper
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Company Name:{" "}
+                <Text as="span" color="gray.500">
+                  Stone Tech Zone
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Email Address:{" "}
+                <Text as="span" color="gray.500">
+                  lucas@stone-tech.com
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                VAT Number:{" "}
+                <Text as="span" color="gray.500">
+                  FRB1235476
+                </Text>
+              </Text>
+            </Flex>
+            <Flex
+              direction={{ sm: "column", md: "row" }}
+              alignItems="flex-start"
+              p={{ md: "1.5rem" }}
+            >
+              <Button
+                p="0px"
+                bg="transparent"
+                mb={{ sm: "10px", md: "0px" }}
+                mr={{ md: "12px" }}
+              >
+                <Flex
+                  color="red.500"
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaTrashAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    DELETE
+                  </Text>
+                </Flex>
+              </Button>
+              <Button p="0px" bg="transparent">
+                <Flex
+                  color={textColor}
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaPencilAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    EDIT
+                  </Text>
+                </Flex>
+              </Button>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="column"
+        width="100%"
+        position="relative"
+        minWidth="0px"
+        wordWrap="break-word"
+        backgroundClip="border-box"
+        bg={bg}
+        width="100%"
+        boxShadow="0px 3.5px 5.5px rgba(0, 0, 0, 0.02)"
+        borderRadius="15px"
+        p="1.5rem"
+        bg={bgColor}
+        my="1rem"
+      >
+        <Box display="flex" width="100%" pt="28px" px="21px" p="0px">
+          <Flex justifyContent="space-between" w="100%">
+            <Flex direction="column" maxWidth="70%">
+              <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
+                Ethan James
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Company Name:{" "}
+                <Text as="span" color="gray.500">
+                  Fiber Notion
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                Email Address:{" "}
+                <Text as="span" color="gray.500">
+                  ethan@fiber.com
+                </Text>
+              </Text>
+              <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+                VAT Number:{" "}
+                <Text as="span" color="gray.500">
+                  FRB1235476
+                </Text>
+              </Text>
+            </Flex>
+            <Flex
+              direction={{ sm: "column", md: "row" }}
+              alignItems="flex-start"
+              p={{ md: "1.5rem" }}
+            >
+              <Button
+                p="0px"
+                bg="transparent"
+                mb={{ sm: "10px", md: "0px" }}
+                mr={{ md: "12px" }}
+              >
+                <Flex
+                  color="red.500"
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaTrashAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    DELETE
+                  </Text>
+                </Flex>
+              </Button>
+              <Button p="0px" bg="transparent">
+                <Flex
+                  color={textColor}
+                  cursor="pointer"
+                  alignItems="center"
+                  p="12px"
+                >
+                  <Icon as={FaPencilAlt} mr="4px" />
+                  <Text fontSize="sm" fontWeight="semibold">
+                    EDIT
+                  </Text>
+                </Flex>
+              </Button>
+            </Flex>
+          </Flex>
+        </Box>
+      </Box>
+    </Flex>
+  )
+}
+```
+
+## Import
+
+```js
+import BillingRow from "components/Tables/BillingRow"
+// You should also import some data for the table
+import { billingData } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the "billingData" imported above should look like
+
+const billingData = [
+  {
+    name: "Oliver Liam",
+    company: "Viking Burrito",
+    email: "oliver@burrito.com",
+    number: "FRB1235476",
+  },
+  {
+    name: "Lucas Harper",
+    company: "Stone Tech Zone",
+    email: "lucas@stone-tech.com",
+    number: "FRB1235476",
+  },
+  {
+    name: "Ethan James",
+    company: "Fiber Notion",
+    email: "ethan@fiber.com",
+    number: "FRB1235476",
+  },
+]
+;<Flex direction="column">
+  {billingData.map((row) => {
+    return (
+      <BillingRow
+        name={row.name}
+        company={row.company}
+        email={row.email}
+        number={row.number}
+      />
+    )
+  })}
+</Flex>
+```
+
+```jsx
+function Example() {
+  const exampleBg = useColorModeValue("gray.200", "gray.800")
+  const bg = useColorModeValue("gray.50", "gray.700")
+  const textColor = useColorModeValue("gray.700", "white")
+  const bgColor = useColorModeValue("#F8F9FA", "gray.800")
+  const nameColor = useColorModeValue("gray.500", "white")
+  return (
+    <Table variant="simple" color={textColor}>
+      <Thead>
+        <Tr my=".8rem" ps="0px">
+          <Th ps="0px" color="gray.400">
+            Companies
+          </Th>
+          <Th color="gray.400">Members</Th>
+          <Th color="gray.400">Budget</Th>
+          <Th color="gray.400">Completion</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <CheckIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Purity UI Version
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $14,000
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="cyan.300" fontWeight="bold" pb=".2rem">
+                60%
+              </Text>
+              <Progress
+                colorScheme={"cyan"}
+                size="xs"
+                value={60}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <TimeIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Add Progress Track
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $3,000
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="cyan.300" fontWeight="bold" pb=".2rem">
+                10%
+              </Text>
+              <Progress
+                colorScheme={"cyan"}
+                size="xs"
+                value={10}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <SunIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Fix Platform Errors
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Not set
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                100%
+              </Text>
+              <Progress
+                colorScheme={"teal"}
+                size="xs"
+                value={100}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <InfoIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Launch our Mobile App
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $32,000
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                100%
+              </Text>
+              <Progress
+                colorScheme={"teal"}
+                size="xs"
+                value={100}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <CalendarIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Add the New Pricing Page
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $400
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="cyan.300" fontWeight="bold" pb=".2rem">
+                25%
+              </Text>
+              <Progress
+                colorScheme={"cyan"}
+                size="xs"
+                value={25}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <CheckIcon h={"24px"} w={"24px"} pr="5px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Redesign New Online Shop
+              </Text>
+            </Flex>
+          </Td>
+
+          <Td>
+            <AvatarGroup size="sm">
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+              <Avatar
+                name="avatar"
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                _hover={{ zIndex: "3", cursor: "pointer" }}
+              />
+            </AvatarGroup>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $7,600
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="cyan.300" fontWeight="bold" pb=".2rem">
+                40%
+              </Text>
+              <Progress
+                colorScheme={"cyan"}
+                size="xs"
+                value={40}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  )
+}
+```
+
+## Import
+
+```js
+import DashboardTableRow from "components/Tables/DashboardTableRow"
+// You should also import some data for the table
+import { dashboardData } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the "dashboardData" imported above should look like
+
+const dashboardTableData = [
+  {
+    logo: AdobexdLogo,
+    name: "Purity UI Version",
+    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
+    budget: "$14,000",
+    progression: 60,
+  },
+  {
+    logo: AtlassianLogo,
+    name: "Add Progress Track",
+    members: [avatar3, avatar2],
+    budget: "$3,000",
+    progression: 10,
+  },
+  {
+    logo: SlackLogo,
+    name: "Fix Platform Errors",
+    members: [avatar10, avatar4],
+    budget: "Not set",
+    progression: 100,
+  },
+  {
+    logo: SpotifyLogo,
+    name: "Launch our Mobile App",
+    members: [avatar2, avatar3, avatar7, avatar8],
+    budget: "$32,000",
+    progression: 100,
+  },
+  {
+    logo: JiraLogo,
+    name: "Add the New Pricing Page",
+    members: [avatar10, avatar3, avatar7, avatar2, avatar8],
+    budget: "$400",
+    progression: 25,
+  },
+  {
+    logo: InvisionLogo,
+    name: "Redesign New Online Shop",
+    members: [avatar9, avatar3, avatar2],
+    budget: "$7,600",
+    progression: 40,
+  },
+]
+;<Table variant="simple" color={textColor}>
+  <Thead>
+    <Tr my=".8rem" ps="0px">
+      <Th ps="0px" color="gray.400">
+        Companies
+      </Th>
+      <Th color="gray.400">Members</Th>
+      <Th color="gray.400">Budget</Th>
+      <Th color="gray.400">Completion</Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    {dashboardTableData.map((row) => {
+      return (
+        <DashboardTableRow
+          name={row.name}
+          logo={row.logo}
+          members={row.members}
+          budget={row.budget}
+          progression={row.progression}
+        />
+      )
+    })}
+  </Tbody>
+</Table>
+```
+
+```jsx
+function Example() {
+  const textColor = useColorModeValue("gray.700", "white")
+  return (
+    <Flex flexDirection="column">
+      <Flex my={{ sm: "1rem", xl: "10px" }} alignItems="center">
+        <Flex direction="column">
+          <Text fontSize="md" color={textColor} fontWeight="bold">
+            March, 01, 2020
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+            #MS-415646
+          </Text>
+        </Flex>
+        <Spacer />
+        <Box mr="12px">
+          <Text fontSize="md" color="gray.400" fontWeight="semibold">
+            $180
+          </Text>
+        </Box>
+        <Button p="0px" bg="transparent" variant="no-hover">
+          <Flex alignItems="center" p="12px">
+            <Icon as={FaFilePdf} w="20px" h="auto" mr="5px" />
+            <Text fontSize="md" color={textColor} fontWeight="bold">
+              PDF
+            </Text>
+          </Flex>
+        </Button>
+      </Flex>
+      <Flex my={{ sm: "1rem", xl: "10px" }} alignItems="center">
+        <Flex direction="column">
+          <Text fontSize="md" color={textColor} fontWeight="bold">
+            February, 10, 2020
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+            #RV-126749
+          </Text>
+        </Flex>
+        <Spacer />
+        <Box mr="12px">
+          <Text fontSize="md" color="gray.400" fontWeight="semibold">
+            $250
+          </Text>
+        </Box>
+        <Button p="0px" bg="transparent" variant="no-hover">
+          <Flex alignItems="center" p="12px">
+            <Icon as={FaFilePdf} w="20px" h="auto" mr="5px" />
+            <Text fontSize="md" color={textColor} fontWeight="bold">
+              PDF
+            </Text>
+          </Flex>
+        </Button>
+      </Flex>
+      <Flex my={{ sm: "1rem", xl: "10px" }} alignItems="center">
+        <Flex direction="column">
+          <Text fontSize="md" color={textColor} fontWeight="bold">
+            April, 05, 2020
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+            #FB-212562
+          </Text>
+        </Flex>
+        <Spacer />
+        <Box mr="12px">
+          <Text fontSize="md" color="gray.400" fontWeight="semibold">
+            $560
+          </Text>
+        </Box>
+        <Button p="0px" bg="transparent" variant="no-hover">
+          <Flex alignItems="center" p="12px">
+            <Icon as={FaFilePdf} w="20px" h="auto" mr="5px" />
+            <Text fontSize="md" color={textColor} fontWeight="bold">
+              PDF
+            </Text>
+          </Flex>
+        </Button>
+      </Flex>
+      <Flex my={{ sm: "1rem", xl: "10px" }} alignItems="center">
+        <Flex direction="column">
+          <Text fontSize="md" color={textColor} fontWeight="bold">
+            June, 25, 2019
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+            #QW-103578
+          </Text>
+        </Flex>
+        <Spacer />
+        <Box mr="12px">
+          <Text fontSize="md" color="gray.400" fontWeight="semibold">
+            $120
+          </Text>
+        </Box>
+        <Button p="0px" bg="transparent" variant="no-hover">
+          <Flex alignItems="center" p="12px">
+            <Icon as={FaFilePdf} w="20px" h="auto" mr="5px" />
+            <Text fontSize="md" color={textColor} fontWeight="bold">
+              PDF
+            </Text>
+          </Flex>
+        </Button>
+      </Flex>
+      <Flex my={{ sm: "1rem", xl: "10px" }} alignItems="center">
+        <Flex direction="column">
+          <Text fontSize="md" color={textColor} fontWeight="bold">
+            March, 01, 2019
+          </Text>
+          <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+            #AR-803481
+          </Text>
+        </Flex>
+        <Spacer />
+        <Box mr="12px">
+          <Text fontSize="md" color="gray.400" fontWeight="semibold">
+            $300
+          </Text>
+        </Box>
+        <Button p="0px" bg="transparent" variant="no-hover">
+          <Flex alignItems="center" p="12px">
+            <Icon as={FaFilePdf} w="20px" h="auto" mr="5px" />
+            <Text fontSize="md" color={textColor} fontWeight="bold">
+              PDF
+            </Text>
+          </Flex>
+        </Button>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+## Import
+
+```js
+import InvoicesRow from "components/Tables/InvoicesRow"
+// You should also import some data for the table
+import { invoicesData } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the "dashboardData" imported above should look like
+
+const invoicesData = [
+  {
+    date: "March, 01, 2020",
+    code: "#MS-415646",
+    price: "$180",
+    logo: FaFilePdf,
+    format: "PDF",
+  },
+  {
+    date: "February, 10, 2020",
+    code: "#RV-126749",
+    price: "$250",
+    logo: FaFilePdf,
+    format: "PDF",
+  },
+  {
+    date: "April, 05, 2020",
+    code: "#FB-212562",
+    price: "$560",
+    logo: FaFilePdf,
+    format: "PDF",
+  },
+  {
+    date: "June, 25, 2019",
+    code: "#QW-103578",
+    price: "$120",
+    logo: FaFilePdf,
+    format: "PDF",
+  },
+  {
+    date: "March, 01, 2019",
+    code: "#AR-803481",
+    price: "$300",
+    logo: FaFilePdf,
+    format: "PDF",
+  },
+]
+
+;<Flex direction="column">
+  {invoicesData.map((row) => {
+    return (
+      <InvoicesRow
+        date={row.date}
+        code={row.code}
+        price={row.price}
+        logo={row.logo}
+        format={row.format}
+      />
+    )
+  })}
+</Flex>
+```
+
+```jsx
+function Example() {
+  const exampleBg = useColorModeValue("gray.200", "gray.800")
+  const bg = useColorModeValue("gray.50", "gray.700")
+  const textColor = useColorModeValue("gray.700", "white")
+  const bgColor = useColorModeValue("#F8F9FA", "gray.800")
+  const nameColor = useColorModeValue("gray.500", "white")
+  return (
+    <Table variant="simple" color={textColor}>
+      <Thead>
+        <Tr my=".8rem" pl="0px">
+          <Th pl="0px" color="gray.400">
+            Companies
+          </Th>
+          <Th color="gray.400">Budget</Th>
+          <Th color="gray.400">Status</Th>
+          <Th color="gray.400">Completion</Th>
+          <Th></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex
+              alignItems="center"
+              py=".8rem"
+              minWidth="100%"
+              flexWrap="nowrap"
+            >
+              <Icon as={CheckIcon} h={"24px"} w={"24px"} mr="18px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Purity UI Version
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $14,000
+            </Text>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Working
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                60%
+              </Text>
+              <Progress
+                colorScheme={60 === 100 ? "teal" : "cyan"}
+                size="xs"
+                value={60}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent">
+              <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex
+              alignItems="center"
+              py=".8rem"
+              minWidth="100%"
+              flexWrap="nowrap"
+            >
+              <Icon as={CheckIcon} h={"24px"} w={"24px"} mr="18px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Add Progress Track
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $3,000
+            </Text>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Canceled
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                60%
+              </Text>
+              <Progress
+                colorScheme={10 === 100 ? "teal" : "cyan"}
+                size="xs"
+                value={10}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent">
+              <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex
+              alignItems="center"
+              py=".8rem"
+              minWidth="100%"
+              flexWrap="nowrap"
+            >
+              <Icon as={CheckIcon} h={"24px"} w={"24px"} mr="18px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Fix Platform Errors
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Not set
+            </Text>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Done
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                100%
+              </Text>
+              <Progress
+                colorScheme={100 === 100 ? "teal" : "cyan"}
+                size="xs"
+                value={100}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent">
+              <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex
+              alignItems="center"
+              py=".8rem"
+              minWidth="100%"
+              flexWrap="nowrap"
+            >
+              <Icon as={CheckIcon} h={"24px"} w={"24px"} mr="18px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Launch our Mobile App
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $32,000
+            </Text>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Done
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                100%
+              </Text>
+              <Progress
+                colorScheme={100 === 100 ? "teal" : "cyan"}
+                size="xs"
+                value={100}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent">
+              <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex
+              alignItems="center"
+              py=".8rem"
+              minWidth="100%"
+              flexWrap="nowrap"
+            >
+              <Icon as={CheckIcon} h={"24px"} w={"24px"} mr="18px" />
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >
+                Add the New Pricing Page
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              $400
+            </Text>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              Done
+            </Text>
+          </Td>
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color="teal.300" fontWeight="bold" pb=".2rem">
+                40%
+              </Text>
+              <Progress
+                colorScheme={40 === 100 ? "teal" : "cyan"}
+                size="xs"
+                value={40}
+                borderRadius="15px"
+              />
+            </Flex>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent">
+              <Icon as={FaEllipsisV} color="gray.400" cursor="pointer" />
+            </Button>
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  )
+}
+```
+
+## Import
+
+```js
+import TablesProjectRow from "components/Tables/TablesProjectRow"
+// You should also import some data for the table
+import { tablesProjectData } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the "tablesProjectData" imported above should look like
+
+const tablesProjectData = [
+  {
+    logo: AdobexdLogo,
+    name: "Purity UI Version",
+    budget: "$14,000",
+    status: "Working",
+    progression: 60,
+  },
+  {
+    logo: AtlassianLogo,
+    name: "Add Progress Track",
+    budget: "$3,000",
+    status: "Canceled",
+    progression: 10,
+  },
+  {
+    logo: SlackLogo,
+    name: "Fix Platform Errors",
+    budget: "Not set",
+    status: "Done",
+    progression: 100,
+  },
+  {
+    logo: SpotifyLogo,
+    name: "Launch our Mobile App",
+    budget: "$32,000",
+    status: "Done",
+    progression: 100,
+  },
+  {
+    logo: JiraLogo,
+    name: "Add the New Pricing Page",
+    budget: "$400",
+    status: "Working",
+    progression: 25,
+  },
+]
+;<Table variant="simple" color={textColor}>
+  <Thead>
+    <Tr my=".8rem" pl="0px">
+      <Th pl="0px" color="gray.400">
+        Companies
+      </Th>
+      <Th color="gray.400">Budget</Th>
+      <Th color="gray.400">Status</Th>
+      <Th color="gray.400">Completion</Th>
+      <Th></Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    {tablesProjectData.map((row) => {
+      return (
+        <TablesProjectRow
+          name={row.name}
+          logo={row.logo}
+          status={row.status}
+          budget={row.budget}
+          progression={row.progression}
+        />
+      )
+    })}
+  </Tbody>
+</Table>
+```
+
+```jsx
+function Example() {
+  const exampleBg = useColorModeValue("gray.200", "gray.800")
+  const bg = useColorModeValue("gray.50", "gray.700")
+  const textColor = useColorModeValue("gray.700", "white")
+  const bgColor = useColorModeValue("#F8F9FA", "gray.800")
+  const nameColor = useColorModeValue("gray.500", "white")
+  const bgStatus = useColorModeValue("gray.400", "#1a202c")
+  const colorStatus = useColorModeValue("white", "gray.400")
+  return (
+    <Table variant="simple" color={textColor}>
+      <Thead>
+        <Tr my=".8rem" pl="0px" color="gray.400">
+          <Th pl="0px" color="gray.400">
+            Author
+          </Th>
+          <Th color="gray.400">Function</Th>
+          <Th color="gray.400">Status</Th>
+          <Th color="gray.400">Employed</Th>
+          <Th></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Esthera Jackson
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  alexa@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                Organization
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Manager
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Online" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Online" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Online
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              14/06/21
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Alexa Liras
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  laurent@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                Developer
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Programmer
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Offline" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Offline" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Offline
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              12/05/2
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Laurent Michael
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  laurent@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                Projects
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Executive
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Online" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Online" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Online
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              07/06/21
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Freduardo Hill
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  freduardo@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                Organization
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Manager
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Online" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Online" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Online
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              14/11/21
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Daniel Thomas
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  daniel@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                Developer
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Programmer
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Offline" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Offline" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Offline
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              21/01/21
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+        <Tr>
+          <Td minWidth={{ sm: "250px" }} pl="0px">
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Avatar
+                src="https://demos.creative-tim.com/purity-ui-dashboard/static/media/signInImage.eeb0c777.png"
+                w="40px"
+                borderRadius="15px"
+                mr="18px"
+              />
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >
+                  Mark Wilson
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  mark@simmmple.com
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+
+          <Td>
+            <Flex direction="column">
+              <Text fontSize="md" color={textColor} fontWeight="bold">
+                UI/UX Design
+              </Text>
+              <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                Designer
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Flex
+              bg={"Offline" === "Online" ? "green.400" : bgStatus}
+              w="66px"
+              h="26px"
+              align="center"
+              justify="center"
+              borderRadius="8px"
+            >
+              <Text
+                color={"Offline" === "Online" ? "white" : colorStatus}
+                fontWeight="bold"
+                fontSize="md"
+              >
+                Offline
+              </Text>
+            </Flex>
+          </Td>
+          <Td>
+            <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
+              04/09/20
+            </Text>
+          </Td>
+          <Td>
+            <Button p="0px" bg="transparent" variant="no-hover">
+              <Text
+                fontSize="md"
+                color="gray.400"
+                fontWeight="bold"
+                cursor="pointer"
+              >
+                Edit
+              </Text>
+            </Button>
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  )
+}
+```
+
+## Import
+
+```js
+import TablesTableRow from "components/Tables/TablesTableRow"
+// You should also import some data for the table
+import { tablesTableData } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the "tablesTableData" imported above should look like
+
+const tablesTableData = [
+  {
+    logo: avatar1,
+    name: "Esthera Jackson",
+    email: "alexa@simmmple.com",
+    subdomain: "Manager",
+    domain: "Organization",
+    status: "Online",
+    date: "14/06/21",
+  },
+  {
+    logo: avatar2,
+    name: "Alexa Liras",
+    email: "laurent@simmmple.com",
+    subdomain: "Programmer",
+    domain: "Developer",
+    status: "Offline",
+    date: "12/05/21",
+  },
+  {
+    logo: avatar3,
+    name: "Laurent Michael",
+    email: "laurent@simmmple.com",
+    subdomain: "Executive",
+    domain: "Projects",
+    status: "Online",
+    date: "07/06/21",
+  },
+  {
+    logo: avatar4,
+    name: "Freduardo Hill",
+    email: "freduardo@simmmple.com",
+    subdomain: "Manager",
+    domain: "Organization",
+    status: "Online",
+    date: "14/11/21",
+  },
+  {
+    logo: avatar5,
+    name: "Daniel Thomas",
+    email: "daniel@simmmple.com",
+    subdomain: "Programmer",
+    domain: "Developer",
+    status: "Offline",
+    date: "21/01/21",
+  },
+  {
+    logo: avatar7,
+    name: "Mark Wilson",
+    email: "mark@simmmple.com",
+    subdomain: "Designer",
+    domain: "UI/UX Design",
+    status: "Offline",
+    date: "04/09/20",
+  },
+]
+;<Table variant="simple" color={textColor}>
+  <Thead>
+    <Tr my=".8rem" pl="0px" color="gray.400">
+      <Th pl="0px" color="gray.400">
+        Author
+      </Th>
+      <Th color="gray.400">Function</Th>
+      <Th color="gray.400">Status</Th>
+      <Th color="gray.400">Employed</Th>
+      <Th></Th>
+    </Tr>
+  </Thead>
+  <Tbody>
+    {tablesTableData.map((row) => {
+      return (
+        <TablesTableRow
+          name={row.name}
+          logo={row.logo}
+          email={row.email}
+          subdomain={row.subdomain}
+          domain={row.domain}
+          status={row.status}
+          date={row.date}
+        />
+      )
+    })}
+  </Tbody>
+</Table>
+```
+
+```jsx
+function Example() {
+  const textColor = useColorModeValue("gray.700", "white")
+  return (
+    <Flex direction="column" w="100%">
+      <Flex
+        direction={{ sm: "column", lg: "row" }}
+        justifyContent={{ sm: "center", lg: "space-between" }}
+        alignItems={{ sm: "center" }}
+        w="100%"
+        my={{ md: "12px" }}
+      >
+        <Text
+          color={textColor}
+          fontSize={{ sm: "lg", md: "xl", lg: "lg" }}
+          fontWeight="bold"
+        >
+          Your Transactions
+        </Text>
+        <Flex alignItems="center">
+          <Icon
+            as={FaRegCalendarAlt}
+            color="gray.400"
+            fontSize="md"
+            me="6px"
+          ></Icon>
+          <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+            23 - 30 March 2021
+          </Text>
+        </Flex>
+      </Flex>
+      <Text
+        color="gray.400"
+        fontSize={{ sm: "sm", md: "md" }}
+        fontWeight="semibold"
+        my="12px"
+      >
+        NEWEST
+      </Text>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "-" === "+" ? "green.400" : "-" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={FaArrowDown} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              Netflix
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              27 March 2021, at 12:30 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "-" === "+" ? "green.400" : "-" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            - $2,500
+          </Text>
+        </Box>
+      </Flex>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={FaArrowUp} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              Apple
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              27 March 2021, at 12:30 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            + $2,500
+          </Text>
+        </Box>
+      </Flex>
+      <Text
+        color="gray.400"
+        fontSize={{ sm: "sm", md: "md" }}
+        fontWeight="semibold"
+        my="12px"
+      >
+        OLDER
+      </Text>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={FaArrowUp} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              Stripe
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              26 March 2021, at 13:45 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            + $800
+          </Text>
+        </Box>
+      </Flex>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={FaArrowUp} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              HubSpot
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              26 March 2021, at 12:30 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "+" === "+" ? "green.400" : "+" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            + $1,700
+          </Text>
+        </Box>
+      </Flex>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "P" === "+" ? "green.400" : "P" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={AiOutlineExclamation} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              Webflow
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              26 March 2021, at 05:00 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "P" === "+" ? "green.400" : "P" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            Pending
+          </Text>
+        </Box>
+      </Flex>
+      <Flex my="1rem" justifyContent="space-between">
+        <Flex alignItems="center">
+          <Box
+            mr="12px"
+            borderRadius="50%"
+            color={
+              "-" === "+" ? "green.400" : "-" === "-" ? "red.400" : "gray.400"
+            }
+            border="1px solid"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="35px"
+            h="35px"
+          >
+            <Icon as={FaArrowDown} />
+          </Box>
+          <Flex direction="column">
+            <Text
+              fontSize={{ sm: "md", md: "lg", lg: "md" }}
+              color={textColor}
+              fontWeight="bold"
+            >
+              Microsoft
+            </Text>
+            <Text
+              fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
+              color="gray.400"
+              fontWeight="semibold"
+            >
+              25 March 2021, at 16:30 PM
+            </Text>
+          </Flex>
+        </Flex>
+        <Box
+          color={
+            "-" === "+" ? "green.400" : "-" === "-" ? "red.400" : { textColor }
+          }
+        >
+          <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
+            - $987
+          </Text>
+        </Box>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+## Import
+
+```js
+import TransactionsRow from "components/Tables/TransactionsRow"
+// You should also import some data for the table
+import { newestTransactions, olderTransactions } from "variables/general"
+```
+
+```tsx
+const textColor = useColorModeValue("gray.700", "white")
+// This is how the data imported above should look like
+
+export const newestTransactions = [
+  {
+    name: "Netflix",
+    date: "27 March 2021, at 12:30 PM",
+    price: "- $2,500",
+    logo: FaArrowDown,
+  },
+  {
+    name: "Apple",
+    date: "27 March 2021, at 12:30 PM",
+    price: "+ $2,500",
+    logo: FaArrowUp,
+  },
+]
+
+export const olderTransactions = [
+  {
+    name: "Stripe",
+    date: "26 March 2021, at 13:45 PM",
+    price: "+ $800",
+    logo: FaArrowUp,
+  },
+  {
+    name: "HubSpot",
+    date: "26 March 2021, at 12:30 PM",
+    price: "+ $1,700",
+    logo: FaArrowUp,
+  },
+  {
+    name: "Webflow",
+    date: "26 March 2021, at 05:00 PM",
+    price: "Pending",
+    logo: AiOutlineExclamation,
+  },
+  {
+    name: "Microsoft",
+    date: "25 March 2021, at 16:30 PM",
+    price: "- $987",
+    logo: FaArrowDown,
+  },
+]
+;<Flex direction="column" w="100%">
+  <Flex
+    direction={{ sm: "column", lg: "row" }}
+    justifyContent={{ sm: "center", lg: "space-between" }}
+    alignItems={{ sm: "center" }}
+    w="100%"
+    my={{ md: "12px" }}
+  >
+    <Text
+      color={textColor}
+      fontSize={{ sm: "lg", md: "xl", lg: "lg" }}
+      fontWeight="bold"
+    >
+      Your Transactions
+    </Text>
+    <Flex alignItems="center">
+      <Icon
+        as={FaRegCalendarAlt}
+        color="gray.400"
+        fontSize="md"
+        me="6px"
+      ></Icon>
+      <Text color="gray.400" fontSize="sm" fontWeight="semibold">
+        23 - 30 March 2021
+      </Text>
+    </Flex>
+  </Flex>
+  <Text
+    color="gray.400"
+    fontSize={{ sm: "sm", md: "md" }}
+    fontWeight="semibold"
+    my="12px"
+  >
+    NEWEST
+  </Text>
+  {newestTransactions.map((row) => {
+    return (
+      <TransactionRow
+        name={row.name}
+        logo={row.logo}
+        date={row.date}
+        price={row.price}
+      />
+    )
+  })}
+  <Text
+    color="gray.400"
+    fontSize={{ sm: "sm", md: "md" }}
+    fontWeight="semibold"
+    my="12px"
+  >
+    OLDER
+  </Text>
+  {olderTransactions.map((row) => {
+    return (
+      <TransactionRow
+        name={row.name}
+        logo={row.logo}
+        date={row.date}
+        price={row.price}
+      />
+    )
+  })}
+</Flex>
+```
+
+## Props
+
+### Table
+
+<PropsTable of="Table" />
+
+### Td
+
+<PropsTable of="Td" />
+
+### Th
+
+<PropsTable of="Th" />
+
+### TableCaption
+
+<PropsTable of="TableCaption" />

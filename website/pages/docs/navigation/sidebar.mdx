@@ -1,0 +1,35 @@
+---
+title: Sidebar
+package: "@chakra-ui/navigation"
+description:
+  The component where all the page links are located. It works like a menu.
+---
+
+It has an option to set the brand text (`logoText`), an option to set the logo
+image (`logo`), an option to choose between opaque and transparent modes and an
+option to set the routes / links to be displayed in it (`routes`).
+
+For more info about the links, please read the routing system section.
+
+Inside the same `Sidebar.js` file, there is a `SidebarResponsive()` component,
+which is a button that opens a drawer which only appears on smaller viewports.
+It has the same props as the normal `Sidebar`, besides the opacity mode.
+
+## Example of code
+
+This is the actual code for the `Sidebar` in our demo app.
+
+```js
+import Sidebar from "components/Sidebar/Sidebar.js"
+import appRoutes from "routes/app.js"
+import logo from "assets/img/reactlogo.png"
+```
+
+```js
+<Sidebar routes={appRoutes} logoText={"DASHBOARD"} variant="opaque" {...rest} />
+```
+
+## Props
+
+Please check out the official
+[Chakra UI documentation](https://chakra-ui.com/docs/overlay/drawer?ref=creative-tim).
