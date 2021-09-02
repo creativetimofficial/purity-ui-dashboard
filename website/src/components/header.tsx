@@ -6,6 +6,7 @@ import {
   Icon,
   IconButton,
   Link,
+  Text,
   useColorMode,
   useColorModeValue,
   useDisclosure,
@@ -49,10 +50,22 @@ function HeaderContent() {
         <Flex align="center">
           <NextLink href="/" passHref>
             <chakra.a
-              display="block"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
               aria-label="Purity UI Dashboard, Back to homepage"
+              minW={{ base: "0px", md: "180px" }}
             >
               <Logo display={{ base: "none", md: "block" }} />
+              <Text
+                color={useColorModeValue("#2D3748", "#fff")}
+                fontSize="18px"
+                fontWeight="bold"
+                ms="6px"
+                display={{ base: "none", md: "block" }}
+              >
+                Purity UI Docs
+              </Text>
               <Box minW="3rem" display={{ base: "block", md: "none" }}>
                 <LogoIcon />
               </Box>
