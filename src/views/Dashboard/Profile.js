@@ -60,7 +60,7 @@ function Profile() {
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        alignItems="center"
+        align="center"
       >
         <Box
           bgImage={ProfileBgImage}
@@ -79,7 +79,7 @@ function Profile() {
             maxH="330px"
             w={{ sm: "90%", xl: "95%" }}
             justifyContent={{ sm: "center", md: "space-between" }}
-            alignItems="center"
+            align="center"
             backdropFilter="saturate(200%) blur(50px)"
             position="absolute"
             boxShadow="0px 2px 5.5px rgba(0, 0, 0, 0.02)"
@@ -95,13 +95,13 @@ function Profile() {
             }}
           >
             <Flex
-              alignItems="center"
+              align="center"
               mb={{ sm: "10px", md: "0px" }}
               direction={{ sm: "column", md: "row" }}
               w={{ sm: "100%" }}
               textAlign={{ sm: "center", md: "start" }}
             >
-              <Image
+              <Avatar
                 me={{ md: "22px" }}
                 src={avatar4}
                 w="80px"
@@ -132,7 +132,7 @@ function Profile() {
             >
               <Button p="0px" bg="transparent" _hover={{ bg: "none" }}>
                 <Flex
-                  alignItems="center"
+                  align="center"
                   w={{ sm: "100%", lg: "135px" }}
                   bg="hsla(0,0%,100%,.3)"
                   borderRadius="15px"
@@ -150,7 +150,7 @@ function Profile() {
               </Button>
               <Button p="0px" bg="transparent" _hover={{ bg: "none" }}>
                 <Flex
-                  alignItems="center"
+                  align="center"
                   w={{ lg: "135px" }}
                   borderRadius="15px"
                   justifyContent="center"
@@ -166,7 +166,7 @@ function Profile() {
               </Button>
               <Button p="0px" bg="transparent" _hover={{ bg: "none" }}>
                 <Flex
-                  alignItems="center"
+                  align="center"
                   w={{ lg: "135px" }}
                   borderRadius="15px"
                   justifyContent="center"
@@ -184,18 +184,18 @@ function Profile() {
         </Box>
       </Box>
       <Grid templateColumns={{ sm: "1fr", xl: "repeat(3, 1fr)" }} gap="22px">
-        <Card p="1rem">
+        <Card p="16px">
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
               Platform Settings
             </Text>
           </CardHeader>
-          <CardBody p="0px 5px">
+          <CardBody px="5px">
             <Flex direction="column">
               <Text fontSize="sm" color="gray.500" fontWeight="600" mb="20px">
                 ACCOUNT
               </Text>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -206,7 +206,7 @@ function Profile() {
                   Email me when someone follows me
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -217,7 +217,7 @@ function Profile() {
                   Email me when someone answers on my post
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -236,7 +236,7 @@ function Profile() {
               >
                 APPLICATION
               </Text>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -247,7 +247,7 @@ function Profile() {
                   New launches and projects
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -258,7 +258,7 @@ function Profile() {
                   Monthly product changes
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="20px">
+              <Flex align="center" mb="20px">
                 <Switch colorScheme="teal" me="10px" />
                 <Text
                   noOfLines={1}
@@ -272,13 +272,13 @@ function Profile() {
             </Flex>
           </CardBody>
         </Card>
-        <Card p="1rem" my={{ sm: "24px", xl: "0px" }}>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
               Profile Information
             </Text>
           </CardHeader>
-          <CardBody p="0px 5px">
+          <CardBody px="5px">
             <Flex direction="column">
               <Text fontSize="md" color="gray.500" fontWeight="400" mb="30px">
                 Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the
@@ -286,7 +286,7 @@ function Profile() {
                 more painful in the short term (pain avoidance is creating an
                 illusion of equality).
               </Text>
-              <Flex alignItems="center" mb="18px">
+              <Flex align="center" mb="18px">
                 <Text
                   fontSize="md"
                   color={textColor}
@@ -299,7 +299,7 @@ function Profile() {
                   Esthera Jackson
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="18px">
+              <Flex align="center" mb="18px">
                 <Text
                   fontSize="md"
                   color={textColor}
@@ -312,7 +312,7 @@ function Profile() {
                   (44) 123 1234 123
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="18px">
+              <Flex align="center" mb="18px">
                 <Text
                   fontSize="md"
                   color={textColor}
@@ -325,7 +325,7 @@ function Profile() {
                   esthera@simmmple.com
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="18px">
+              <Flex align="center" mb="18px">
                 <Text
                   fontSize="md"
                   color={textColor}
@@ -338,7 +338,7 @@ function Profile() {
                   United States
                 </Text>
               </Flex>
-              <Flex alignItems="center" mb="18px">
+              <Flex align="center" mb="18px">
                 <Text
                   fontSize="md"
                   color={textColor}
@@ -380,17 +380,17 @@ function Profile() {
             </Flex>
           </CardBody>
         </Card>
-        <Card p="1rem">
+        <Card p="16px">
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
               Conversations
             </Text>
           </CardHeader>
-          <CardBody p="0px 5px">
+          <CardBody px="5px">
             <Flex direction="column" w="100%">
               <Flex justifyContent="space-between" mb="21px">
-                <Flex alignItems="center">
-                  <Image
+                <Flex align="center">
+                  <Avatar
                     src={avatar2}
                     w="50px"
                     h="50px"
@@ -418,8 +418,8 @@ function Profile() {
                 </Button>
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
-                <Flex alignItems="center">
-                  <Image
+                <Flex align="center">
+                  <Avatar
                     src={avatar3}
                     w="50px"
                     h="50px"
@@ -447,8 +447,8 @@ function Profile() {
                 </Button>
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
-                <Flex alignItems="center">
-                  <Image
+                <Flex align="center">
+                  <Avatar
                     src={avatar4}
                     w="50px"
                     h="50px"
@@ -476,8 +476,8 @@ function Profile() {
                 </Button>
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
-                <Flex alignItems="center">
-                  <Image
+                <Flex align="center">
+                  <Avatar
                     src={avatar5}
                     w="50px"
                     h="50px"
@@ -505,8 +505,8 @@ function Profile() {
                 </Button>
               </Flex>
               <Flex justifyContent="space-between" mb="21px">
-                <Flex alignItems="center">
-                  <Image
+                <Flex align="center">
+                  <Avatar
                     src={avatar6}
                     w="50px"
                     h="50px"
@@ -537,7 +537,7 @@ function Profile() {
           </CardBody>
         </Card>
       </Grid>
-      <Card p="1rem" my="24px">
+      <Card p="16px" my="24px">
         <CardHeader p="12px 5px" mb="12px">
           <Flex direction="column">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
@@ -548,7 +548,7 @@ function Profile() {
             </Text>
           </Flex>
         </CardHeader>
-        <CardBody p="0px 5px">
+        <CardBody px="5px">
           <Grid
             templateColumns={{ sm: "1fr", md: "1fr 1fr", xl: "repeat(4, 1fr)" }}
             templateRows={{ sm: "1fr 1fr 1fr auto", md: "1fr 1fr", xl: "1fr" }}
@@ -709,7 +709,7 @@ function Profile() {
               <Flex
                 direction="column"
                 justifyContent="center"
-                alignItems="center"
+                align="center"
               >
                 <Icon as={FaPlus} fontSize="lg" mb="12px" />
                 <Text fontSize="lg" fontWeight="bold">

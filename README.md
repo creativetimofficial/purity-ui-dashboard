@@ -18,10 +18,12 @@ You will save a lot of time going from prototyping to full-functional code, beca
 This Free Chakra UI Dashboard is coming with prebuilt design blocks, so the development process is seamless,
 switching from our pages to the real website is very easy to be done.
 
-<!-- **Documentation built by Developers**
+Check all components <a href="https://purity-ui-dashboard.creative-tim.com/docs/form/button?ref=readme-pud" target="_blank">here</a>.
+
+**Documentation built by Developers**
 
 Each element is well presented in a very complex documentation.
-You can read more about the <a href="https://chakra-ui.com/docs/form/button" target="_blank">documentation here</a>. -->
+You can read more about the <a href="https://purity-ui-dashboard.creative-tim.com/?ref=readme-pud" target="_blank">documentation here</a>.
 
 **Example Pages**
 
