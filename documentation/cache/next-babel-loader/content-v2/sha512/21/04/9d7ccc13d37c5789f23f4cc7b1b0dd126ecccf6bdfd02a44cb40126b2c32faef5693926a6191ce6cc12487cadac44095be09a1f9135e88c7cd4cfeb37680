@@ -1,1 +1,0 @@
-{"ast":null,"code":"export function getUrl(medium) {\n  return `https://pro.chakra-ui.com/components?utm_source=chakra-ui.com&utm_medium=${medium}`;\n}","map":null,"metadata":{},"sourceType":"module"}
