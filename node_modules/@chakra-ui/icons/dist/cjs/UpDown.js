@@ -1,0 +1,14 @@
+"use strict";
+
+exports.__esModule = true;
+exports.UpDownIcon = void 0;
+
+var _icon = require("@chakra-ui/icon");
+
+var UpDownIcon = (0, _icon.createIcon)({
+  displayName: "UpDownIcon",
+  viewBox: "-1 -1 9 11",
+  d: "M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+});
+exports.UpDownIcon = UpDownIcon;
+//# sourceMappingURL=UpDown.js.map

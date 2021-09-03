@@ -1,1 +1,0 @@
-{"ast":null,"code":"export * from \"./mdx-components\";","map":{"version":3,"sources":["/Users/vladmihalache/Documents/GitHub/chakra-ui/website/src/components/mdx-components/index.ts"],"names":[],"mappings":"AAAA,cAAc,kBAAd","sourcesContent":["export * from \"./mdx-components\"\n"]},"metadata":{},"sourceType":"module"}
