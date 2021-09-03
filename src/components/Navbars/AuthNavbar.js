@@ -9,8 +9,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import {
-  DashboardLogo,
-  DashboardLogoWhite,
+  CreativeTimLogo,
   DocumentIcon,
   HomeIcon,
   PersonIcon,
@@ -78,16 +77,12 @@ export default function AuthNavbar(props) {
       fontWeight="bold"
       justifyContent="center"
       alignItems="center"
-      fontSize="11px"
       color={mainText}
     >
-      {props.secondary === true ? (
-        <DashboardLogoWhite w="83.5px" h="22.5px" />
-      ) : (
-        <DashboardLogo w="83.5px" h="21.5px" />
-      )}
-      <Box w="1px" h="18px" mx="10px" backgroundColor={mainText}></Box>
-      <Text mt="3px">{logoText}</Text>
+      <CreativeTimLogo w="32px" h="32px" me="10px" />
+      <Text fontsize="sm" mt="3px">
+        {logoText}
+      </Text>
     </Link>
   );
   var linksAuth = (
@@ -176,10 +171,9 @@ export default function AuthNavbar(props) {
     >
       <Flex w="100%" justifyContent={{ sm: "start", lg: "space-between" }}>
         {brand}
-        <Box ms={{ base: "auto", lg: "0px" }}>
+        <Box ms={{ base: "auto", lg: "0px" }} display={{ lg: "none" }}>
           <SidebarResponsive
             logoText={props.logoText}
-            display={{ lg: "none" }}
             secondary={props.secondary}
             routes={routes}
             // logo={logo}
