@@ -1,28 +1,28 @@
 /*eslint-disable*/
-import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import PropTypes from "prop-types";
+import { HamburgerIcon } from "@chakra-ui/icons";
 // chakra imports
 import {
-  Button,
-  Flex,
-  Text,
-  Link,
-  Stack,
   Box,
-  useColorModeValue,
-  useDisclosure,
+  Button,
   Drawer,
   DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
   DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import IconBox from "components/Icons/IconBox";
-import { DashboardLogo } from "components/Icons/Icons";
+import { CreativeTimLogo } from "components/Icons/Icons";
 import { Separator } from "components/Separator/Separator";
 import { SidebarHelp } from "components/Sidebar/SidebarHelp";
+import PropTypes from "prop-types";
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 // FUNCTIONS
 
@@ -220,9 +220,10 @@ function Sidebar(props) {
         alignItems="center"
         fontSize="11px"
       >
-        <DashboardLogo w="83.5px" h="21.5px" />
-        <Box w="1px" h="18px" mx="10px" backgroundColor={mainText}></Box>
-        <Text mt="3px">{logoText}</Text>
+        <CreativeTimLogo w="32px" h="32px" me="10px" />
+        <Text fontSize="sm" mt="3px">
+          {logoText}
+        </Text>
       </Link>
       <Separator></Separator>
     </Box>
@@ -435,9 +436,10 @@ export function SidebarResponsive(props) {
         alignItems="center"
         fontSize="11px"
       >
-        <DashboardLogo w="83.5px" h="21.5px" />
-        <Box w="1px" h="18px" mx="10px" backgroundColor={mainText}></Box>
-        <Text mt="3px">{logoText}</Text>
+        <CreativeTimLogo w="32px" h="32px" me="10px" />
+        <Text fontSize="sm" mt="3px">
+          {logoText}
+        </Text>
       </Link>
       <Separator></Separator>
     </Box>
