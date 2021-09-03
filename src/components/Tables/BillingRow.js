@@ -1,4 +1,4 @@
-import { Button, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
+import { Button, Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import React from "react";
@@ -11,9 +11,8 @@ function BillingRow(props) {
   const { name, company, email, number } = props;
 
   return (
-    <Card p="1.5rem" bg={bgColor} my="1rem">
-      <CardBody p="0px">
-        <Flex justifyContent="space-between" w="100%">
+    <Box p="24px" bg={bgColor} my="22px" borderRadius="12px">
+        <Flex justify="space-between" w="100%">
           <Flex direction="column" maxWidth="70%">
             <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
               {name}
@@ -39,8 +38,8 @@ function BillingRow(props) {
           </Flex>
           <Flex
             direction={{ sm: "column", md: "row" }}
-            alignItems="flex-start"
-            p={{ md: "1.5rem" }}
+            align="flex-start"
+            p={{ md: "24px" }}
           >
             <Button
               p="0px"
@@ -51,7 +50,7 @@ function BillingRow(props) {
               <Flex
                 color="red.500"
                 cursor="pointer"
-                alignItems="center"
+                align="center"
                 p="12px"
               >
                 <Icon as={FaTrashAlt} mr="4px" />
@@ -64,7 +63,7 @@ function BillingRow(props) {
               <Flex
                 color={textColor}
                 cursor="pointer"
-                alignItems="center"
+                align="center"
                 p="12px"
               >
                 <Icon as={FaPencilAlt} mr="4px" />
@@ -75,8 +74,7 @@ function BillingRow(props) {
             </Button>
           </Flex>
         </Flex>
-      </CardBody>
-    </Card>
+    </Box>
   );
 }
 
