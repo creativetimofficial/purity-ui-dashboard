@@ -19,6 +19,11 @@ import {
   useColorMode,
   useColorModeValue,
   Portal,
+  Stat,
+  StatLabel,
+  StatArrow,
+  StatNumber,
+  StatHelpText
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -70,129 +75,98 @@ export default function Dashboard() {
   return (
     <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="24px">
-        <Card h="83px" py=".3rem" px="1.3rem">
-          <Flex
-            flexDirection="row"
-            align="center"
-            justify="center"
-            height="100%"
-          >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Today's Money
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $53,000
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
-                  +55%
-                </Text>
-              </Flex>
+        <Card minH="83px">
+          <CardBody >
+            <Flex
+              flexDirection="row"
+              align="center"
+              justify="center"
+              w="100%"
+            >
+              <Stat mr="auto">
+                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Money</StatLabel>
+                <Flex>
+                  <StatNumber fontSize="lg" color={textColor}>$53,000</StatNumber>
+                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                    +55%
+                  </StatHelpText>
+                </Flex>
+              </Stat>
+              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+                <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
+              </IconBox>
             </Flex>
-            <Spacer />
-            <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
-              <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-            </IconBox>
-          </Flex>
+          </CardBody>
         </Card>
-        <Card h="83px" py=".3rem" px="1.3rem">
-          <Flex
-            flexDirection="row"
-            align="center"
-            justify="center"
-            height="100%"
-          >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Today's Users
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $2,300
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
-                  +5%
-                </Text>
-              </Flex>
+        <Card minH="83px">
+          <CardBody>
+            <Flex
+              flexDirection="row"
+              align="center"
+              justify="center"
+              w="100%"
+            >
+              <Stat mr="auto">
+                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Users</StatLabel>
+                <Flex>
+                  <StatNumber fontSize="lg" color={textColor}>$2,300</StatNumber>
+                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                    +5%
+                  </StatHelpText>
+                </Flex>
+              </Stat>
+              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+                <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
+              </IconBox>
             </Flex>
-            <Spacer />
-            <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
-              <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-            </IconBox>
-          </Flex>
+          </CardBody>
         </Card>
-        <Card h="83px" py=".3rem" px="1.3rem">
-          <Flex
-            flexDirection="row"
-            align="center"
-            justify="center"
-            height="100%"
-          >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                New Clients
-              </Text>
-              <Flex flexDirection="row" align="flex-end">
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $3,052
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="red.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
-                  -14%
-                </Text>
-              </Flex>
+        <Card minH="83px">
+          <CardBody>
+            <Flex
+              flexDirection="row"
+              align="center"
+              justify="center"
+              w="100%"
+            >
+              <Stat>
+                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">New Clients</StatLabel>
+                <Flex>
+                  <StatNumber fontSize="lg" color={textColor}>+$3,020</StatNumber>
+                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="red.500" fontWeight="bold" ps="3px" fontSize="md">
+                    -14%
+                  </StatHelpText>
+                </Flex>
+              </Stat>
+              <Spacer />
+              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+                <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
+              </IconBox>
             </Flex>
-            <Spacer />
-            <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
-              <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-            </IconBox>
-          </Flex>
+          </CardBody>
         </Card>
-        <Card h="83px" py=".3rem" px="1.3rem">
-          <Flex
-            flexDirection="row"
-            align="center"
-            justify="center"
-            height="100%"
-          >
-            <Flex flexDirection="column">
-              <Text fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">
-                Total Sales
-              </Text>
-              <Flex flexDirection="row" align="flex-end" mt={0}>
-                <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  $173,000
-                </Text>
-                <Text
-                  fontSize="md"
-                  color="green.400"
-                  fontWeight="bold"
-                  ps=".2rem"
-                >
-                  +8%
-                </Text>
-              </Flex>
+        <Card minH="83px">
+          <CardBody>
+            <Flex
+              flexDirection="row"
+              align="center"
+              justify="center"
+              w="100%"
+            >
+              <Stat mr="auto">
+                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Total Sales</StatLabel>
+                <Flex>
+                  <StatNumber fontSize="lg" color={textColor} fontWeight="bold">$173,000</StatNumber>
+                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                    +8%
+                  </StatHelpText>
+                </Flex>
+              </Stat>
+              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+                <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
+              </IconBox>
             </Flex>
-            <Spacer />
-            <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
-              <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
-            </IconBox>
-          </Flex>
+          </CardBody>
         </Card>
       </SimpleGrid>
       <Grid
@@ -202,7 +176,8 @@ export default function Dashboard() {
         gap="24px"
       >
         <Card minHeight="290.5px" p="1.2rem">
-          <Flex flexDirection={{ sm: "column", lg: "row" }} h="100%">
+          <CardBody w="100%">
+          <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%">
             <Flex
               flexDirection="column"
               h="100%"
@@ -273,6 +248,7 @@ export default function Dashboard() {
               />
             </Flex>
           </Flex>
+          </CardBody>
         </Card>
         <Card maxHeight="290.5px" p="1rem">
           <CardBody
@@ -346,8 +322,8 @@ export default function Dashboard() {
         gap="24px"
         mb={{ lg: "26px" }}
       >
-        <Card p="1rem">
-          <CardBody p="0px">
+        <Card p="16px">
+          <CardBody>
             <Flex direction="column" w="100%">
               <BarChart />
               <Flex
@@ -501,7 +477,7 @@ export default function Dashboard() {
           </CardBody>
         </Card>
         <Card p="28px 10px 16px 0px" mb={{ sm: "26px", lg: "0px" }}>
-          <CardHeader p="0px" mb="20px" pl="22px">
+          <CardHeader mb="20px" pl="22px">
             <Flex direction="column" alignSelf="flex-start">
               <Text fontSize="lg" color={textColor} fontWeight="bold" mb="6px">
                 Sales Overview
@@ -524,7 +500,7 @@ export default function Dashboard() {
         templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
         gap="24px"
       >
-        <Card p="1rem" overflowX={{ sm: "scroll", xl: "hidden" }}>
+        <Card p="16px" overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="12px 0px 28px 0px">
             <Flex direction="column">
               <Text
@@ -578,8 +554,8 @@ export default function Dashboard() {
             </Tbody>
           </Table>
         </Card>
-        <Card p="1rem" maxHeight="100%">
-          <CardHeader pt="0px" p="28px 0px 35px 21px">
+        <Card maxH="100%">
+          <CardHeader  p="22px 0px 35px 14px">
             <Flex direction="column">
               <Text
                 fontSize="lg"
@@ -597,7 +573,7 @@ export default function Dashboard() {
               </Text>
             </Flex>
           </CardHeader>
-          <CardBody ps="26px" pe="0px" mb="31px" position="relative">
+          <CardBody ps="20px" pe="0px" mb="31px" position="relative">
             <Flex direction="column">
               {timelineData.map((row, index, arr) => {
                 return (

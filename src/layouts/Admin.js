@@ -1,10 +1,5 @@
 // Chakra imports
-import {
-  ChakraProvider,
-  Portal,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { ChakraProvider, Portal, useDisclosure } from "@chakra-ui/react";
 import Configurator from "components/Configurator/Configurator";
 import Footer from "components/Footer/Footer.js";
 // Layout components
@@ -102,7 +97,7 @@ export default function Dashboard(props) {
     <ChakraProvider theme={theme} resetCss={false}>
       <Sidebar
         routes={routes}
-        logoText={"DASHBOARD"}
+        logoText={"PURITY UI DASHBOARD"}
         display="none"
         sidebarVariant={sidebarVariant}
         {...rest}
@@ -117,7 +112,7 @@ export default function Dashboard(props) {
         <Portal>
           <AdminNavbar
             onOpen={onOpen}
-            logoText={"DASHBOARD"}
+            logoText={"PURITY UI DASHBOARD"}
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             rtlActive={false}
