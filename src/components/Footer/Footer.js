@@ -35,7 +35,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.creative-tim.com"
+          href="https://www.creative-tim.com?ref=creativetim-pud"
           target="_blank"
         >
           {rtlActive ? " توقيت الإبداعية" : "Creative Tim "}
@@ -44,7 +44,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.simmmple.com"
+          href="https://www.simmmple.com?ref=creativetim-pud"
           target="_blank"
         >
           {rtlActive ? "سيممبل " : " Simmmple"}
@@ -58,7 +58,10 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.creative-tim.com">
+          <Link
+            color="gray.400"
+            href="https://www.creative-tim.com?ref=creativetim-pud"
+          >
             {rtlActive ? "توقيت الإبداعية" : "Creative Tim"}
           </Link>
         </ListItem>
@@ -68,7 +71,10 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.simmmple.com">
+          <Link
+            color="gray.400"
+            href="https://www.simmmple.com?ref=creativetim-pud"
+          >
             {rtlActive ? "سيممبل" : "Simmmple"}
           </Link>
         </ListItem>
@@ -81,7 +87,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#blog"
-            href="https://creative-tim.com/blog?"
+            href="https://creative-tim.com/blog?ref=creativetim-pud"
           >
             {rtlActive ? "مدونة" : "Blog"}
           </Link>
@@ -90,7 +96,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#license"
-            href="https://www.creative-tim.com/license?"
+            href="https://www.creative-tim.com/license?ref=creativetim-pud"
           >
             {rtlActive ? "رخصة" : "License"}
           </Link>
