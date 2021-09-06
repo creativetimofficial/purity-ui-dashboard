@@ -35,7 +35,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.creative-tim.com?ref=creativetim-pud"
+          href="https://www.creative-tim.com"
           target="_blank"
         >
           {rtlActive ? " توقيت الإبداعية" : "Creative Tim "}
@@ -44,7 +44,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.simmmple.com?ref=simmmple-pud"
+          href="https://www.simmmple.com"
           target="_blank"
         >
           {rtlActive ? "سيممبل " : " Simmmple"}
@@ -58,10 +58,7 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link
-            color="gray.400"
-            href="https://www.creative-tim.com?ref=creativetim-pud"
-          >
+          <Link color="gray.400" href="https://www.creative-tim.com">
             {rtlActive ? "توقيت الإبداعية" : "Creative Tim"}
           </Link>
         </ListItem>
@@ -71,10 +68,7 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link
-            color="gray.400"
-            href="https://www.simmmple.com?ref=simmmple-pud"
-          >
+          <Link color="gray.400" href="https://www.simmmple.com">
             {rtlActive ? "سيممبل" : "Simmmple"}
           </Link>
         </ListItem>
@@ -87,7 +81,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#blog"
-            href="https://creative-tim.com/blog?ref=creativetim-pud"
+            href="https://creative-tim.com/blog?"
           >
             {rtlActive ? "مدونة" : "Blog"}
           </Link>
@@ -96,7 +90,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#license"
-            href="https://www.creative-tim.com/license?ref=creativetim-pud"
+            href="https://www.creative-tim.com/license?"
           >
             {rtlActive ? "رخصة" : "License"}
           </Link>
