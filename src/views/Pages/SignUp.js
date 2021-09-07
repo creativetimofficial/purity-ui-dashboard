@@ -19,7 +19,7 @@ import React from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 
 function SignUp() {
-  const titleColor = useColorModeValue("teal.500", "teal.200");
+  const titleColor = useColorModeValue("teal.300", "teal.200");
   const textColor = useColorModeValue("gray.700", "white");
   const bgColor = useColorModeValue("white", "gray.700");
   const bgIcons = useColorModeValue("teal.200", "rgba(255, 255, 255, 0.5)");
@@ -106,7 +106,7 @@ function SignUp() {
                   as={FaFacebook}
                   w="30px"
                   h="30px"
-                  _hover={{ color: "black", filter: "brightness(120%)" }}
+                  _hover={{ filter: "brightness(120%)" }}
                 />
               </Link>
             </Flex>
@@ -126,7 +126,7 @@ function SignUp() {
                   as={FaApple}
                   w="30px"
                   h="30px"
-                  _hover={{ color: "black", filter: "brightness(120%)" }}
+                  _hover={{ filter: "brightness(120%)" }}
                 />
               </Link>
             </Flex>
@@ -146,7 +146,7 @@ function SignUp() {
                   as={FaGoogle}
                   w="30px"
                   h="30px"
-                  _hover={{ color: "black", filter: "brightness(120%)" }}
+                  _hover={{ filter: "brightness(120%)" }}
                 />
               </Link>
             </Flex>
@@ -161,28 +161,37 @@ function SignUp() {
             or
           </Text>
           <FormControl>
-            <FormLabel fontWeight="normal">Name</FormLabel>
+            <FormLabel fontSize="sm" fontWeight="normal">
+              Name
+            </FormLabel>
             <Input
+              borderRadius="15px"
               type="text"
               placeholder="Your full name"
-              mb="16px"
+              mb="24px"
               size="lg"
             />
-            <FormLabel fontWeight="normal">Email</FormLabel>
+            <FormLabel fontSize="sm" fontWeight="normal">
+              Email
+            </FormLabel>
             <Input
+              borderRadius="15px"
               type="email"
               placeholder="Your email address"
-              mb="16px"
+              mb="24px"
               size="lg"
             />
-            <FormLabel fontWeight="normal">Password</FormLabel>
+            <FormLabel fontSize="sm" fontWeight="normal">
+              Password
+            </FormLabel>
             <Input
+              borderRadius="15px"
               type="password"
               placeholder="Your password"
               mb="24px"
               size="lg"
             />
-            <FormControl display="flex" alignItems="center" mb="36px">
+            <FormControl display="flex" alignItems="center" mb="24px">
               <Switch id="remember-login" colorScheme="teal" mr="10px" />
               <FormLabel htmlFor="remember-login" mb="0" fontWeight="normal">
                 Remember me
@@ -191,13 +200,20 @@ function SignUp() {
             <Button
               type="submit"
               bg="teal.300"
+              fontSize="10px"
+              color="white"
+              fontWeight="bold"
               w="100%"
               h="45"
-              mb="20px"
-              _hover="teal.300"
-              color="white"
+              mb="24px"
+              _hover={{
+                bg: "teal.200",
+              }}
+              _active={{
+                bg: "teal.400",
+              }}
             >
-              Sign Up
+              SIGN UP
             </Button>
           </FormControl>
           <Flex
@@ -209,7 +225,13 @@ function SignUp() {
           >
             <Text color={textColor} fontWeight="medium">
               Already have an account?
-              <Link color={titleColor} as="span" ms="5px" href="#">
+              <Link
+                color={titleColor}
+                as="span"
+                ms="5px"
+                href="#"
+                fontWeight="bold"
+              >
                 Sign In
               </Link>
             </Text>
