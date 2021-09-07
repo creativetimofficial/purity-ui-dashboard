@@ -97,6 +97,9 @@ export default function AdminNavbar(props) {
         sm: paddingX,
         md: "30px",
       }}
+      ps={{
+        xl: "12px",
+      }}
       paddingTop="8px"
       top="18px"
       w={{ sm: "calc(100vw - 30px)", xl: "calc(100vw - 75px - 275px)" }}

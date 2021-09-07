@@ -23,7 +23,7 @@ function SignIn() {
   return (
     <Flex position="relative" mb="40px">
       <Flex
-        h={{ sm: "initial", md: "64vh", lg: "75vh" }}
+        h={{ sm: "initial", md: "75vh", lg: "85vh" }}
         w="100%"
         maxW="1044px"
         mx="auto"
@@ -42,6 +42,7 @@ function SignIn() {
             background="transparent"
             p="48px"
             mt={{ md: "60px", lg: "0px" }}
+            mt="100px"
           >
             <Heading color={titleColor} fontSize="32px">
               Welcome Back

@@ -123,6 +123,7 @@ export default function HeaderLinks(props) {
       />
       <SettingsIcon
         cursor="pointer"
+        ms={{ base: "16px", xl: "0px" }}
         me="16px"
         ref={settingsRef}
         onClick={props.onOpen}

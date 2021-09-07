@@ -413,7 +413,7 @@ export function SidebarResponsive(props) {
       );
     });
   };
-  const { logoText, routes, rtlActive } = props;
+  const { logoText, routes, rtlActive, ...rest } = props;
 
   var links = <>{createLinks(routes)}</>;
   //  BRAND
@@ -450,54 +450,53 @@ export function SidebarResponsive(props) {
   const btnRef = React.useRef();
   // Color variables
   return (
-    <Box ref={mainPanel} display={props.display}>
-      <Box display={{ sm: "block", xl: "none" }}>
-        <>
-          <HamburgerIcon
-            color={hamburgerColor}
-            w="18px"
-            h="18px"
-            me="16px"
-            ref={btnRef}
-            colorScheme="teal"
-            onClick={onOpen}
+    <Flex
+      display={{ sm: "flex", xl: "none" }}
+      ref={mainPanel}
+      alignItems="center"
+    >
+      <HamburgerIcon
+        color={hamburgerColor}
+        w="18px"
+        h="18px"
+        ref={btnRef}
+        colorScheme="teal"
+        onClick={onOpen}
+      />
+      <Drawer
+        isOpen={isOpen}
+        onClose={onClose}
+        placement="left"
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent
+          w="250px"
+          maxW="250px"
+          ms={{
+            sm: "16px",
+          }}
+          my={{
+            sm: "16px",
+          }}
+          borderRadius="16px"
+        >
+          <DrawerCloseButton
+            _focus={{ boxShadow: "none" }}
+            _hover={{ boxShadow: "none" }}
           />
-          <Drawer
-            isOpen={isOpen}
-            onClose={onClose}
-            placement="left"
-            finalFocusRef={btnRef}
-          >
-            <DrawerOverlay />
-            <DrawerContent
-              w="250px"
-              maxW="250px"
-              ms={{
-                sm: "16px",
-              }}
-              my={{
-                sm: "16px",
-              }}
-              borderRadius="16px"
-            >
-              <DrawerCloseButton
-                _focus={{ boxShadow: "none" }}
-                _hover={{ boxShadow: "none" }}
-              />
-              <DrawerBody maxW="250px" px="1rem">
-                <Box maxW="100%" h="100vh">
-                  <Box>{brand}</Box>
-                  <Stack direction="column" mb="40px">
-                    <Box>{links}</Box>
-                  </Stack>
-                  <SidebarHelp></SidebarHelp>
-                </Box>
-              </DrawerBody>
-            </DrawerContent>
-          </Drawer>
-        </>
-      </Box>
-    </Box>
+          <DrawerBody maxW="250px" px="1rem">
+            <Box maxW="100%" h="100vh">
+              <Box>{brand}</Box>
+              <Stack direction="column" mb="40px">
+                <Box>{links}</Box>
+              </Stack>
+              <SidebarHelp></SidebarHelp>
+            </Box>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </Flex>
   );
 }
 // PROPS

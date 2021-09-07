@@ -23,7 +23,7 @@ import {
   StatLabel,
   StatArrow,
   StatNumber,
-  StatHelpText
+  StatHelpText,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -76,18 +76,30 @@ export default function Dashboard() {
     <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="24px">
         <Card minH="83px">
-          <CardBody >
-            <Flex
-              flexDirection="row"
-              align="center"
-              justify="center"
-              w="100%"
-            >
+          <CardBody>
+            <Flex flexDirection="row" align="center" justify="center" w="100%">
               <Stat mr="auto">
-                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Money</StatLabel>
+                <StatLabel
+                  fontSize="sm"
+                  color="gray.400"
+                  fontWeight="bold"
+                  pb=".1rem"
+                >
+                  Today's Money
+                </StatLabel>
                 <Flex>
-                  <StatNumber fontSize="lg" color={textColor}>$53,000</StatNumber>
-                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                  <StatNumber fontSize="lg" color={textColor}>
+                    $53,000
+                  </StatNumber>
+                  <StatHelpText
+                    alignSelf="flex-end"
+                    justifySelf="flex-end"
+                    m="0px"
+                    color="green.400"
+                    fontWeight="bold"
+                    ps="3px"
+                    fontSize="md"
+                  >
                     +55%
                   </StatHelpText>
                 </Flex>
@@ -100,17 +112,29 @@ export default function Dashboard() {
         </Card>
         <Card minH="83px">
           <CardBody>
-            <Flex
-              flexDirection="row"
-              align="center"
-              justify="center"
-              w="100%"
-            >
+            <Flex flexDirection="row" align="center" justify="center" w="100%">
               <Stat mr="auto">
-                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Today's Users</StatLabel>
+                <StatLabel
+                  fontSize="sm"
+                  color="gray.400"
+                  fontWeight="bold"
+                  pb=".1rem"
+                >
+                  Today's Users
+                </StatLabel>
                 <Flex>
-                  <StatNumber fontSize="lg" color={textColor}>$2,300</StatNumber>
-                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                  <StatNumber fontSize="lg" color={textColor}>
+                    2,300
+                  </StatNumber>
+                  <StatHelpText
+                    alignSelf="flex-end"
+                    justifySelf="flex-end"
+                    m="0px"
+                    color="green.400"
+                    fontWeight="bold"
+                    ps="3px"
+                    fontSize="md"
+                  >
                     +5%
                   </StatHelpText>
                 </Flex>
@@ -123,17 +147,29 @@ export default function Dashboard() {
         </Card>
         <Card minH="83px">
           <CardBody>
-            <Flex
-              flexDirection="row"
-              align="center"
-              justify="center"
-              w="100%"
-            >
+            <Flex flexDirection="row" align="center" justify="center" w="100%">
               <Stat>
-                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">New Clients</StatLabel>
+                <StatLabel
+                  fontSize="sm"
+                  color="gray.400"
+                  fontWeight="bold"
+                  pb=".1rem"
+                >
+                  New Clients
+                </StatLabel>
                 <Flex>
-                  <StatNumber fontSize="lg" color={textColor}>+$3,020</StatNumber>
-                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="red.500" fontWeight="bold" ps="3px" fontSize="md">
+                  <StatNumber fontSize="lg" color={textColor}>
+                    +3,020
+                  </StatNumber>
+                  <StatHelpText
+                    alignSelf="flex-end"
+                    justifySelf="flex-end"
+                    m="0px"
+                    color="red.500"
+                    fontWeight="bold"
+                    ps="3px"
+                    fontSize="md"
+                  >
                     -14%
                   </StatHelpText>
                 </Flex>
@@ -147,17 +183,29 @@ export default function Dashboard() {
         </Card>
         <Card minH="83px">
           <CardBody>
-            <Flex
-              flexDirection="row"
-              align="center"
-              justify="center"
-              w="100%"
-            >
+            <Flex flexDirection="row" align="center" justify="center" w="100%">
               <Stat mr="auto">
-                <StatLabel fontSize="sm" color="gray.400" fontWeight="bold" pb=".1rem">Total Sales</StatLabel>
+                <StatLabel
+                  fontSize="sm"
+                  color="gray.400"
+                  fontWeight="bold"
+                  pb=".1rem"
+                >
+                  Total Sales
+                </StatLabel>
                 <Flex>
-                  <StatNumber fontSize="lg" color={textColor} fontWeight="bold">$173,000</StatNumber>
-                  <StatHelpText alignSelf="flex-end" justifySelf="flex-end" m="0px" color="green.400" fontWeight="bold" ps="3px" fontSize="md">
+                  <StatNumber fontSize="lg" color={textColor} fontWeight="bold">
+                    $173,000
+                  </StatNumber>
+                  <StatHelpText
+                    alignSelf="flex-end"
+                    justifySelf="flex-end"
+                    m="0px"
+                    color="green.400"
+                    fontWeight="bold"
+                    ps="3px"
+                    fontSize="md"
+                  >
                     +8%
                   </StatHelpText>
                 </Flex>
@@ -177,77 +225,77 @@ export default function Dashboard() {
       >
         <Card minHeight="290.5px" p="1.2rem">
           <CardBody w="100%">
-          <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%">
-            <Flex
-              flexDirection="column"
-              h="100%"
-              lineHeight="1.6"
-              width={{ lg: "45%" }}
-            >
-              <Text fontSize="sm" color="gray.400" fontWeight="bold">
-                Built by developers
-              </Text>
-              <Text
-                fontSize="lg"
-                color={textColor}
-                fontWeight="bold"
-                pb=".5rem"
+            <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%">
+              <Flex
+                flexDirection="column"
+                h="100%"
+                lineHeight="1.6"
+                width={{ lg: "45%" }}
               >
-                Purity UI Dashboard
-              </Text>
-              <Text fontSize="sm" color="gray.400" fontWeight="normal">
-                From colors, cards, typography to complex elements, you will
-                find the full documentation.
-              </Text>
-              <Spacer />
-              <Flex align="center">
-                <Button
-                  p="0px"
-                  variant="no-hover"
-                  bg="transparent"
-                  my={{ sm: "1.5rem", lg: "0px" }}
+                <Text fontSize="sm" color="gray.400" fontWeight="bold">
+                  Built by developers
+                </Text>
+                <Text
+                  fontSize="lg"
+                  color={textColor}
+                  fontWeight="bold"
+                  pb=".5rem"
                 >
-                  <Text
-                    fontSize="sm"
-                    color={textColor}
-                    fontWeight="bold"
-                    cursor="pointer"
-                    transition="all .5s ease"
+                  Purity UI Dashboard
+                </Text>
+                <Text fontSize="sm" color="gray.400" fontWeight="normal">
+                  From colors, cards, typography to complex elements, you will
+                  find the full documentation.
+                </Text>
+                <Spacer />
+                <Flex align="center">
+                  <Button
+                    p="0px"
+                    variant="no-hover"
+                    bg="transparent"
                     my={{ sm: "1.5rem", lg: "0px" }}
-                    _hover={{ mr: "4px" }}
                   >
-                    Read more
-                  </Text>
-                  <Icon
-                    as={BsArrowRight}
-                    w="20px"
-                    h="20px"
-                    fontSize="2xl"
-                    transition="all .5s ease"
-                    mx=".3rem"
-                    cursor="pointer"
-                    pt="4px"
-                    _hover={{ transform: "translateX(20%)" }}
-                  />
-                </Button>
+                    <Text
+                      fontSize="sm"
+                      color={textColor}
+                      fontWeight="bold"
+                      cursor="pointer"
+                      transition="all .5s ease"
+                      my={{ sm: "1.5rem", lg: "0px" }}
+                      _hover={{ mr: "4px" }}
+                    >
+                      Read more
+                    </Text>
+                    <Icon
+                      as={BsArrowRight}
+                      w="20px"
+                      h="20px"
+                      fontSize="2xl"
+                      transition="all .5s ease"
+                      mx=".3rem"
+                      cursor="pointer"
+                      pt="4px"
+                      _hover={{ transform: "translateX(20%)" }}
+                    />
+                  </Button>
+                </Flex>
+              </Flex>
+              <Spacer />
+              <Flex
+                bg="teal.300"
+                align="center"
+                justify="center"
+                borderRadius="15px"
+                width={{ lg: "40%" }}
+                minHeight={{ sm: "250px" }}
+              >
+                <Image
+                  src={logoChakra}
+                  alt="chakra image"
+                  minWidth={{ md: "300px", lg: "auto" }}
+                />
               </Flex>
             </Flex>
-            <Spacer />
-            <Flex
-              bg="teal.300"
-              align="center"
-              justify="center"
-              borderRadius="15px"
-              width={{ lg: "40%" }}
-              minHeight={{ sm: "250px" }}
-            >
-              <Image
-                src={logoChakra}
-                alt="chakra image"
-                minWidth={{ md: "300px", lg: "auto" }}
-              />
-            </Flex>
-          </Flex>
           </CardBody>
         </Card>
         <Card maxHeight="290.5px" p="1rem">
@@ -555,7 +603,7 @@ export default function Dashboard() {
           </Table>
         </Card>
         <Card maxH="100%">
-          <CardHeader  p="22px 0px 35px 14px">
+          <CardHeader p="22px 0px 35px 14px">
             <Flex direction="column">
               <Text
                 fontSize="lg"
