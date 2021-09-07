@@ -165,6 +165,7 @@ function SignUp() {
               Name
             </FormLabel>
             <Input
+              ms="4px"
               borderRadius="15px"
               type="text"
               placeholder="Your full name"
@@ -175,6 +176,7 @@ function SignUp() {
               Email
             </FormLabel>
             <Input
+              ms="4px"
               borderRadius="15px"
               type="email"
               placeholder="Your email address"
@@ -185,6 +187,7 @@ function SignUp() {
               Password
             </FormLabel>
             <Input
+              ms="4px"
               borderRadius="15px"
               type="password"
               placeholder="Your password"
