@@ -161,7 +161,7 @@ export default function AuthNavbar(props) {
       boxShadow={navbarShadow}
       filter={navbarFilter}
       backdropFilter={navbarBackdrop}
-      borderRadius="70px"
+      borderRadius="15px"
       px="16px"
       py="22px"
       mx="auto"
@@ -171,7 +171,10 @@ export default function AuthNavbar(props) {
     >
       <Flex w="100%" justifyContent={{ sm: "start", lg: "space-between" }}>
         {brand}
-        <Box ms={{ base: "auto", lg: "0px" }} display={{ lg: "none" }}>
+        <Box
+          ms={{ base: "auto", lg: "0px" }}
+          display={{ base: "flex", lg: "none" }}
+        >
           <SidebarResponsive
             logoText={props.logoText}
             secondary={props.secondary}

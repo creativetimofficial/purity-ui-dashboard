@@ -121,7 +121,6 @@ purity-ui-dashboard/
     │   ├── Card
     │   │   ├── Card.js
     │   │   ├── CardBody.js
-    │   │   ├── CardFooter.js
     │   │   └── CardHeader.js
     │   ├── Charts
     │   │   ├── BarChart.js
@@ -174,7 +173,6 @@ purity-ui-dashboard/
     │   │   ├── card
     │   │   │   ├── Card.js
     │   │   │   ├── CardBody.js
-    │   │   │   ├── CardFooter.js
     │   │   │   └── CardHeader.js
     │   │   ├── layout
     │   │   │   ├── MainPanel.js
