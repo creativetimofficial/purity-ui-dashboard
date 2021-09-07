@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/purity-ui-dashboard/static/js/main.92cad9ab.chunk.js",
-    "main.js.map": "/purity-ui-dashboard/static/js/main.92cad9ab.chunk.js.map",
+    "main.js": "/purity-ui-dashboard/static/js/main.8dcd92fa.chunk.js",
+    "main.js.map": "/purity-ui-dashboard/static/js/main.8dcd92fa.chunk.js.map",
     "runtime-main.js": "/purity-ui-dashboard/static/js/runtime-main.12e2ec03.js",
     "runtime-main.js.map": "/purity-ui-dashboard/static/js/runtime-main.12e2ec03.js.map",
     "static/js/2.d20675b5.chunk.js": "/purity-ui-dashboard/static/js/2.d20675b5.chunk.js",
     "static/js/2.d20675b5.chunk.js.map": "/purity-ui-dashboard/static/js/2.d20675b5.chunk.js.map",
     "index.html": "/purity-ui-dashboard/index.html",
     "static/js/2.d20675b5.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/2.d20675b5.chunk.js.LICENSE.txt",
-    "static/js/main.92cad9ab.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/main.92cad9ab.chunk.js.LICENSE.txt",
+    "static/js/main.8dcd92fa.chunk.js.LICENSE.txt": "/purity-ui-dashboard/static/js/main.8dcd92fa.chunk.js.LICENSE.txt",
     "static/media/BackgroundCard1.55c062c0.png": "/purity-ui-dashboard/static/media/BackgroundCard1.55c062c0.png",
     "static/media/BgSignUp.2dea4acf.png": "/purity-ui-dashboard/static/media/BgSignUp.2dea4acf.png",
     "static/media/ImageArchitect1.032614a5.png": "/purity-ui-dashboard/static/media/ImageArchitect1.032614a5.png",
@@ -32,6 +32,6 @@
   "entrypoints": [
     "static/js/runtime-main.12e2ec03.js",
     "static/js/2.d20675b5.chunk.js",
-    "static/js/main.92cad9ab.chunk.js"
+    "static/js/main.8dcd92fa.chunk.js"
   ]
 }
