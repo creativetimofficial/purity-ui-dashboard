@@ -31,9 +31,6 @@ function Sidebar(props) {
   let location = useLocation();
   // this is for the rest of the collapses
   const [state, setState] = React.useState({});
-  // React.useEffect(() => {
-  //   setState(getCollapseStates(props.routes));
-  // }, []);
   const mainPanel = React.useRef();
   let variantChange = "0.2s linear";
   // verifies if routeName is the one active (in browser input)

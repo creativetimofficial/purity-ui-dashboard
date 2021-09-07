@@ -8,7 +8,6 @@ import { linkStyles } from "./components/link";
 import { drawerStyles } from "./components/drawer";
 import { CardComponent } from "./additions/card/Card";
 import { CardBodyComponent } from "./additions/card/CardBody";
-import { CardFooterComponent } from "./additions/card/CardFooter";
 import { CardHeaderComponent } from "./additions/card/CardHeader";
 import { MainPanelComponent } from "./additions/layout/MainPanel";
 import { PanelContentComponent } from "./additions/layout/PanelContent";
@@ -24,7 +23,6 @@ export default extendTheme(
   drawerStyles, // Sidebar variant for Chakra's drawer
   CardComponent, // Card component
   CardBodyComponent, // Card Body component
-  CardFooterComponent, // Card Footer component
   CardHeaderComponent, // Card Header component
   MainPanelComponent, // Main Panel component
   PanelContentComponent, // Panel Content component
