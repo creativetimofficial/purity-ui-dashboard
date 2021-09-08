@@ -161,10 +161,11 @@ function SignUp() {
             or
           </Text>
           <FormControl>
-            <FormLabel fontSize="sm" fontWeight="normal">
+            <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
               Name
             </FormLabel>
             <Input
+              fontSize="sm"
               ms="4px"
               borderRadius="15px"
               type="text"
@@ -172,10 +173,11 @@ function SignUp() {
               mb="24px"
               size="lg"
             />
-            <FormLabel fontSize="sm" fontWeight="normal">
+            <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
               Email
             </FormLabel>
             <Input
+              fontSize="sm"
               ms="4px"
               borderRadius="15px"
               type="email"
@@ -183,10 +185,11 @@ function SignUp() {
               mb="24px"
               size="lg"
             />
-            <FormLabel fontSize="sm" fontWeight="normal">
+            <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
               Password
             </FormLabel>
             <Input
+              fontSize="sm"
               ms="4px"
               borderRadius="15px"
               type="password"
@@ -195,7 +198,7 @@ function SignUp() {
               size="lg"
             />
             <FormControl display="flex" alignItems="center" mb="24px">
-              <Switch id="remember-login" colorScheme="teal" mr="10px" />
+              <Switch id="remember-login" colorScheme="teal" me="10px" />
               <FormLabel htmlFor="remember-login" mb="0" fontWeight="normal">
                 Remember me
               </FormLabel>
