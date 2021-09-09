@@ -18,7 +18,7 @@ function TimelineRow(props) {
           pr="6px"
           zIndex="1"
           position="relative"
-          left="-8px"
+          insetStart="-8px"
         />
         <Box
           w="2px"

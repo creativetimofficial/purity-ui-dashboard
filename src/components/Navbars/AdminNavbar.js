@@ -92,7 +92,7 @@ export default function AdminNavbar(props) {
       mx="auto"
       mt={secondaryMargin}
       pb="8px"
-      right={{ sm: "15px", xl: "30px" }}
+      insetEnd={{ sm: "15px", xl: "30px" }}
       px={{
         sm: paddingX,
         md: "30px",
@@ -100,7 +100,7 @@ export default function AdminNavbar(props) {
       ps={{
         xl: "12px",
       }}
-      paddingTop="8px"
+      pt="8px"
       top="18px"
       w={{ sm: "calc(100vw - 30px)", xl: "calc(100vw - 75px - 275px)" }}
     >

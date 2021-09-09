@@ -18,7 +18,7 @@ function DashboardTableRow(props) {
     <Tr>
       <Td minWidth={{ sm: "250px" }} pl="0px">
         <Flex alignItems="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Icon as={logo} h={"24px"} w={"24px"} mr="18px" />
+          <Icon as={logo} h={"24px"} w={"24px"} me="18px" />
           <Text
             fontSize="md"
             color={textColor}

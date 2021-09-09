@@ -143,8 +143,6 @@ purity-ui-dashboard/
     │   ├── Navbars
     │   │   ├── Searchbar
     │   │   │   └── SearchBar.js
-    │   │   ├── Settings
-    │   │   │   └── SettingsBar.js
     │   │   ├── AdminNavbar.js
     │   │   ├── AdminNavbarLinks.js
     │   │   └── AuthNavbar.js

@@ -154,7 +154,7 @@ export default function AuthNavbar(props) {
     <Flex
       position={navbarPosition}
       top="16px"
-      left="50%"
+      insetStart="50%"
       transform="translate(-50%, 0px)"
       background={navbarBg}
       border={navbarBorder}
