@@ -5,6 +5,8 @@ function TimelineRow(props) {
   const { logo, title, date, color, index, arrLength } = props;
   const textColor = useColorModeValue("gray.700", "white.300");
   const bgIconColor = useColorModeValue("white.300", "gray.700");
+  const connectorColor = useColorModeValue("gray.200", 'gray.600')
+  const 
 
   return (
     <Flex alignItems="center" minH="78px" justifyContent="start" mb="5px">
@@ -22,7 +24,7 @@ function TimelineRow(props) {
         />
         <Box
           w="2px"
-          bg="gray.200"
+          bg={connectorColor}
           h={index === arrLength - 1 ? "15px" : "100%"}
         ></Box>
       </Flex>
