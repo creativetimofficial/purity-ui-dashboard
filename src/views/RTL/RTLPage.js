@@ -46,7 +46,7 @@ import DashboardTableRow from "components/Tables/DashboardTableRow";
 import TimelineRow from "components/Tables/TimelineRow";
 import React, { useState } from "react";
 // react icons
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 import { dashboardTableData, timelineData } from "variables/general";
 
@@ -266,7 +266,11 @@ export default function Dashboard() {
                       Read more
                     </Text>
                     <Icon
-                      as={BsArrowRight}
+                      as={
+                        document.documentElement.dir === "rtl"
+                          ? BsArrowLeft
+                          : BsArrowRight
+                      }
                       w="20px"
                       h="20px"
                       fontSize="2xl"
@@ -274,7 +278,11 @@ export default function Dashboard() {
                       mx=".3rem"
                       cursor="pointer"
                       pt="4px"
-                      _hover={{ transform: "translateX(20%)" }}
+                      _hover={
+                        document.documentElement.dir === "rtl"
+                          ? { transform: "translateX(-20%)" }
+                          : { transform: "translateX(20%)" }
+                      }
                     />
                   </Button>
                 </Flex>
@@ -346,14 +354,22 @@ export default function Dashboard() {
                       Read more
                     </Text>
                     <Icon
-                      as={BsArrowRight}
+                      as={
+                        document.documentElement.dir === "rtl"
+                          ? BsArrowLeft
+                          : BsArrowRight
+                      }
                       w="20px"
                       h="20px"
                       fontSize="xl"
                       transition="all .5s ease"
                       mx=".3rem"
                       cursor="pointer"
-                      _hover={{ transform: "translateX(20%)" }}
+                      _hover={
+                        document.documentElement.dir === "rtl"
+                          ? { transform: "translateX(-20%)" }
+                          : { transform: "translateX(20%)" }
+                      }
                       pt="4px"
                     />
                   </Button>

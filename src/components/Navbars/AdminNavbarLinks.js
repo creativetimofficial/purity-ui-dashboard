@@ -30,15 +30,7 @@ import { NavLink } from "react-router-dom";
 import routes from "routes.js";
 
 export default function HeaderLinks(props) {
-  const {
-    rtlActive,
-    variant,
-    children,
-    fixed,
-    secondary,
-    onOpen,
-    ...rest
-  } = props;
+  const { variant, children, fixed, secondary, onOpen, ...rest } = props;
 
   // Chakra Color Mode
   let mainTeal = useColorModeValue("teal.300", "teal.300");
@@ -57,6 +49,7 @@ export default function HeaderLinks(props) {
       pe={{ sm: "0px", md: "16px" }}
       w={{ sm: "100%", md: "auto" }}
       alignItems="center"
+      flexDirection="row"
     >
       <InputGroup
         cursor="pointer"
@@ -107,8 +100,19 @@ export default function HeaderLinks(props) {
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
           variant="transparent-with-icon"
+          rightIcon={
+            document.documentElement.dir ? (
+              ""
+            ) : (
+              <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
+            )
+          }
           leftIcon={
-            <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
+            document.documentElement.dir ? (
+              <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
+            ) : (
+              ""
+            )
           }
         >
           <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
@@ -172,7 +176,6 @@ export default function HeaderLinks(props) {
 }
 
 HeaderLinks.propTypes = {
-  rtlActive: PropTypes.bool,
   variant: PropTypes.string,
   fixed: PropTypes.bool,
   secondary: PropTypes.bool,

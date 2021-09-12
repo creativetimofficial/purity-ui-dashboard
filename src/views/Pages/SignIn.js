@@ -131,7 +131,7 @@ function SignIn() {
           h="100%"
           w="40vw"
           position="absolute"
-          insetEnd="0px"
+          right="0px"
         >
           <Box
             bgImage={signInImage}

@@ -1,5 +1,6 @@
 // Chakra imports
 import { ChakraProvider, Portal, useDisclosure } from "@chakra-ui/react";
+import { RtlProvider } from "components/RTLProvider/RTLProvider";
 import Configurator from "components/Configurator/Configurator";
 import Footer from "components/Footer/Footer.js";
 // Layout components
@@ -22,7 +23,6 @@ export default function Dashboard(props) {
   const [fixed, setFixed] = useState(false);
   // ref for main panel div
   const mainPanel = React.createRef();
-  // functions for changing the states from components
   const getRoute = () => {
     return window.location.pathname !== "/admin/full-screen-maps";
   };
@@ -78,7 +78,7 @@ export default function Dashboard(props) {
       if (prop.category === "account") {
         return getRoutes(prop.views);
       }
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/rtl" || prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -95,149 +95,150 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <ChakraProvider theme={theme} resetCss={false}>
-      <Sidebar
-        routes={routes}
-        logoText={"PURITY UI DASHBOARD"}
-        display="none"
-        sidebarVariant={sidebarVariant}
-        {...rest}
-        rtlActive
-      />
-      <MainPanel
-        ref={mainPanel}
-        w={{
-          base: "100%",
-          xl: "calc(100% - 275px)",
-        }}
-      >
-        <Portal>
-          <AdminNavbar
-            onOpen={onOpen}
-            logoText={"PURITY UI DASHBOARD"}
-            brandText={getActiveRoute(routes)}
-            secondary={getActiveNavbar(routes)}
-            rtlActive
-            fixed={fixed}
-            {...rest}
-          />
-        </Portal>
-        {getRoute() ? (
-          <PanelContent>
-            <PanelContainer>
-              <Switch>
-                {getRoutes(routes)}
-                <Redirect from="/admin" to="/admin/dashboard" />
-              </Switch>
-            </PanelContainer>
-          </PanelContent>
-        ) : null}
-        <Footer />
-        <Portal>
-          <FixedPlugin
-            secondary={getActiveNavbar(routes)}
-            fixed={fixed}
-            onOpen={onOpen}
-          />
-        </Portal>
-        <Configurator
-          secondary={getActiveNavbar(routes)}
-          isOpen={isOpen}
-          onClose={onClose}
-          isChecked={fixed}
-          onSwitch={(value) => {
-            setFixed(value);
-          }}
-          onOpaque={() => setSidebarVariant("opaque")}
-          onTransparent={() => setSidebarVariant("transparent")}
+      <RtlProvider>
+        <Sidebar
+          routes={routes}
+          logoText={"PURITY UI DASHBOARD"}
+          display="none"
+          sidebarVariant={sidebarVariant}
+          {...rest}
         />
-      </MainPanel>
+        <MainPanel
+          variant="rtl"
+          ref={mainPanel}
+          w={{
+            base: "100%",
+            xl: "calc(100% - 275px)",
+          }}
+        >
+          <Portal>
+            <AdminNavbar
+              onOpen={onOpen}
+              logoText={"PURITY UI DASHBOARD"}
+              brandText={getActiveRoute(routes)}
+              secondary={getActiveNavbar(routes)}
+              fixed={fixed}
+              {...rest}
+            />
+          </Portal>
+          {getRoute() ? (
+            <PanelContent>
+              <PanelContainer>
+                <Switch>
+                  {getRoutes(routes)}
+                  <Redirect from="/rtl" to="/rtl/rtl-support-page" />
+                </Switch>
+              </PanelContainer>
+            </PanelContent>
+          ) : null}
+          <Footer />
+          <Portal>
+            <FixedPlugin
+              secondary={getActiveNavbar(routes)}
+              fixed={fixed}
+              onOpen={onOpen}
+            />
+          </Portal>
+          <Configurator
+            secondary={getActiveNavbar(routes)}
+            isOpen={isOpen}
+            onClose={onClose}
+            isChecked={fixed}
+            onSwitch={(value) => {
+              setFixed(value);
+            }}
+            onOpaque={() => setSidebarVariant("opaque")}
+            onTransparent={() => setSidebarVariant("transparent")}
+          />
+        </MainPanel>
+      </RtlProvider>
     </ChakraProvider>
   );
 }
 
 // Chakra-UI imports
-export default function RTL(props) {
-  const { ...rest } = props;
-  // states and functions
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [miniActive, setMiniActive] = React.useState(false);
-  // const [logo, setLogo] = React.useState(
-  //   require("assets/img/logo-white.svg").default
-  // );
-  // ref for main panel div
-  const mainPanel = React.createRef();
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const getActiveRoute = (routes) => {
-    let activeRoute = "Default Brand Text";
-    for (let i = 0; i < routes.length; i++) {
-      if (routes[i].collapse) {
-        let collapseActiveRoute = getActiveRoute(routes[i].views);
-        if (collapseActiveRoute !== activeRoute) {
-          return collapseActiveRoute;
-        }
-      } else {
-        if (
-          window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
-        ) {
-          return routes[i].name;
-        }
-      }
-    }
-    return activeRoute;
-  };
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
-      if (prop.layout === "/rtl") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
-  return (
-    <ChakraProvider theme={theme} resetCss={false}>
-      <Sidebar
-        routes={routes}
-        logoText={"توقيت الإبداعية"}
-        handleDrawerToggle={handleDrawerToggle}
-        open={mobileOpen}
-        miniActive={miniActive}
-        {...rest}
-      />
-      <MainPanel
-        variant="rtl"
-        w={{
-          lg: "calc(100% - 260px)",
-        }}
-      >
-        <AdminNavbar
-          sidebarMinimize={sidebarMinimize.bind(this)}
-          miniActive={miniActive}
-          handleDrawerToggle={handleDrawerToggle}
-          brandText={getActiveRoute(routes)}
-          {...rest}
-        />
-        <PanelContent>
-          <PanelContainer>
-            <Switch>
-              {getRoutes(routes)}
-              <Redirect from="/rtl" to="/rtl/rtl-support-page" />
-            </Switch>
-          </PanelContainer>
-        </PanelContent>
-        <Fo />
-      </MainPanel>
-    </ChakraProvider>
-  );
-}
+// export default function RTL(props) {
+//   const { ...rest } = props;
+//   // states and functions
+//   const [mobileOpen, setMobileOpen] = React.useState(false);
+//   const [miniActive, setMiniActive] = React.useState(false);
+//   // const [logo, setLogo] = React.useState(
+//   //   require("assets/img/logo-white.svg").default
+//   // );
+//   // ref for main panel div
+//   const mainPanel = React.createRef();
+//   const handleDrawerToggle = () => {
+//     setMobileOpen(!mobileOpen);
+//   };
+//   const getActiveRoute = (routes) => {
+//     let activeRoute = "Default Brand Text";
+//     for (let i = 0; i < routes.length; i++) {
+//       if (routes[i].collapse) {
+//         let collapseActiveRoute = getActiveRoute(routes[i].views);
+//         if (collapseActiveRoute !== activeRoute) {
+//           return collapseActiveRoute;
+//         }
+//       } else {
+//         if (
+//           window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
+//         ) {
+//           return routes[i].name;
+//         }
+//       }
+//     }
+//     return activeRoute;
+//   };
+//   const getRoutes = (routes) => {
+//     return routes.map((prop, key) => {
+//       if (prop.collapse) {
+//         return getRoutes(prop.views);
+//       }
+//       if (prop.layout === "/rtl") {
+//         return (
+//           <Route
+//             path={prop.layout + prop.path}
+//             component={prop.component}
+//             key={key}
+//           />
+//         );
+//       } else {
+//         return null;
+//       }
+//     });
+//   };
+//   return (
+//     <ChakraProvider theme={theme} resetCss={false}>
+//       <Sidebar
+//         routes={routes}
+//         logoText={"توقيت الإبداعية"}
+//         handleDrawerToggle={handleDrawerToggle}
+//         open={mobileOpen}
+//         miniActive={miniActive}
+//         {...rest}
+//       />
+//       <MainPanel
+//         variant="rtl"
+//         w={{
+//           lg: "calc(100% - 260px)",
+//         }}
+//       >
+//         <AdminNavbar
+//           sidebarMinimize={sidebarMinimize.bind(this)}
+//           miniActive={miniActive}
+//           handleDrawerToggle={handleDrawerToggle}
+//           brandText={getActiveRoute(routes)}
+//           {...rest}
+//         />
+//         <PanelContent>
+//           <PanelContainer>
+//             <Switch>
+//               {getRoutes(routes)}
+//               <Redirect from="/rtl" to="/rtl/rtl-support-page" />
+//             </Switch>
+//           </PanelContainer>
+//         </PanelContent>
+//         <Fo />
+//       </MainPanel>
+//     </ChakraProvider>
+//   );
+// }

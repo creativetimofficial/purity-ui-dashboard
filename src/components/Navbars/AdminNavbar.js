@@ -15,7 +15,6 @@ import AdminNavbarLinks from "./AdminNavbarLinks";
 export default function AdminNavbar(props) {
   const [scrolled, setScrolled] = useState(false);
   const {
-    rtlActive,
     variant,
     children,
     fixed,
@@ -92,7 +91,8 @@ export default function AdminNavbar(props) {
       mx="auto"
       mt={secondaryMargin}
       pb="8px"
-      insetEnd={{ sm: "15px", xl: "30px" }}
+      left={document.documentElement.dir === "rtl" ? "30px" : ""}
+      right={document.documentElement.dir === "rtl" ? "" : "30px"}
       px={{
         sm: paddingX,
         md: "30px",
@@ -149,7 +149,6 @@ export default function AdminNavbar(props) {
         <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
             onOpen={props.onOpen}
-            rtlActive={rtlActive}
             logoText={props.logoText}
             secondary={props.secondary}
             fixed={props.fixed}
@@ -161,7 +160,6 @@ export default function AdminNavbar(props) {
 }
 
 AdminNavbar.propTypes = {
-  rtlActive: PropTypes.bool,
   brandText: PropTypes.string,
   variant: PropTypes.string,
   secondary: PropTypes.bool,

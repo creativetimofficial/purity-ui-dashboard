@@ -35,8 +35,8 @@ function SignUp() {
         minH={{ base: "70vh", md: "50vh" }}
         w={{ md: "calc(100vw - 50px)" }}
         borderRadius={{ md: "15px" }}
-        insetStart="0"
-        insetEnd="0"
+        left="0"
+        right="0"
         bgRepeat="no-repeat"
         overflow="hidden"
         zIndex="-1"

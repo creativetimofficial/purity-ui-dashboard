@@ -7,7 +7,6 @@ import React from "react";
 export function ItemContent(props) {
   const navbarIcon = useColorModeValue("gray.500", "gray.200");
   const notificationColor = useColorModeValue("gray.700", "white");
-  const { rtlActive } = props;
   const spacing = " ";
   return (
     <>
@@ -35,7 +34,3 @@ export function ItemContent(props) {
     </>
   );
 }
-
-ItemContent.propTypes = {
-  rtlActive: PropTypes.bool,
-};
