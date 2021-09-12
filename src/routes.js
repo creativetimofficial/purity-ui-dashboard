@@ -45,7 +45,6 @@ var dashRoutes = [
     path: "/rtl-support-page",
     name: "RTL",
     rtlName: "آرتيإل",
-    onClick: "rtl",
     icon: <CreditIcon color="inherit" />,
     component: RTLPage,
     layout: "/rtl",

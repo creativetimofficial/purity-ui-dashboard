@@ -89,11 +89,6 @@ function Sidebar(props) {
         <NavLink to={prop.layout + prop.path}>
           {activeRoute(prop.layout + prop.path) === "active" ? (
             <Button
-              onClick={
-                prop.onClick === "rtl"
-                  ? (document.documentElement.dir = "rtl")
-                  : (document.documentElement.dir = "ltr")
-              }
               boxSize="initial"
               justifyContent="flex-start"
               alignItems="center"
@@ -147,11 +142,6 @@ function Sidebar(props) {
             </Button>
           ) : (
             <Button
-              onClick={
-                prop.onClick === "rtl"
-                  ? (document.documentElement.dir = "rtl")
-                  : (document.documentElement.dir = "ltr")
-              }
               boxSize="initial"
               justifyContent="flex-start"
               alignItems="center"
@@ -328,11 +318,6 @@ export function SidebarResponsive(props) {
         <NavLink to={prop.layout + prop.path}>
           {activeRoute(prop.layout + prop.path) === "active" ? (
             <Button
-              onClick={
-                prop.onClick === "rtl"
-                  ? (document.documentElement.dir = "rtl")
-                  : (document.documentElement.dir = "ltr")
-              }
               boxSize="initial"
               justifyContent="flex-start"
               alignItems="center"
@@ -383,11 +368,6 @@ export function SidebarResponsive(props) {
             </Button>
           ) : (
             <Button
-              onClick={
-                prop.onClick === "rtl"
-                  ? (document.documentElement.dir = "rtl")
-                  : (document.documentElement.dir = "ltr")
-              }
               boxSize="initial"
               justifyContent="flex-start"
               alignItems="center"
@@ -494,7 +474,7 @@ export function SidebarResponsive(props) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement="start"
+        placement={document.documentElement.dir === "rtl" ? "right" : "left"}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />

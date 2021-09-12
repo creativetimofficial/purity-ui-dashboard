@@ -48,7 +48,7 @@ import React, { useState } from "react";
 // react icons
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
-import { dashboardTableData, timelineData } from "variables/general";
+import { rtlDashboardTableData, rtlTimelineData } from "variables/general";
 
 export default function Dashboard() {
   const value = "$100.000";
@@ -84,7 +84,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  Today's Money
+                  أموال اليوم
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor}>
@@ -119,7 +119,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  Today's Users
+                  مستخدمو اليوم
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor}>
@@ -154,7 +154,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  New Clients
+                  عملاء جدد
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor}>
@@ -190,7 +190,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  Total Sales
+                  إجمالي المبيعات
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor} fontWeight="bold">
@@ -232,7 +232,7 @@ export default function Dashboard() {
                 width={{ lg: "45%" }}
               >
                 <Text fontSize="sm" color="gray.400" fontWeight="bold">
-                  Built by developers
+                  بناها المطورون
                 </Text>
                 <Text
                   fontSize="lg"
@@ -240,11 +240,11 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".5rem"
                 >
-                  Purity UI Dashboard
+                  لوحة معلومات Purity UI
                 </Text>
                 <Text fontSize="sm" color="gray.400" fontWeight="normal">
-                  From colors, cards, typography to complex elements, you will
-                  find the full documentation.
+                  من الألوان والبطاقات والطباعة إلى العناصر المعقدة ، ستجد
+                  الوثائق الكاملة.
                 </Text>
                 <Spacer />
                 <Flex align="center">
@@ -263,7 +263,7 @@ export default function Dashboard() {
                       my={{ sm: "1.5rem", lg: "0px" }}
                       _hover={{ me: "4px" }}
                     >
-                      Read more
+                      اقرأ أكثر
                     </Text>
                     <Icon
                       as={
@@ -333,11 +333,11 @@ export default function Dashboard() {
                 lineHeight="1.6"
               >
                 <Text fontSize="xl" fontWeight="bold" pb=".3rem">
-                  Work with the rockets
+                  العمل مع الصواريخ
                 </Text>
                 <Text fontSize="sm" fontWeight="normal" w={{ lg: "92%" }}>
-                  Wealth creation is a revolutionary recent positive-sum game.
-                  It is all about who takes the opportunity first.
+                  تكوين الثروة هو لعبة ثورية حديثة ذات محصلة إيجابية. الأمر كله
+                  يتعلق بمن يغتنم الفرصة أولاً.
                 </Text>
                 <Spacer />
                 <Flex
@@ -351,7 +351,7 @@ export default function Dashboard() {
                       _hover={{ me: "4px" }}
                       transition="all .5s ease"
                     >
-                      Read more
+                      اقرأ أكثر
                     </Text>
                     <Icon
                       as={
@@ -401,13 +401,13 @@ export default function Dashboard() {
                   fontWeight="bold"
                   mb="6px"
                 >
-                  Active Users
+                  المستخدمين النشطين
                 </Text>
                 <Text fontSize="md" fontWeight="medium" color="gray.400">
                   <Text as="span" color="green.400" fontWeight="bold">
                     (+23%)
                   </Text>{" "}
-                  than last week
+                  من الأسبوع الماضي
                 </Text>
               </Flex>
               <SimpleGrid gap={{ sm: "12px" }} columns={4}>
@@ -423,7 +423,7 @@ export default function Dashboard() {
                       <WalletIcon h={"15px"} w={"15px"} color={iconBoxInside} />
                     </IconBox>
                     <Text fontSize="sm" color="gray.400" fontWeight="semibold">
-                      Users
+                      المستخدمون
                     </Text>
                   </Flex>
                   <Text
@@ -454,7 +454,7 @@ export default function Dashboard() {
                       <RocketIcon h={"15px"} w={"15px"} color={iconBoxInside} />
                     </IconBox>
                     <Text fontSize="sm" color="gray.400" fontWeight="semibold">
-                      Clicks
+                      نقرات
                     </Text>
                   </Flex>
                   <Text
@@ -485,7 +485,7 @@ export default function Dashboard() {
                       <CartIcon h={"15px"} w={"15px"} color={iconBoxInside} />
                     </IconBox>
                     <Text fontSize="sm" color="gray.400" fontWeight="semibold">
-                      Sales
+                      مبيعات
                     </Text>
                   </Flex>
                   <Text
@@ -516,7 +516,7 @@ export default function Dashboard() {
                       <StatsIcon h={"15px"} w={"15px"} color={iconBoxInside} />
                     </IconBox>
                     <Text fontSize="sm" color="gray.400" fontWeight="semibold">
-                      Items
+                      العناصر
                     </Text>
                   </Flex>
                   <Text
@@ -543,13 +543,13 @@ export default function Dashboard() {
           <CardHeader mb="20px" pl="22px">
             <Flex direction="column" alignSelf="flex-start">
               <Text fontSize="lg" color={textColor} fontWeight="bold" mb="6px">
-                Sales Overview
+                نظرة عامة على المبيعات
               </Text>
               <Text fontSize="md" fontWeight="medium" color="gray.400">
                 <Text as="span" color="green.400" fontWeight="bold">
-                  (+5%) more
+                  (+5%) أكثر
                 </Text>{" "}
-                in 2021
+                في عام 2021
               </Text>
             </Flex>
           </CardHeader>
@@ -572,7 +572,7 @@ export default function Dashboard() {
                 fontWeight="bold"
                 pb=".5rem"
               >
-                Projects
+                المشاريع
               </Text>
               <Flex align="center">
                 <Icon
@@ -584,9 +584,9 @@ export default function Dashboard() {
                 />
                 <Text fontSize="sm" color="gray.400" fontWeight="normal">
                   <Text fontWeight="bold" as="span">
-                    30 done
+                    30 انتهى
                   </Text>{" "}
-                  this month.
+                  هذا الشهر.
                 </Text>
               </Flex>
             </Flex>
@@ -595,15 +595,15 @@ export default function Dashboard() {
             <Thead>
               <Tr my=".8rem" ps="0px">
                 <Th ps="0px" color="gray.400">
-                  Companies
+                  شركات
                 </Th>
-                <Th color="gray.400">Members</Th>
-                <Th color="gray.400">Budget</Th>
-                <Th color="gray.400">Completion</Th>
+                <Th color="gray.400">أعضاء</Th>
+                <Th color="gray.400">الدخل</Th>
+                <Th color="gray.400">انتهاء</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {dashboardTableData.map((row) => {
+              {rtlDashboardTableData.map((row) => {
                 return (
                   <DashboardTableRow
                     name={row.name}
@@ -626,19 +626,19 @@ export default function Dashboard() {
                 fontWeight="bold"
                 pb=".5rem"
               >
-                Orders overview
+                نظرة عامة على الطلبات
               </Text>
               <Text fontSize="sm" color="gray.400" fontWeight="normal">
                 <Text fontWeight="bold" as="span" color="teal.300">
                   +30%
                 </Text>{" "}
-                this month.
+                هذا الشهر.
               </Text>
             </Flex>
           </CardHeader>
           <CardBody ps="20px" pe="0px" mb="31px" position="relative">
             <Flex direction="column">
-              {timelineData.map((row, index, arr) => {
+              {rtlTimelineData.map((row, index, arr) => {
                 return (
                   <TimelineRow
                     logo={row.logo}
