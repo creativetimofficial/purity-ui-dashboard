@@ -36,7 +36,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.creative-tim.com"
+          href="https://www.creative-tim.com?ref=creativetim-pud"
           target="_blank"
         >
           {document.documentElement.dir === "rtl"
@@ -47,7 +47,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.simmmple.com"
+          href="https://www.simmmple.com?ref=creativetim-pud"
           target="_blank"
         >
           {document.documentElement.dir === "rtl" ? "سيممبل " : " Simmmple"}
@@ -63,7 +63,10 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.creative-tim.com">
+          <Link
+            color="gray.400"
+            href="https://www.creative-tim.com?ref=creativetim-pud"
+          >
             {document.documentElement.dir === "rtl"
               ? "توقيت الإبداعية"
               : "Creative Tim"}
@@ -75,7 +78,10 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.simmmple.com">
+          <Link
+            color="gray.400"
+            href="https://www.simmmple.com?ref=creativetim-pud"
+          >
             {document.documentElement.dir === "rtl" ? "سيممبل" : "Simmmple"}
           </Link>
         </ListItem>
@@ -88,7 +94,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#blog"
-            href="https://creative-tim.com/blog"
+            href="https://creative-tim.com/blog?ref=creativetim-pud"
           >
             {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"}
           </Link>
@@ -97,7 +103,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#license"
-            href="https://www.creative-tim.com/license"
+            href="https://www.creative-tim.com/license?ref=creativetim-pud"
           >
             {document.documentElement.dir === "rtl" ? "رخصة" : "License"}
           </Link>
