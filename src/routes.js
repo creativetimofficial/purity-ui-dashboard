@@ -14,6 +14,7 @@ import {
   PersonIcon,
   DocumentIcon,
   RocketIcon,
+  SupportIcon,
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -45,7 +46,7 @@ var dashRoutes = [
     path: "/rtl-support-page",
     name: "RTL",
     rtlName: "آرتيإل",
-    icon: <CreditIcon color="inherit" />,
+    icon: <SupportIcon color="inherit" />,
     component: RTLPage,
     layout: "/rtl",
   },
