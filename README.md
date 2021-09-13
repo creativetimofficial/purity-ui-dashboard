@@ -165,7 +165,8 @@ purity-ui-dashboard/
     │       └── TransactionRow.js
     ├── layouts
     │   ├── Admin.js
-    │   └── Auth.js
+    │   ├── Auth.js
+    │   └── RTL.js
     ├── theme
     │   ├── additions
     │   │   ├── card
@@ -195,9 +196,11 @@ purity-ui-dashboard/
     │   │   ├── Dashboard.js
     │   │   ├── Profile.js
     │   │   └── Tables.js
-    │   └── Pages
+    │   ├── Pages
     │       ├── SignIn.js
     │       └── SignUp.js
+    │   └── RTL
+    │       └── RTLPage.js
     ├── index.js
     └── routes.js
 
