@@ -39,7 +39,7 @@ function Sidebar(props) {
   };
   // this function creates the links and collapses that appear in the sidebar (left menu)
   const createLinks = (routes) => {
-    const { sidebarVariant, rtlActive } = props;
+    const { sidebarVariant } = props;
     // Chakra Color Mode
     let activeBg = useColorModeValue("white", "gray.700");
     let inactiveBg = useColorModeValue("white", "gray.700");
@@ -77,7 +77,9 @@ function Sidebar(props) {
               }}
               py="12px"
             >
-              {rtlActive ? prop.rtlName : prop.name}
+              {document.documentElement.dir === "rtl"
+                ? prop.rtlName
+                : prop.name}
             </Text>
             {createLinks(prop.views)}
           </>
@@ -132,7 +134,9 @@ function Sidebar(props) {
                   </IconBox>
                 )}
                 <Text color={activeColor} my="auto" fontSize="sm">
-                  {rtlActive ? prop.rtlName : prop.name}
+                  {document.documentElement.dir === "rtl"
+                    ? prop.rtlName
+                    : prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -181,7 +185,9 @@ function Sidebar(props) {
                   </IconBox>
                 )}
                 <Text color={inactiveColor} my="auto" fontSize="sm">
-                  {rtlActive ? prop.rtlName : prop.name}
+                  {document.documentElement.dir === "rtl"
+                    ? prop.rtlName
+                    : prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -190,7 +196,7 @@ function Sidebar(props) {
       );
     });
   };
-  const { logoText, routes, rtlActive, sidebarVariant } = props;
+  const { logoText, routes, sidebarVariant } = props;
 
   var links = <>{createLinks(routes)}</>;
   //  BRAND
@@ -272,7 +278,6 @@ export function SidebarResponsive(props) {
   };
   // this function creates the links and collapses that appear in the sidebar (left menu)
   const createLinks = (routes) => {
-    const { rtlActive } = props;
     // Chakra Color Mode
     const activeBg = useColorModeValue("white", "gray.700");
     const inactiveBg = useColorModeValue("white", "gray.700");
@@ -301,7 +306,9 @@ export function SidebarResponsive(props) {
               }}
               py="12px"
             >
-              {rtlActive ? prop.rtlName : prop.name}
+              {document.documentElement.dir === "rtl"
+                ? prop.rtlName
+                : prop.name}
             </Text>
             {createLinks(prop.views)}
           </>
@@ -353,7 +360,9 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={activeColor} my="auto" fontSize="sm">
-                  {rtlActive ? prop.rtlName : prop.name}
+                  {document.documentElement.dir === "rtl"
+                    ? prop.rtlName
+                    : prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -401,7 +410,9 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={inactiveColor} my="auto" fontSize="sm">
-                  {rtlActive ? prop.rtlName : prop.name}
+                  {document.documentElement.dir === "rtl"
+                    ? prop.rtlName
+                    : prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -410,7 +421,7 @@ export function SidebarResponsive(props) {
       );
     });
   };
-  const { logoText, routes, rtlActive, ...rest } = props;
+  const { logoText, routes, ...rest } = props;
 
   var links = <>{createLinks(routes)}</>;
   //  BRAND
@@ -463,7 +474,7 @@ export function SidebarResponsive(props) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement="left"
+        placement={document.documentElement.dir === "rtl" ? "right" : "left"}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
@@ -499,13 +510,11 @@ export function SidebarResponsive(props) {
 // PROPS
 
 Sidebar.propTypes = {
-  rtlActive: PropTypes.bool,
   logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
   variant: PropTypes.string,
 };
 SidebarResponsive.propTypes = {
-  rtlActive: PropTypes.bool,
   logoText: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object),
 };

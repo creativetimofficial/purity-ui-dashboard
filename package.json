@@ -7,6 +7,7 @@
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",
     "@chakra-ui/theme-tools": "^1.1.9",
+    "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/open-sans": "^4.5.0",
@@ -32,7 +33,9 @@
     "react-scripts": "4.0.3",
     "react-swipeable-views": "0.13.9",
     "react-table": "7.7.0",
-    "react-tagsinput": "3.19.0"
+    "react-tagsinput": "3.19.0",
+    "stylis": "^4.0.10",
+    "stylis-plugin-rtl": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

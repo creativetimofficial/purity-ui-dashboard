@@ -25,7 +25,7 @@ export default function AuthNavbar(props) {
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
-  const { logo, logoText, rtlActive, secondary, ...rest } = props;
+  const { logo, logoText, secondary, ...rest } = props;
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
     return window.location.href.indexOf(routeName) > -1 ? true : false;
