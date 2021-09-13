@@ -1,6 +1,6 @@
 # [Purity UI Dashboard](https://demos.creative-tim.com/purity-ui-dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fpurity-ui-dashboard%2F&text=Check%20Purity%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%26%20%40simmmple_web)
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-1.0.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/purity-ui-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/purity-ui-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
 ![Product Gif](https://i.ibb.co/7NXMZQS/Cover-Purity-Chakra-FREE-Thumbnail.png)
 
