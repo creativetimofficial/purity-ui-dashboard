@@ -30,7 +30,7 @@ export function SidebarHelp(props) {
       </Text>
       <Link
         w="100%"
-        href="https://demos.creative-tim.com/docs-purity-ui-dashboard/?ref=creativetim-pud"
+        href="https://demos.creative-tim.com/docs-purity-ui-dashboard/"
       >
         <Button
           fontSize="10px"
