@@ -1,5 +1,6 @@
 // chakra imports
 import { Box, ChakraProvider, Portal } from "@chakra-ui/react";
+import { ThemeEditorProvider } from "@hypertheme-editor/chakra-ui";
 import Footer from "components/Footer/Footer.js";
 // core components
 import AuthNavbar from "components/Navbars/AuthNavbar.js";
@@ -85,25 +86,27 @@ export default function Pages(props) {
   document.documentElement.dir = "ltr";
   return (
     <ChakraProvider theme={theme} resetCss={false} w="100%">
-      <Box ref={navRef} w="100%">
-        <Portal containerRef={navRef}>
-          <AuthNavbar
-            secondary={getActiveNavbar(routes)}
-            logoText="PURITY UI DASHBOARD"
-          />
-        </Portal>
-        <Box w="100%">
-          <Box ref={wrapper} w="100%">
-            <Switch>
-              {getRoutes(routes)}
-              <Redirect from="/auth" to="/auth/login-page" />
-            </Switch>
+      <ThemeEditorProvider>
+        <Box ref={navRef} w="100%">
+          <Portal containerRef={navRef}>
+            <AuthNavbar
+              secondary={getActiveNavbar(routes)}
+              logoText="PURITY UI DASHBOARD"
+            />
+          </Portal>
+          <Box w="100%">
+            <Box ref={wrapper} w="100%">
+              <Switch>
+                {getRoutes(routes)}
+                <Redirect from="/auth" to="/auth/login-page" />
+              </Switch>
+            </Box>
+          </Box>
+          <Box px="24px" mx="auto" width="1044px" maxW="100%">
+            <Footer />
           </Box>
         </Box>
-        <Box px="24px" mx="auto" width="1044px" maxW="100%">
-          <Footer />
-        </Box>
-      </Box>
+      </ThemeEditorProvider>
     </ChakraProvider>
   );
 }
