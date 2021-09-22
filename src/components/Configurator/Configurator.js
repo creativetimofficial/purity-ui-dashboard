@@ -137,18 +137,12 @@ export default function Configurator(props) {
 
               <Separator />
               <Box mt="24px">
-                {/* <Text fontSize="md" fontWeight="600">
-                  Sidenav Type
-                </Text>
-                <Text fontSize="sm" mb="16px">
-                  Choose between 2 different sidenav types.
-                </Text> */}
                 <Flex flexDirection="column">
                   <Text fontSize="md" fontWeight="600">
-                    ThemeEditor
+                    Theme Editor
                   </Text>
                   <Text fontSize="sm" mb="16px">
-                    Edit the current theme, click the button below
+                    Edit the current Chakra UI theme, click the button below
                   </Text>
                   <ThemeEditor />
                 </Flex>
