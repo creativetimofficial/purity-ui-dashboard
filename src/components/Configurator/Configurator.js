@@ -20,6 +20,7 @@ import { Separator } from "components/Separator/Separator";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { FaTwitter, FaFacebook } from "react-icons/fa";
+import { ThemeEditor } from "./ThemeEditor";
 
 export default function Configurator(props) {
   const { secondary, isOpen, onClose, fixed, ...rest } = props;
@@ -136,12 +137,22 @@ export default function Configurator(props) {
 
               <Separator />
               <Box mt="24px">
-                <Text fontSize="md" fontWeight="600">
+                {/* <Text fontSize="md" fontWeight="600">
                   Sidenav Type
                 </Text>
                 <Text fontSize="sm" mb="16px">
                   Choose between 2 different sidenav types.
-                </Text>
+                </Text> */}
+                <Flex flexDirection="column">
+                  <Text fontSize="md" fontWeight="600">
+                    ThemeEditor
+                  </Text>
+                  <Text fontSize="sm" mb="16px">
+                    Edit the current theme, click the button below
+                  </Text>
+                  <ThemeEditor />
+                </Flex>
+                <Separator mb={4} />
                 <Box>
                   <Link
                     href="https://www.creative-tim.com/product/purity-ui-dashboard"

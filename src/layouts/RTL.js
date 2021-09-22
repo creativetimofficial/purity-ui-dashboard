@@ -16,6 +16,7 @@ import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
 import MainPanel from "../components/Layout/MainPanel";
 import PanelContainer from "../components/Layout/PanelContainer";
 import PanelContent from "../components/Layout/PanelContent";
+import { ThemeEditorProvider } from "@hypertheme-editor/chakra-ui";
 export default function Dashboard(props) {
   const { ...rest } = props;
   // states and functions
@@ -96,63 +97,65 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <ChakraProvider theme={theme} resetCss={false}>
-      <RtlProvider>
-        <Sidebar
-          routes={routes}
-          logoText={"PURITY UI DASHBOARD"}
-          display="none"
-          sidebarVariant={sidebarVariant}
-          {...rest}
-        />
-        <MainPanel
-          variant="rtl"
-          ref={mainPanel}
-          w={{
-            base: "100%",
-            xl: "calc(100% - 275px)",
-          }}
-        >
-          <Portal>
-            <AdminNavbar
-              onOpen={onOpen}
-              logoText={"PURITY UI DASHBOARD"}
-              brandText={getActiveRoute(routes)}
-              secondary={getActiveNavbar(routes)}
-              fixed={fixed}
-              {...rest}
-            />
-          </Portal>
-          {getRoute() ? (
-            <PanelContent>
-              <PanelContainer>
-                <Switch>
-                  {getRoutes(routes)}
-                  <Redirect from="/rtl" to="/rtl/rtl-support-page" />
-                </Switch>
-              </PanelContainer>
-            </PanelContent>
-          ) : null}
-          <Footer />
-          <Portal>
-            <FixedPlugin
-              secondary={getActiveNavbar(routes)}
-              fixed={fixed}
-              onOpen={onOpen}
-            />
-          </Portal>
-          <Configurator
-            secondary={getActiveNavbar(routes)}
-            isOpen={isOpen}
-            onClose={onClose}
-            isChecked={fixed}
-            onSwitch={(value) => {
-              setFixed(value);
-            }}
-            onOpaque={() => setSidebarVariant("opaque")}
-            onTransparent={() => setSidebarVariant("transparent")}
+      <ThemeEditorProvider>
+        <RtlProvider>
+          <Sidebar
+            routes={routes}
+            logoText={"PURITY UI DASHBOARD"}
+            display="none"
+            sidebarVariant={sidebarVariant}
+            {...rest}
           />
-        </MainPanel>
-      </RtlProvider>
+          <MainPanel
+            variant="rtl"
+            ref={mainPanel}
+            w={{
+              base: "100%",
+              xl: "calc(100% - 275px)",
+            }}
+          >
+            <Portal>
+              <AdminNavbar
+                onOpen={onOpen}
+                logoText={"PURITY UI DASHBOARD"}
+                brandText={getActiveRoute(routes)}
+                secondary={getActiveNavbar(routes)}
+                fixed={fixed}
+                {...rest}
+              />
+            </Portal>
+            {getRoute() ? (
+              <PanelContent>
+                <PanelContainer>
+                  <Switch>
+                    {getRoutes(routes)}
+                    <Redirect from="/rtl" to="/rtl/rtl-support-page" />
+                  </Switch>
+                </PanelContainer>
+              </PanelContent>
+            ) : null}
+            <Footer />
+            <Portal>
+              <FixedPlugin
+                secondary={getActiveNavbar(routes)}
+                fixed={fixed}
+                onOpen={onOpen}
+              />
+            </Portal>
+            <Configurator
+              secondary={getActiveNavbar(routes)}
+              isOpen={isOpen}
+              onClose={onClose}
+              isChecked={fixed}
+              onSwitch={(value) => {
+                setFixed(value);
+              }}
+              onOpaque={() => setSidebarVariant("opaque")}
+              onTransparent={() => setSidebarVariant("transparent")}
+            />
+          </MainPanel>
+        </RtlProvider>
+      </ThemeEditorProvider>
     </ChakraProvider>
   );
 }

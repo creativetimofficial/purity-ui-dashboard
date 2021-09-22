@@ -1,5 +1,6 @@
 // Chakra imports
 import { ChakraProvider, Portal, useDisclosure } from "@chakra-ui/react";
+import { ThemeEditorProvider } from "@hypertheme-editor/chakra-ui";
 import Configurator from "components/Configurator/Configurator";
 import Footer from "components/Footer/Footer.js";
 // Layout components
@@ -96,60 +97,62 @@ export default function Dashboard(props) {
   // Chakra Color Mode
   return (
     <ChakraProvider theme={theme} resetCss={false}>
-      <Sidebar
-        routes={routes}
-        logoText={"PURITY UI DASHBOARD"}
-        display="none"
-        sidebarVariant={sidebarVariant}
-        {...rest}
-      />
-      <MainPanel
-        ref={mainPanel}
-        w={{
-          base: "100%",
-          xl: "calc(100% - 275px)",
-        }}
-      >
-        <Portal>
-          <AdminNavbar
-            onOpen={onOpen}
-            logoText={"PURITY UI DASHBOARD"}
-            brandText={getActiveRoute(routes)}
-            secondary={getActiveNavbar(routes)}
-            fixed={fixed}
-            {...rest}
-          />
-        </Portal>
-        {getRoute() ? (
-          <PanelContent>
-            <PanelContainer>
-              <Switch>
-                {getRoutes(routes)}
-                <Redirect from="/admin" to="/admin/dashboard" />
-              </Switch>
-            </PanelContainer>
-          </PanelContent>
-        ) : null}
-        <Footer />
-        <Portal>
-          <FixedPlugin
-            secondary={getActiveNavbar(routes)}
-            fixed={fixed}
-            onOpen={onOpen}
-          />
-        </Portal>
-        <Configurator
-          secondary={getActiveNavbar(routes)}
-          isOpen={isOpen}
-          onClose={onClose}
-          isChecked={fixed}
-          onSwitch={(value) => {
-            setFixed(value);
-          }}
-          onOpaque={() => setSidebarVariant("opaque")}
-          onTransparent={() => setSidebarVariant("transparent")}
+      <ThemeEditorProvider>
+        <Sidebar
+          routes={routes}
+          logoText={"PURITY UI DASHBOARD"}
+          display="none"
+          sidebarVariant={sidebarVariant}
+          {...rest}
         />
-      </MainPanel>
+        <MainPanel
+          ref={mainPanel}
+          w={{
+            base: "100%",
+            xl: "calc(100% - 275px)",
+          }}
+        >
+          <Portal>
+            <AdminNavbar
+              onOpen={onOpen}
+              logoText={"PURITY UI DASHBOARD"}
+              brandText={getActiveRoute(routes)}
+              secondary={getActiveNavbar(routes)}
+              fixed={fixed}
+              {...rest}
+            />
+          </Portal>
+          {getRoute() ? (
+            <PanelContent>
+              <PanelContainer>
+                <Switch>
+                  {getRoutes(routes)}
+                  <Redirect from="/admin" to="/admin/dashboard" />
+                </Switch>
+              </PanelContainer>
+            </PanelContent>
+          ) : null}
+          <Footer />
+          <Portal>
+            <FixedPlugin
+              secondary={getActiveNavbar(routes)}
+              fixed={fixed}
+              onOpen={onOpen}
+            />
+          </Portal>
+          <Configurator
+            secondary={getActiveNavbar(routes)}
+            isOpen={isOpen}
+            onClose={onClose}
+            isChecked={fixed}
+            onSwitch={(value) => {
+              setFixed(value);
+            }}
+            onOpaque={() => setSidebarVariant("opaque")}
+            onTransparent={() => setSidebarVariant("transparent")}
+          />
+        </MainPanel>
+      </ThemeEditorProvider>
     </ChakraProvider>
   );
 }
