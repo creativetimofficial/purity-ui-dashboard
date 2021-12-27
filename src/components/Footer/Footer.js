@@ -35,7 +35,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.creative-tim.com?ref=creativetim-pud"
+          href="https://www.creative-tim.com?ref=creativetim-vud"
           target="_blank"
         >
           {rtlActive ? " توقيت الإبداعية" : "Creative Tim "}
@@ -44,7 +44,7 @@ export default function Footer(props) {
         <Link
           // color={linkTeal}
           color="teal.400"
-          href="https://www.simmmple.com?ref=creativetim-pud"
+          href="https://www.simmmple.com?ref=creativetim-vud"
           target="_blank"
         >
           {rtlActive ? "سيممبل " : " Simmmple"}
@@ -60,7 +60,7 @@ export default function Footer(props) {
         >
           <Link
             color="gray.400"
-            href="https://www.creative-tim.com?ref=creativetim-pud"
+            href="https://www.creative-tim.com?ref=creativetim-vud"
           >
             {rtlActive ? "توقيت الإبداعية" : "Creative Tim"}
           </Link>
@@ -73,7 +73,7 @@ export default function Footer(props) {
         >
           <Link
             color="gray.400"
-            href="https://www.simmmple.com?ref=creativetim-pud"
+            href="https://www.simmmple.com?ref=creativetim-vud"
           >
             {rtlActive ? "سيممبل" : "Simmmple"}
           </Link>
@@ -87,7 +87,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#blog"
-            href="https://creative-tim.com/blog?ref=creativetim-pud"
+            href="https://creative-tim.com/blog?ref=creativetim-vud"
           >
             {rtlActive ? "مدونة" : "Blog"}
           </Link>
@@ -96,7 +96,7 @@ export default function Footer(props) {
           <Link
             color="gray.400"
             href="#license"
-            href="https://www.creative-tim.com/license?ref=creativetim-pud"
+            href="https://www.creative-tim.com/license?ref=creativetim-vud"
           >
             {rtlActive ? "رخصة" : "License"}
           </Link>
