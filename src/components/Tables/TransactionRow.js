@@ -9,7 +9,7 @@ function TransactionRow(props) {
     <Flex my="1rem" justifyContent="space-between">
       <Flex alignItems="center">
         <Box
-          mr="12px"
+          me="12px"
           borderRadius="50%"
           color={
             price[0] === "+"

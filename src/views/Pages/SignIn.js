@@ -23,7 +23,7 @@ function SignIn() {
   return (
     <Flex position="relative" mb="40px">
       <Flex
-        h={{ sm: "initial", md: "64vh", lg: "75vh" }}
+        h={{ sm: "initial", md: "75vh", lg: "85vh" }}
         w="100%"
         maxW="1044px"
         mx="auto"
@@ -35,19 +35,20 @@ function SignIn() {
           alignItems="center"
           justifyContent="start"
           style={{ userSelect: "none" }}
+          w={{ base: "100%", md: "50%", lg: "42%" }}
         >
           <Flex
             direction="column"
             w="100%"
             background="transparent"
             p="48px"
-            mt={{ md: "60px", lg: "0px" }}
+            mt={{ md: "150px", lg: "80px" }}
           >
-            <Heading color={titleColor} fontSize="32px">
+            <Heading color={titleColor} fontSize="32px" mb="10px">
               Welcome Back
             </Heading>
             <Text
-              mb="24px"
+              mb="36px"
               ms="4px"
               color={textColor}
               fontWeight="bold"
@@ -56,22 +57,30 @@ function SignIn() {
               Enter your email and password to sign in
             </Text>
             <FormControl>
-              <FormLabel fontWeight="normal">Email</FormLabel>
+              <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
+                Email
+              </FormLabel>
               <Input
+                borderRadius="15px"
+                mb="24px"
+                fontSize="sm"
                 type="text"
                 placeholder="Your email adress"
-                mb="16px"
                 size="lg"
               />
-              <FormLabel fontWeight="normal">Password</FormLabel>
+              <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
+                Password
+              </FormLabel>
               <Input
+                borderRadius="15px"
+                mb="36px"
+                fontSize="sm"
                 type="password"
                 placeholder="Your password"
-                mb="24px"
                 size="lg"
               />
               <FormControl display="flex" alignItems="center">
-                <Switch id="remember-login" colorScheme="teal" />
+                <Switch id="remember-login" colorScheme="teal" me="10px" />
                 <FormLabel
                   htmlFor="remember-login"
                   mb="0"
@@ -82,19 +91,22 @@ function SignIn() {
                 </FormLabel>
               </FormControl>
               <Button
+                fontSize="10px"
                 type="submit"
                 bg="teal.300"
                 w="100%"
                 h="45"
                 mb="20px"
-                _hover="teal.300"
                 color="white"
-                w="100%"
-                h="45"
                 mt="20px"
-                mb="20px"
+                _hover={{
+                  bg: "teal.200",
+                }}
+                _active={{
+                  bg: "teal.400",
+                }}
               >
-                Sign In
+                SIGN IN
               </Button>
             </FormControl>
             <Flex
@@ -106,7 +118,7 @@ function SignIn() {
             >
               <Text color={textColor} fontWeight="medium">
                 Don't have an account?
-                <Link color={titleColor} as="span" ms="5px">
+                <Link color={titleColor} as="span" ms="5px" fontWeight="bold">
                   Sign Up
                 </Link>
               </Text>

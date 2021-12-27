@@ -1,6 +1,6 @@
 const PanelContainer = {
   baseStyle: {
-    padding: "30px 15px",
+    p: "30px 15px",
     minHeight: "calc(100vh - 123px)",
   },
 };

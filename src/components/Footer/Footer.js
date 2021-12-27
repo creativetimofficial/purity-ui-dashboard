@@ -4,8 +4,7 @@ import { Flex, Link, List, ListItem, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 export default function Footer(props) {
-  // const linkTeal = useColorModeValue("teal.400", "red.200");
-  const { rtlActive } = props;
+  // const linkTeal = useColorModeValue("teal.400", "red.200");=
   return (
     <Flex
       flexDirection={{
@@ -30,7 +29,9 @@ export default function Footer(props) {
       >
         &copy; {1900 + new Date().getYear()},{" "}
         <Text as="span">
-          {rtlActive ? " مصنوع من ❤️ بواسطة" : "Made with ❤️ by "}
+          {document.documentElement.dir === "rtl"
+            ? " مصنوع من ❤️ بواسطة"
+            : "Made with ❤️ by "}
         </Text>
         <Link
           // color={linkTeal}
@@ -38,7 +39,9 @@ export default function Footer(props) {
           href="https://www.creative-tim.com?ref=creativetim-vud"
           target="_blank"
         >
-          {rtlActive ? " توقيت الإبداعية" : "Creative Tim "}
+          {document.documentElement.dir === "rtl"
+            ? " توقيت الإبداعية"
+            : "Creative Tim "}
         </Link>
         &
         <Link
@@ -47,9 +50,11 @@ export default function Footer(props) {
           href="https://www.simmmple.com?ref=creativetim-vud"
           target="_blank"
         >
-          {rtlActive ? "سيممبل " : " Simmmple"}
+          {document.documentElement.dir === "rtl" ? "سيممبل " : " Simmmple"}
         </Link>
-        {rtlActive ? "للحصول على ويب أفضل" : " for a better web"}
+        {document.documentElement.dir === "rtl"
+          ? "للحصول على ويب أفضل"
+          : " for a better web"}
       </Text>
       <List display="flex">
         <ListItem
@@ -62,7 +67,9 @@ export default function Footer(props) {
             color="gray.400"
             href="https://www.creative-tim.com?ref=creativetim-vud"
           >
-            {rtlActive ? "توقيت الإبداعية" : "Creative Tim"}
+            {document.documentElement.dir === "rtl"
+              ? "توقيت الإبداعية"
+              : "Creative Tim"}
           </Link>
         </ListItem>
         <ListItem
@@ -75,7 +82,7 @@ export default function Footer(props) {
             color="gray.400"
             href="https://www.simmmple.com?ref=creativetim-vud"
           >
-            {rtlActive ? "سيممبل" : "Simmmple"}
+            {document.documentElement.dir === "rtl" ? "سيممبل" : "Simmmple"}
           </Link>
         </ListItem>
         <ListItem
@@ -89,7 +96,7 @@ export default function Footer(props) {
             href="#blog"
             href="https://creative-tim.com/blog?ref=creativetim-vud"
           >
-            {rtlActive ? "مدونة" : "Blog"}
+            {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"}
           </Link>
         </ListItem>
         <ListItem>
@@ -98,14 +105,10 @@ export default function Footer(props) {
             href="#license"
             href="https://www.creative-tim.com/license?ref=creativetim-vud"
           >
-            {rtlActive ? "رخصة" : "License"}
+            {document.documentElement.dir === "rtl" ? "رخصة" : "License"}
           </Link>
         </ListItem>
       </List>
     </Flex>
   );
 }
-
-Footer.propTypes = {
-  rtlActive: PropTypes.bool,
-};

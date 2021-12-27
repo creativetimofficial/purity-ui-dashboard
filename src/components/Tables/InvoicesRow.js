@@ -19,19 +19,19 @@ function InvoicesRow(props) {
         <Text fontSize="md" color={textColor} fontWeight="bold">
           {date}
         </Text>
-        <Text fontSize="sm" color="gray.400" fontWeight="semibold" mr="16px">
+        <Text fontSize="sm" color="gray.400" fontWeight="semibold" me="16px">
           {code}
         </Text>
       </Flex>
       <Spacer />
-      <Box mr="12px">
+      <Box me="12px">
         <Text fontSize="md" color="gray.400" fontWeight="semibold">
           {price}
         </Text>
       </Box>
       <Button p="0px" bg="transparent" variant="no-hover">
         <Flex alignItems="center" p="12px">
-          <Icon as={logo} w="20px" h="auto" mr="5px" />
+          <Icon as={logo} w="20px" h="auto" me="5px" />
           <Text fontSize="md" color={textColor} fontWeight="bold">
             {format}
           </Text>

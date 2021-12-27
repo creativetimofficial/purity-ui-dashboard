@@ -22,7 +22,7 @@ import React, { useState } from "react";
 import { FaTwitter, FaFacebook } from "react-icons/fa";
 
 export default function Configurator(props) {
-  const { rtlActive, secondary, isOpen, onClose, fixed, ...rest } = props;
+  const { secondary, isOpen, onClose, fixed, ...rest } = props;
   const [switched, setSwitched] = useState(props.isChecked);
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -46,7 +46,7 @@ export default function Configurator(props) {
       <Drawer
         isOpen={props.isOpen}
         onClose={props.onClose}
-        placement="right"
+        placement={document.documentElement.dir === "rtl" ? "left" : "right"}
         finalFocusRef={settingsRef}
         blockScrollOnMount={false}
       >
@@ -230,7 +230,6 @@ export default function Configurator(props) {
   );
 }
 Configurator.propTypes = {
-  rtlActive: PropTypes.bool,
   secondary: PropTypes.bool,
   isOpen: PropTypes.func,
   onClose: PropTypes.func,
