@@ -18,7 +18,7 @@
     "framer-motion": "^4.1.17",
     "match-sorter": "6.3.0",
     "moment": "2.29.1",
-    "node-sass": "5.0.0",
+    "node-sass": "7.0.1",
     "nouislider": "15.0.0",
     "react": "17.0.2",
     "react-apexcharts": "^1.3.9",
