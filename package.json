@@ -30,13 +30,16 @@
     "react-icons": "^4.2.0",
     "react-jvectormap": "0.0.16",
     "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.0",
     "react-swipeable-views": "0.13.9",
     "react-table": "7.7.0",
     "react-tagsinput": "3.19.0",
     "stylis": "^4.0.10",
     "stylis-plugin-rtl": "^2.1.0"
   },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  }, 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
