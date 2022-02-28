@@ -606,6 +606,7 @@ export default function Dashboard() {
               {rtlDashboardTableData.map((row) => {
                 return (
                   <DashboardTableRow
+                    key={row.name}
                     name={row.name}
                     logo={row.logo}
                     members={row.members}
@@ -641,6 +642,7 @@ export default function Dashboard() {
               {rtlTimelineData.map((row, index, arr) => {
                 return (
                   <TimelineRow
+                    key={row.title}
                     logo={row.logo}
                     title={row.title}
                     date={row.date}

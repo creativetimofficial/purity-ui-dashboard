@@ -36,6 +36,7 @@ function DashboardTableRow(props) {
             return (
               <Avatar
                 name="Ryan Florence"
+                key={member}
                 src={member}
                 _hover={{ zIndex: "3", cursor: "pointer" }}
               />
