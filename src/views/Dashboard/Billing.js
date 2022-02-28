@@ -120,7 +120,7 @@ function Billing() {
             >
               <CardBody>
                 <Flex direction="column" align="center" w="100%" py="14px">
-                  <IconBox as="box" h={"60px"} w={"60px"} bg={iconTeal}>
+                  <IconBox as="span" h={"60px"} w={"60px"} bg={iconTeal}>
                     <Icon h={"24px"} w={"24px"} color="white" as={FaWallet} />
                   </IconBox>
                   <Flex
@@ -164,7 +164,7 @@ function Billing() {
                   w="100%"
                   py="14px"
                 >
-                  <IconBox as="box" h={"60px"} w={"60px"} bg={iconTeal}>
+                  <IconBox as="span" h={"60px"} w={"60px"} bg={iconTeal}>
                     <Icon h={"24px"} w={"24px"} color="white" as={FaPaypal} />
                   </IconBox>
                   <Flex
