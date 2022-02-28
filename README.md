@@ -86,6 +86,7 @@ Let us know your thoughts below. And good luck with development!
 ## Quick Start
 
 - Clone the repo: `git clone https://github.com/creativetimofficial/purity-ui-dashboard.git`.
+- `cd purity-ui-dashboard`
 - `npm install`
 - `npm start`
 - [Download from Github](https://github.com/creativetimofficial/purity-ui-dashboard/archive/main.zip).
