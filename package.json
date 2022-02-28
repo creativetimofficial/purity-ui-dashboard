@@ -39,7 +39,7 @@
   },
   "resolutions": {
     "react-error-overlay": "6.0.9"
-  }, 
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
@@ -64,10 +64,14 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      "cover 99.8%",
       "not dead",
-      "not op_mini all"
+      "not OperaMini all"
     ],
-    "development": []
+    "development": [
+      "cover 99.8%",
+      "not dead",
+      "not OperaMini all"
+    ]
   }
 }
