@@ -103,7 +103,7 @@ export default function Dashboard() {
                   </StatHelpText>
                 </Flex>
               </Stat>
-              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+              <IconBox as="span" h={"45px"} w={"45px"} bg={iconTeal}>
                 <WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />
               </IconBox>
             </Flex>
@@ -138,7 +138,7 @@ export default function Dashboard() {
                   </StatHelpText>
                 </Flex>
               </Stat>
-              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+              <IconBox as="span" h={"45px"} w={"45px"} bg={iconTeal}>
                 <GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />
               </IconBox>
             </Flex>
@@ -174,7 +174,7 @@ export default function Dashboard() {
                 </Flex>
               </Stat>
               <Spacer />
-              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+              <IconBox as="span" h={"45px"} w={"45px"} bg={iconTeal}>
                 <DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />
               </IconBox>
             </Flex>
@@ -209,7 +209,7 @@ export default function Dashboard() {
                   </StatHelpText>
                 </Flex>
               </Stat>
-              <IconBox as="box" h={"45px"} w={"45px"} bg={iconTeal}>
+              <IconBox as="span" h={"45px"} w={"45px"} bg={iconTeal}>
                 <CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />
               </IconBox>
             </Flex>
@@ -414,7 +414,7 @@ export default function Dashboard() {
                 <Flex direction="column">
                   <Flex alignItems="center">
                     <IconBox
-                      as="box"
+                      as="span"
                       h={"30px"}
                       w={"30px"}
                       bg={iconTeal}
@@ -445,7 +445,7 @@ export default function Dashboard() {
                 <Flex direction="column">
                   <Flex alignItems="center">
                     <IconBox
-                      as="box"
+                      as="span"
                       h={"30px"}
                       w={"30px"}
                       bg={iconTeal}
@@ -476,7 +476,7 @@ export default function Dashboard() {
                 <Flex direction="column">
                   <Flex alignItems="center">
                     <IconBox
-                      as="box"
+                      as="span"
                       h={"30px"}
                       w={"30px"}
                       bg={iconTeal}
@@ -507,7 +507,7 @@ export default function Dashboard() {
                 <Flex direction="column">
                   <Flex alignItems="center">
                     <IconBox
-                      as="box"
+                      as="span"
                       h={"30px"}
                       w={"30px"}
                       bg={iconTeal}
