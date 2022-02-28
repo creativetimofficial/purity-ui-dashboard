@@ -46,6 +46,7 @@ function Tables() {
               {tablesTableData.map((row) => {
                 return (
                   <TablesTableRow
+                    key={`${row.email}-${row.name}`}
                     name={row.name}
                     logo={row.logo}
                     email={row.email}
@@ -88,6 +89,7 @@ function Tables() {
               {tablesProjectData.map((row) => {
                 return (
                   <TablesProjectRow
+                    key={row.name}
                     name={row.name}
                     logo={row.logo}
                     status={row.status}
