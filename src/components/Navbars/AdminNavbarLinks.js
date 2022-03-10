@@ -23,7 +23,7 @@ import avatar3 from "assets/img/avatars/avatar3.png";
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
 import { ItemContent } from "components/Menu/ItemContent";
-import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import SidebarResponsive from "components/Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
 import { NavLink } from "react-router-dom";

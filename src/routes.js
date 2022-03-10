@@ -1,11 +1,11 @@
 // import
-import Dashboard from "views/Dashboard/Dashboard.js";
-import Tables from "views/Dashboard/Tables.js";
-import Billing from "views/Dashboard/Billing.js";
-import RTLPage from "views/RTL/RTLPage.js";
-import Profile from "views/Dashboard/Profile.js";
-import SignIn from "views/Pages/SignIn.js";
-import SignUp from "views/Pages/SignUp.js";
+import Dashboard from "views/Dashboard/Dashboard";
+import Tables from "views/Dashboard/Tables";
+import Billing from "views/Dashboard/Billing";
+import RTLPage from "views/Dashboard/RTL";
+import Profile from "views/Dashboard/Profile";
+import SignIn from "views/Auth/SignIn.js";
+import SignUp from "views/Auth/SignUp.js";
 
 import {
   HomeIcon,
