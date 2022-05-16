@@ -1,5 +1,25 @@
 # Change Log
 
+## [2.0.2] 2022-05-16
+
+### Update v2.0.2
+
+- The problem with npm install/ building the project was fixed.
+
+### Updated dependencies
+
+```
+chakra-ui/icons                      1.0.14         →         1.1.5
+chakra-ui/react                      1.6.5          →         1.8.8
+chakra-ui/theme-tools                1.1.9          →         1.3.6
+```
+
+### Added dependencies
+
+```
+chakra-ui/system                      1.12.1
+```
+
 ## [2.0.1] 2022-03-20
 
 ### Update v2.0.1
