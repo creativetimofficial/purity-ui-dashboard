@@ -16,7 +16,7 @@
     "@fontsource/roboto": "^4.5.0",
     "apexcharts": "^3.27.3",
     "classnames": "2.3.1",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "3.10.6",
     "match-sorter": "6.3.0",
     "moment": "2.29.1",
     "node-sass": "7.0.1",
