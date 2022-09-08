@@ -184,7 +184,6 @@ purity-ui-dashboard/
     │   │   └── drawer.js
     │   ├── foundations
     │   │   ├── breakpoints.js
-    │   │   ├── fonts.js
     │   │   └── text.js
     │   ├── styles.js
     │   └── theme.js

@@ -1,5 +1,10 @@
 # Change Log
 
+## [2.0.3] 2022-09-08
+
+### Update v2.0.3
+
+- We deleted `fonts.js` and now you can change the fonts directly in `src/theme/styles.js`.
 ## [2.0.2] 2022-05-16
 
 ### Update v2.0.2
