@@ -15,7 +15,7 @@ import {
   PersonIcon,
   RocketIcon,
 } from "components/Icons/Icons";
-import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import SidebarResponsive from "components/Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -80,7 +80,7 @@ export default function AuthNavbar(props) {
       color={mainText}
     >
       <CreativeTimLogo w="32px" h="32px" me="10px" />
-      <Text fontsize="sm" mt="3px">
+      <Text fontSize="sm" mt="3px">
         {logoText}
       </Text>
     </Link>
