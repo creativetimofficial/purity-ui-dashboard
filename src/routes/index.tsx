@@ -8,7 +8,7 @@ import ProtectedRoute from "./ProtectedRoute"
 // error pages import
 // import Error404 from "@/pages/ErrorPages/Error404"
 // layout import
-import LoginPage from "@/pages/login"
+import SignIn from "@/pages/SignIn"
 import Loadable from "@/components/loadable"
 import AuthLayout from "@/layout/authLayout"
 import AppLayout from "@/layout/appLayout"
@@ -22,10 +22,10 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/login"
+          path="/sign-in"
           element={
             <AuthLayout>
-              <LoginPage />
+              <SignIn />
             </AuthLayout>
           }
         />
