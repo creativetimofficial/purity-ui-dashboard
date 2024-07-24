@@ -14,8 +14,10 @@
 		"@fontsource/open-sans": "^4.5.0",
 		"@fontsource/raleway": "^4.5.0",
 		"@fontsource/roboto": "^4.5.8",
+		"ajv": "^8.17.1",
 		"apexcharts": "^3.27.3",
 		"classnames": "2.3.1",
+		"cross-env": "^7.0.3",
 		"framer-motion": "^4.1.17",
 		"match-sorter": "6.3.0",
 		"moment": "2.29.1",
@@ -36,8 +38,7 @@
 		"react-table": "7.7.0",
 		"react-tagsinput": "3.19.0",
 		"stylis": "^4.0.13",
-		"stylis-plugin-rtl": "^2.1.1",
-		"cross-env": "^7.0.3"
+		"stylis-plugin-rtl": "^2.1.1"
 	},
 	"resolutions": {
 		"react-error-overlay": "6.0.11"
