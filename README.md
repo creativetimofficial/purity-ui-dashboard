@@ -55,6 +55,7 @@ Let us know your thoughts below. And good luck with development!
 - [Versions](#versions)
 - [Demo](#demo)
 - [Quick start](#quick-start)
+- [Deploy](#deploy)
 - [Documentation](#documentation)
 - [File Structure](#file-structure)
 - [Browser Support](#browser-support)
@@ -91,6 +92,12 @@ Let us know your thoughts below. And good luck with development!
 - `npm start`
 - [Download from Github](https://github.com/creativetimofficial/purity-ui-dashboard/archive/main.zip).
 - [Download from Creative Tim](https://www.creative-tim.com/product/purity-ui-dashboard).
+
+## Deploy
+
+:rocket: You can deploy your own version of the template to Genezio with one click:
+
+[![Deploy to Genezio](https://raw.githubusercontent.com/Genez-io/graphics/main/svg/deploy-button.svg)](https://app.genez.io/start/deploy?repository=https://github.com/creativetimofficial/purity-ui-dashboard&utm_source=github&utm_medium=referral&utm_campaign=github-creativetim&utm_term=deploy-project&utm_content=button-head)
 
 ## File Structure
 
