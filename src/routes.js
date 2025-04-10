@@ -6,6 +6,7 @@ import RTLPage from "views/Dashboard/RTL";
 import Profile from "views/Dashboard/Profile";
 import SignIn from "views/Auth/SignIn.js";
 import SignUp from "views/Auth/SignUp.js";
+import EventLogging from "views/Dashboard/EventLogging";
 
 import {
   HomeIcon,
@@ -15,6 +16,7 @@ import {
   DocumentIcon,
   RocketIcon,
   SupportIcon,
+  ActivityIcon,
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -40,6 +42,14 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color="inherit" />,
     component: Billing,
+    layout: "/admin",
+  },
+  {
+    path: "/event-logging",
+    name: "Event Logging",
+    rtlName: "سجل الأحداث",
+    icon: <ActivityIcon color="inherit" />,
+    component: EventLogging,
     layout: "/admin",
   },
   {
