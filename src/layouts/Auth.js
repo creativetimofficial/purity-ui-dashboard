@@ -68,7 +68,7 @@ export default function Pages(props) {
 				return getRoutes(prop.views);
 			}
 			if (prop.layout === '/auth') {
-				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+				return <Route exact path={prop.layout + prop.path} component={prop.component} key={key} />;
 			} else {
 				return null;
 			}
@@ -86,7 +86,7 @@ export default function Pages(props) {
 					<Box ref={wrapper} w='100%'>
 						<Switch>
 							{getRoutes(routes)}
-							<Redirect from='/auth' to='/auth/login-page' />
+							<Redirect from='/auth' to='/auth/signin' />
 						</Switch>
 					</Box>
 				</Box>

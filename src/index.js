@@ -28,6 +28,11 @@ import RTLLayout from "layouts/RTL.js";
 // Log the initial Redux state
 console.log("Initial Redux State:", store.getState());
 
+// Check if user is authenticated
+const isAuthenticated = () => {
+  return store.getState().auth.token !== null;
+};
+
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
@@ -35,7 +40,7 @@ ReactDOM.render(
         <Route path={`/auth`} component={AuthLayout} />
         <Route path={`/admin`} component={AdminLayout} />
         <Route path={`/rtl`} component={RTLLayout} />
-        <Redirect from={`/`} to="/admin/dashboard" />
+        <Redirect from={`/`} to={isAuthenticated() ? "/admin/dashboard" : "/auth/signin"} />
       </Switch>
     </HashRouter>
   </Provider>,

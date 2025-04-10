@@ -26,11 +26,20 @@ import { ItemContent } from "components/Menu/ItemContent";
 import SidebarResponsive from "components/Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import routes from "routes.js";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function HeaderLinks(props) {
   const { variant, children, fixed, secondary, onOpen, ...rest } = props;
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const token = useSelector((state) => state.auth.token);
+
+  const handleSignOut = () => {
+    dispatch({ type: "auth/clearToken" });
+    history.push("/auth/signin");
+  };
 
   // Chakra Color Mode
   let mainTeal = useColorModeValue("teal.300", "teal.300");
@@ -118,6 +127,18 @@ export default function HeaderLinks(props) {
           <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
         </Button>
       </NavLink>
+      {token && (
+        <Button
+          ms="0px"
+          px="0px"
+          me={{ sm: "2px", md: "16px" }}
+          color={navbarIcon}
+          variant="transparent-with-icon"
+          onClick={handleSignOut}
+        >
+          <Text display={{ sm: "none", md: "flex" }}>Sign Out</Text>
+        </Button>
+      )}
       <SidebarResponsive
         logoText={props.logoText}
         secondary={props.secondary}

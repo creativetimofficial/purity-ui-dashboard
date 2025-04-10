@@ -1,10 +1,14 @@
 import axios from 'axios';
+import store from '../store/store';
 
 // Create an axios instance
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
   headers: {
     'Content-Type': 'application/json',
+    // 'Cache-Control': 'no-cache, no-store, must-revalidate',
+    // 'Pragma': 'no-cache',
+    // 'Expires': '0'
   },
   timeout: 10000, // 10 seconds
 });
@@ -18,7 +22,7 @@ api.interceptors.request.use(
       data: config.data,
       params: config.params,
     });
-    const token = localStorage.getItem('token');
+    const token = store.getState().auth.token;
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -50,8 +54,8 @@ api.interceptors.response.use(
       switch (error.response.status) {
         case 401:
           // Handle unauthorized access
-          localStorage.removeItem('token');
-          window.location.href = '/auth/sign-in';
+          store.dispatch({ type: 'auth/clearToken' });
+          window.location.href = '/auth/signin';
           break;
         case 403:
           // Handle forbidden access

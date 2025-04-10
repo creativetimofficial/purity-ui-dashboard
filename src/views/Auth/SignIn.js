@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Box,
@@ -12,14 +12,69 @@ import {
   Switch,
   Text,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
+import { NavLink, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import api from "services/api";
 // Assets
 import signInImage from "assets/img/signInImage.png";
 
 function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const toast = useToast();
+
   // Chakra color mode
   const titleColor = useColorModeValue("teal.300", "teal.200");
   const textColor = useColorModeValue("gray.400", "white");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await api.post("/auth/signin", {
+        email,
+        password,
+      });
+
+      // Check if we got a valid response (including 304)
+      if (response.status === 304) {
+        // For 304, we need to check if we have the token in the cached response
+        if (!response.data || !response.data.token) {
+          throw new Error('Invalid credentials');
+        }
+      } else if (!response.data || !response.data.token) {
+        throw new Error('Invalid credentials');
+      }
+
+      dispatch({ type: "auth/setToken", payload: response.data.token });
+      toast({
+        title: "Success",
+        description: "Signed in successfully",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      history.push("/admin");
+    } catch (error) {
+      // Always show invalid credentials message if we don't get a valid token
+      toast({
+        title: "Invalid Credentials",
+        description: "The email or password you entered is incorrect. Please try again.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Flex position='relative' mb='40px'>
       <Flex
@@ -52,7 +107,7 @@ function SignIn() {
               fontSize='14px'>
               Enter your email and password to sign in
             </Text>
-            <FormControl>
+            <FormControl as="form" onSubmit={handleSubmit}>
               <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
                 Email
               </FormLabel>
@@ -60,9 +115,12 @@ function SignIn() {
                 borderRadius='15px'
                 mb='24px'
                 fontSize='sm'
-                type='text'
-                placeholder='Your email adress'
+                type='email'
+                placeholder='Your email address'
                 size='lg'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
                 Password
@@ -74,6 +132,9 @@ function SignIn() {
                 type='password'
                 placeholder='Your password'
                 size='lg'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
               <FormControl display='flex' alignItems='center'>
                 <Switch id='remember-login' colorScheme='teal' me='10px' />
@@ -94,6 +155,7 @@ function SignIn() {
                 mb='20px'
                 color='white'
                 mt='20px'
+                isLoading={isLoading}
                 _hover={{
                   bg: "teal.200",
                 }}
@@ -111,9 +173,11 @@ function SignIn() {
               mt='0px'>
               <Text color={textColor} fontWeight='medium'>
                 Don't have an account?
-                <Link color={titleColor} as='span' ms='5px' fontWeight='bold'>
-                  Sign Up
-                </Link>
+                <NavLink to="/auth/signup">
+                  <Link color={titleColor} as='span' ms='5px' fontWeight='bold'>
+                    Sign Up
+                  </Link>
+                </NavLink>
               </Text>
             </Flex>
           </Flex>
