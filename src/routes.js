@@ -1,4 +1,4 @@
-// import
+import React from "react";
 import Dashboard from "views/Dashboard/Dashboard";
 import Tables from "views/Dashboard/Tables";
 import Billing from "views/Dashboard/Billing";
@@ -6,6 +6,8 @@ import RTLPage from "views/Dashboard/RTL";
 import Profile from "views/Dashboard/Profile";
 import SignIn from "views/Auth/SignIn.js";
 import SignUp from "views/Auth/SignUp.js";
+import EventLogging from "views/Dashboard/EventLogging";
+import ProtectedRoute from "components/ProtectedRoute";
 
 import {
   HomeIcon,
@@ -15,15 +17,42 @@ import {
   DocumentIcon,
   RocketIcon,
   SupportIcon,
+  ActivityIcon,
 } from "components/Icons/Icons";
 
+const wrapProtectedRoute = (Component) => {
+  return <ProtectedRoute><Component /></ProtectedRoute>;
+};
+
 var dashRoutes = [
+  // {
+  //   path: "/",
+  //   name: "Sign In",
+  //   component: SignIn,
+  //   layout: "/auth",
+  // },
+  // {
+  //   path: "/signin",
+  //   name: "Sign In",
+  //   rtlName: "لوحة القيادة",
+  //   icon: <DocumentIcon color="inherit" />,
+  //   component: SignIn,
+  //   layout: "/auth",
+  // },
+  // {
+  //   path: "/signup",
+  //   name: "Sign Up",
+  //   rtlName: "لوحة القيادة",
+  //   icon: <RocketIcon color="inherit" />,
+  //   component: SignUp,
+  //   layout: "/auth",
+  // },
   {
     path: "/dashboard",
     name: "Dashboard",
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color="inherit" />,
-    component: Dashboard,
+    component: () => wrapProtectedRoute(Dashboard),
     layout: "/admin",
   },
   {
@@ -31,7 +60,7 @@ var dashRoutes = [
     name: "Tables",
     rtlName: "لوحة القيادة",
     icon: <StatsIcon color="inherit" />,
-    component: Tables,
+    component: () => wrapProtectedRoute(Tables),
     layout: "/admin",
   },
   {
@@ -39,7 +68,15 @@ var dashRoutes = [
     name: "Billing",
     rtlName: "لوحة القيادة",
     icon: <CreditIcon color="inherit" />,
-    component: Billing,
+    component: () => wrapProtectedRoute(Billing),
+    layout: "/admin",
+  },
+  {
+    path: "/event-logging",
+    name: "Event Logging",
+    rtlName: "سجل الأحداث",
+    icon: <ActivityIcon color="inherit" />,
+    component: () => wrapProtectedRoute(EventLogging),
     layout: "/admin",
   },
   {
@@ -47,7 +84,7 @@ var dashRoutes = [
     name: "RTL",
     rtlName: "آرتيإل",
     icon: <SupportIcon color="inherit" />,
-    component: RTLPage,
+    component: () => wrapProtectedRoute(RTLPage),
     layout: "/rtl",
   },
   {
@@ -62,7 +99,7 @@ var dashRoutes = [
         rtlName: "لوحة القيادة",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: Profile,
+        component: () => wrapProtectedRoute(Profile),
         layout: "/admin",
       },
       {
@@ -85,4 +122,5 @@ var dashRoutes = [
     ],
   },
 ];
+
 export default dashRoutes;

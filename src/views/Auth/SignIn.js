@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Box,
@@ -12,14 +12,87 @@ import {
   Switch,
   Text,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
+import { NavLink, useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import api from "services/api";
 // Assets
 import signInImage from "assets/img/signInImage.png";
 
 function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const toast = useToast();
+
   // Chakra color mode
   const titleColor = useColorModeValue("teal.300", "teal.200");
   const textColor = useColorModeValue("gray.400", "white");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await api.post("/auth/signin", {
+        email,
+        password,
+      });
+
+      // Only proceed with successful login if we have a valid token
+      if (response.data && response.data.token) {
+        dispatch({ type: "auth/setToken", payload: response.data.token });
+        toast({
+          title: "Success",
+          description: "Signed in successfully",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        history.push("/admin");
+      } else {
+        // Show error toast if no token in response
+        toast({
+          title: "Login Failed",
+          description: "Invalid credentials",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
+      }
+    } catch (error) {
+      // Always show error toast for any failed login attempt
+      if (error.response?.status === 401) {
+        toast({
+          title: "Login Failed",
+          description: "Invalid credentials",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
+      }
+
+      // Clear form fields
+
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <Flex position='relative' mb='40px'>
       <Flex
@@ -52,7 +125,7 @@ function SignIn() {
               fontSize='14px'>
               Enter your email and password to sign in
             </Text>
-            <FormControl>
+            <FormControl as="form" onSubmit={handleSubmit}>
               <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
                 Email
               </FormLabel>
@@ -60,9 +133,12 @@ function SignIn() {
                 borderRadius='15px'
                 mb='24px'
                 fontSize='sm'
-                type='text'
-                placeholder='Your email adress'
+                type='email'
+                placeholder='Your email address'
                 size='lg'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <FormLabel ms='4px' fontSize='sm' fontWeight='normal'>
                 Password
@@ -74,6 +150,9 @@ function SignIn() {
                 type='password'
                 placeholder='Your password'
                 size='lg'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
               <FormControl display='flex' alignItems='center'>
                 <Switch id='remember-login' colorScheme='teal' me='10px' />
@@ -94,6 +173,7 @@ function SignIn() {
                 mb='20px'
                 color='white'
                 mt='20px'
+                isLoading={isLoading}
                 _hover={{
                   bg: "teal.200",
                 }}
@@ -111,9 +191,11 @@ function SignIn() {
               mt='0px'>
               <Text color={textColor} fontWeight='medium'>
                 Don't have an account?
-                <Link color={titleColor} as='span' ms='5px' fontWeight='bold'>
-                  Sign Up
-                </Link>
+                <NavLink to="/auth/signup">
+                  <Link color={titleColor} as='span' ms='5px' fontWeight='bold'>
+                    Sign Up
+                  </Link>
+                </NavLink>
               </Text>
             </Flex>
           </Flex>
