@@ -30,7 +30,9 @@ console.log("Initial Redux State:", store.getState());
 
 // Check if user is authenticated
 const isAuthenticated = () => {
-  return store.getState().auth.token !== null;
+  const token = store.getState().auth.token;
+  const isSignInPage = window.location.pathname === '/auth/signin';
+  return token !== null && !isSignInPage;
 };
 
 ReactDOM.render(

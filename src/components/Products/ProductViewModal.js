@@ -12,6 +12,7 @@ import {
   VStack,
   HStack,
   useColorModeValue,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -28,13 +29,27 @@ function ProductViewModal({ isOpen, onClose, product }) {
         <ModalCloseButton />
         <ModalBody>
           <VStack spacing={4} align="stretch">
-            <Image
-              src={product.image}
-              alt={product.title}
-              borderRadius="lg"
-              maxH="300px"
-              objectFit="cover"
-            />
+            {product.image_url ? (
+              <Image
+                src={product.image_url}
+                alt={product.title}
+                borderRadius="lg"
+                maxH="300px"
+                objectFit="cover"
+                fallbackSrc="https://via.placeholder.com/300x200?text=No+Image"
+              />
+            ) : (
+              <Box
+                height="300px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="gray.100"
+                borderRadius="lg"
+              >
+                <Text color="gray.500">No image available</Text>
+              </Box>
+            )}
             <Text fontSize="xl" fontWeight="bold" color={textColor}>
               {product.title}
             </Text>

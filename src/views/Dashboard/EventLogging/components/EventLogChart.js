@@ -11,9 +11,10 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import React, { useState, useEffect, useRef } from "react";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getEventStats } from "services/eventLogService";
 import { Chart, registerables } from 'chart.js';
+import { setChartTimeRange } from 'store/slices/eventLogSlice';
 
 // Register Chart.js components
 Chart.register(...registerables);
@@ -25,7 +26,8 @@ function EventLogChart() {
   const textColor = useColorModeValue("gray.700", "white");
   
   // Redux hooks
-  const filters = useSelector((state) => state.eventLog.filters);
+  const dispatch = useDispatch();
+  const chartTimeRange = useSelector((state) => state.eventLog.chart.time_range);
   
   // Chart reference
   const chartRef = useRef(null);
@@ -35,7 +37,6 @@ function EventLogChart() {
   const [chartData, setChartData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [groupBy, setGroupBy] = useState(filters.time_range || "day");
   
   // Colors for different event types
   const eventTypeColors = {
@@ -44,19 +45,18 @@ function EventLogChart() {
     DELETE: "#E53E3E", // red
   };
   
-  // Fetch chart data when filters or groupBy change
+  // Fetch chart data when chartTimeRange changes
   useEffect(() => {
     const fetchChartData = async () => {
       setLoading(true);
       setError(null);
       
       try {
-        console.log("Fetching chart data with filters:", filters);
+        console.log("Fetching chart data");
         
-        // Use the same filters but add group_by parameter
+        // Only use the chart's time range
         const apiFilters = {
-          ...filters,
-          group_by: groupBy,
+          group_by: chartTimeRange,
         };
         
         console.log("API filters for chart:", apiFilters);
@@ -86,7 +86,7 @@ function EventLogChart() {
     };
     
     fetchChartData();
-  }, [filters, groupBy]);
+  }, [chartTimeRange]);
   
   // Format timestamp for x-axis
   const formatTimestamp = (timestamp) => {
@@ -94,7 +94,7 @@ function EventLogChart() {
     
     const date = new Date(timestamp);
     
-    switch (groupBy) {
+    switch (chartTimeRange) {
       case "day":
         return date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
       case "week":
@@ -108,7 +108,7 @@ function EventLogChart() {
   
   // Handle group by change
   const handleGroupByChange = (e) => {
-    setGroupBy(e.target.value);
+    dispatch(setChartTimeRange(e.target.value));
   };
   
   // Initialize or update chart when data changes
@@ -180,7 +180,7 @@ function EventLogChart() {
         chartInstance.current.destroy();
       }
     };
-  }, [chartData, loading, error, groupBy]);
+  }, [chartData, loading, error, chartTimeRange]);
 
   return (
     <Box
@@ -198,7 +198,7 @@ function EventLogChart() {
         
         <FormControl width="200px">
           <FormLabel>Group By</FormLabel>
-          <Select value={groupBy} onChange={handleGroupByChange}>
+          <Select value={chartTimeRange} onChange={handleGroupByChange}>
             <option value="day">Day</option>
             <option value="week">Week</option>
             <option value="month">Month</option>

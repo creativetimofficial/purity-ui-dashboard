@@ -9,7 +9,6 @@ import React from "react";
 // Custom components
 import EventLogTable from "./components/EventLogTable";
 import EventLogChart from "./components/EventLogChart";
-import EventLogFilters from "./components/EventLogFilters";
 
 function EventLogging() {
   // Chakra color mode
@@ -19,11 +18,10 @@ function EventLogging() {
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <Container maxW="container.xl">
         <Grid
-          templateColumns={{ base: "1fr", lg: "300px 1fr" }}
+          templateColumns={{ base: "1fr", lg: "1fr" }}
           gap={6}
           mb={6}
         >
-          <EventLogFilters />
           <Box>
             <EventLogChart />
           </Box>

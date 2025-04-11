@@ -11,14 +11,25 @@ import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 function ProductTableRow(props) {
-  const { id, image, title, sku, price, description, onView, onEdit, onDelete } = props;
+  const { id, image_url, title, sku, price, description, onView, onEdit, onDelete } = props;
   const textColor = useColorModeValue("gray.700", "white");
+
+  console.log('ProductTableRow props:', { id, image_url, title });
 
   return (
     <Tr>
       <Td minWidth={{ sm: "100px" }} pl="0px">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Avatar src={image} w="50px" borderRadius="12px" me="18px" />
+          <Avatar 
+            src={image_url} 
+            w="50px" 
+            borderRadius="12px" 
+            me="18px"
+            onError={(e) => {
+              console.error('Error loading image:', image_url);
+              e.target.src = 'https://via.placeholder.com/50x50?text=No+Image';
+            }}
+          />
         </Flex>
       </Td>
       <Td minWidth={{ sm: "250px" }} pl="0px">

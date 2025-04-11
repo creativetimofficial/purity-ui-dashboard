@@ -4,8 +4,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   filters: {
     time_range: 'day',
-    // Don't include empty values in the initial state
+    event_type: '',
+    user_id: '',
   },
+  chart: {
+    time_range: 'day',
+  }
 };
 
 // Create the slice
@@ -23,7 +27,14 @@ const eventLogSlice = createSlice({
         return acc;
       }, {});
       
-      state.filters = cleanedFilters;
+      state.filters = {
+        ...state.filters,
+        ...cleanedFilters
+      };
+    },
+    // Set chart time range
+    setChartTimeRange: (state, action) => {
+      state.chart.time_range = action.payload;
     },
     // Reset filters to default
     resetFilters: (state) => {
@@ -33,7 +44,7 @@ const eventLogSlice = createSlice({
 });
 
 // Export actions
-export const { setFilters, resetFilters } = eventLogSlice.actions;
+export const { setFilters, setChartTimeRange, resetFilters } = eventLogSlice.actions;
 
 // Export reducer
 export default eventLogSlice.reducer; 

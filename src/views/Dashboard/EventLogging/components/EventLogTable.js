@@ -13,10 +13,18 @@ import {
   Center,
   Badge,
   TableContainer,
+  FormControl,
+  FormLabel,
+  Input,
+  Select,
+  Stack,
+  Button,
+  Flex,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllEvents } from "services/eventLogService";
+import { setFilters, resetFilters } from 'store/slices/eventLogSlice';
 
 function EventLogTable() {
   // Chakra color mode
@@ -25,21 +33,71 @@ function EventLogTable() {
   const textColor = useColorModeValue("gray.700", "white");
   
   // Redux hooks
+  const dispatch = useDispatch();
   const filters = useSelector((state) => state.eventLog.filters);
-  console.log("EventLogTable - Redux filters:", filters);
+  
+  // Local state for form values
+  const [formValues, setFormValues] = useState({
+    timeRange: filters.time_range,
+    eventType: filters.event_type,
+    userId: filters.user_id,
+  });
   
   // State for events
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // Log component mount
+  // Update local state when Redux state changes
   useEffect(() => {
-    console.log("EventLogTable - Component mounted");
-    return () => {
-      console.log("EventLogTable - Component unmounted");
+    setFormValues({
+      timeRange: filters.time_range,
+      eventType: filters.event_type,
+      userId: filters.user_id,
+    });
+  }, [filters]);
+  
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitting filters:", formValues);
+    
+    // Convert frontend filters to API filters
+    const apiFilters = {
+      time_range: formValues.timeRange,
     };
-  }, []);
+    
+    // Only include non-empty values
+    if (formValues.eventType) {
+      apiFilters.event_type = formValues.eventType;
+    }
+    
+    if (formValues.userId) {
+      apiFilters.user_id = formValues.userId;
+    }
+    
+    console.log("API filters:", apiFilters);
+    dispatch(setFilters(apiFilters));
+  };
+  
+  // Handle form reset
+  const handleReset = () => {
+    setFormValues({
+      timeRange: "day",
+      eventType: "",
+      userId: "",
+    });
+    dispatch(resetFilters());
+  };
   
   // Fetch events when filters change
   useEffect(() => {
@@ -98,6 +156,80 @@ function EventLogTable() {
       <Text fontSize="xl" fontWeight="bold" mb={4} color={textColor}>
         Event Logs
       </Text>
+      
+      <form onSubmit={handleSubmit}>
+        <Stack spacing={4} mb={6}>
+          <Flex gap={4} flexWrap="wrap">
+            <FormControl flex="1" minW="200px">
+              <FormLabel fontSize="sm" fontWeight="medium" color={textColor}>
+                Time Range
+              </FormLabel>
+              <Select
+                name="timeRange"
+                value={formValues.timeRange}
+                onChange={handleChange}
+                size="md"
+                focusBorderColor="blue.400"
+              >
+                <option value="day">Last 24 Hours</option>
+                <option value="week">Last 7 Days</option>
+                <option value="month">Last 30 Days</option>
+              </Select>
+            </FormControl>
+            
+            <FormControl flex="1" minW="200px">
+              <FormLabel fontSize="sm" fontWeight="medium" color={textColor}>
+                Event Type
+              </FormLabel>
+              <Select
+                name="eventType"
+                value={formValues.eventType}
+                onChange={handleChange}
+                size="md"
+                focusBorderColor="blue.400"
+              >
+                <option value="">All Types</option>
+                <option value="CREATE">Create</option>
+                <option value="UPDATE">Update</option>
+                <option value="DELETE">Delete</option>
+              </Select>
+            </FormControl>
+            
+            <FormControl flex="1" minW="200px">
+              <FormLabel fontSize="sm" fontWeight="medium" color={textColor}>
+                User ID
+              </FormLabel>
+              <Input
+                name="userId"
+                value={formValues.userId}
+                onChange={handleChange}
+                placeholder="Enter user ID"
+                size="md"
+                focusBorderColor="blue.400"
+              />
+            </FormControl>
+          </Flex>
+          
+          <Flex gap={4} justify="flex-end">
+            <Button
+              type="button"
+              onClick={handleReset}
+              variant="outline"
+              colorScheme="gray"
+              size="md"
+            >
+              Reset
+            </Button>
+            <Button
+              type="submit"
+              colorScheme="blue"
+              size="md"
+            >
+              Apply Filters
+            </Button>
+          </Flex>
+        </Stack>
+      </form>
       
       {loading ? (
         <Center py={10}>

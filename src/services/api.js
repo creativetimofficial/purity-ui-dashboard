@@ -10,7 +10,7 @@ const api = axios.create({
     // 'Pragma': 'no-cache',
     // 'Expires': '0'
   },
-  timeout: 10000, // 10 seconds
+  timeout: 30000, // 10 seconds
 });
 
 // Add a request interceptor for logging
@@ -55,7 +55,6 @@ api.interceptors.response.use(
         case 401:
           // Handle unauthorized access
           store.dispatch({ type: 'auth/clearToken' });
-          window.location.href = '/auth/signin';
           break;
         case 403:
           // Handle forbidden access

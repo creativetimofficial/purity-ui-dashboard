@@ -42,34 +42,52 @@ function SignIn() {
         password,
       });
 
-      // Check if we got a valid response (including 304)
-      if (response.status === 304) {
-        // For 304, we need to check if we have the token in the cached response
-        if (!response.data || !response.data.token) {
-          throw new Error('Invalid credentials');
-        }
-      } else if (!response.data || !response.data.token) {
-        throw new Error('Invalid credentials');
+      // Only proceed with successful login if we have a valid token
+      if (response.data && response.data.token) {
+        dispatch({ type: "auth/setToken", payload: response.data.token });
+        toast({
+          title: "Success",
+          description: "Signed in successfully",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        history.push("/admin");
+      } else {
+        // Show error toast if no token in response
+        toast({
+          title: "Login Failed",
+          description: "Invalid credentials",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
+      }
+    } catch (error) {
+      // Always show error toast for any failed login attempt
+      if (error.response?.status === 401) {
+        toast({
+          title: "Login Failed",
+          description: "Invalid credentials",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+          position: "bottom"
+        });
       }
 
-      dispatch({ type: "auth/setToken", payload: response.data.token });
-      toast({
-        title: "Success",
-        description: "Signed in successfully",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
-      history.push("/admin");
-    } catch (error) {
-      // Always show invalid credentials message if we don't get a valid token
-      toast({
-        title: "Invalid Credentials",
-        description: "The email or password you entered is incorrect. Please try again.",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
+      // Clear form fields
+
     } finally {
       setIsLoading(false);
     }

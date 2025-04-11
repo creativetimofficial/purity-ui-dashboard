@@ -25,7 +25,7 @@ export const createProduct = async (productData) => {
   try {
     // Transform frontend data to match backend expectations
     const transformedData = {
-      shopify_id: productData.shopify_id || Date.now().toString(), // Generate a temporary ID if not provided
+      shopify_id: productData.shopify_id || Date.now().toString(),
       title: productData.title,
       description: productData.description || '',
       price: parseFloat(productData.price),
@@ -33,9 +33,22 @@ export const createProduct = async (productData) => {
       image_url: productData.image || '', // Map 'image' to 'image_url'
     };
 
+    console.log('Sending data to API:', transformedData);
     const response = await api.post('/products', transformedData);
+    console.log('API Response:', response.data);
+    
+    // Ensure the response has the correct image URL field
+    if (response.data) {
+      response.data.image_url = response.data.image_url || response.data.image || '';
+      console.log('Processed response data:', response.data);
+    }
+    
     return response.data;
   } catch (error) {
+    console.error('Error in createProduct:', error);
+    if (error.code === 'ECONNABORTED') {
+      throw new Error('Request timed out. Please try again.');
+    }
     throw new Error(error.response?.data?.error || 'Failed to create product');
   }
 };

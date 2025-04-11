@@ -39,7 +39,7 @@ function ProductEditModal({ isOpen, onClose, onEditProduct, product }) {
         sku: product.sku || "",
         price: product.price || "",
         description: product.description || "",
-        image: product.image || "",
+        image: product.image_url || "",
       });
       setErrors({});
     }

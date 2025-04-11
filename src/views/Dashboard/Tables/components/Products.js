@@ -159,7 +159,10 @@ const Products = ({ title, captions, data: initialData }) => {
     try {
       setIsLoading(true);
       const createdProduct = await createProduct(newProduct);
+      
+      // Simple approach: just add the created product to the list
       setProducts([...products, createdProduct]);
+      
       toast({
         title: "Product created",
         description: `${createdProduct.title} has been created successfully.`,
@@ -168,9 +171,12 @@ const Products = ({ title, captions, data: initialData }) => {
         isClosable: true,
       });
     } catch (err) {
+      const isTimeout = err.message.includes('timed out');
       toast({
-        title: "Error creating product",
-        description: err.message || "An error occurred while creating the product.",
+        title: isTimeout ? "Request Timeout" : "Error creating product",
+        description: isTimeout 
+          ? "The request took too long to complete. Please try again." 
+          : err.message || "An error occurred while creating the product.",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -350,7 +356,7 @@ const Products = ({ title, captions, data: initialData }) => {
                       <ProductTableRow
                         key={row.shopify_id}
                         id={row.shopify_id}
-                        image={row.image_url}
+                        image_url={row.image_url}
                         title={row.title}
                         sku={row.sku}
                         price={row.price}

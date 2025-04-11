@@ -18,12 +18,13 @@ import {
 // Assets
 import BgSignUp from "assets/img/BgSignUp.png";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { signup } from "services/userService";
 import { useDispatch } from 'react-redux';
 
 function SignUp() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const titleColor = useColorModeValue("teal.300", "teal.200");
   const textColor = useColorModeValue("gray.700", "white");
   const bgColor = useColorModeValue("white", "gray.700");
@@ -75,10 +76,8 @@ function SignUp() {
         dispatch({ type: "auth/setToken", payload: response.token });
       }
 
-      // Redirect to sign in page after a short delay
-      setTimeout(() => {
-        window.location.href = '/auth/signin';
-      }, 2000);
+      // Use history.push instead of window.location.href
+      history.push('/auth/signin');
     } catch (error) {
       console.error('Signup error:', error);
       toast({
